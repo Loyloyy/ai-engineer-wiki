@@ -1,0 +1,5 @@
+transcripts/
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
