@@ -19,7 +19,7 @@ import tempfile
 from datetime import datetime
 from pathlib import Path
 
-CHANNEL_URL = "https://www.youtube.com/@aiDotEngineer"
+CHANNEL_URL = "https://www.youtube.com/@aiDotEngineer/videos"
 TRANSCRIPTS_DIR = Path("transcripts")
 MANIFEST_FILE = TRANSCRIPTS_DIR / "_manifest.json"
 
@@ -43,18 +43,28 @@ def save_manifest(manifest: dict) -> None:
 
 
 def fetch_channel_videos(after: str, limit: int) -> list[dict]:
-    """Return video metadata list from yt-dlp, filtered and sorted."""
+    """Return video metadata list from yt-dlp, filtered and sorted.
+
+    Uses full (non-flat) metadata fetch so upload_date is populated.
+    The /videos page is sorted newest-first; --break-on-reject stops
+    once we fall below --dateafter, keeping runtime bounded.
+    We fetch up to 4× limit as a lookahead window before filtering.
+    """
+    lookahead = max(limit * 4, 100)
     cmd = [
         "yt-dlp",
-        "--flat-playlist",
         "--dump-json",
         "--no-warnings",
-        "--extractor-args", "youtube:skip=dash,hls",
+        "--skip-download",
+        "--dateafter", after,
+        "--break-on-reject",
+        "--playlist-end", str(lookahead),
         CHANNEL_URL,
     ]
-    print(f"Fetching channel metadata from {CHANNEL_URL} ...", flush=True)
+    print(f"Fetching channel metadata from {CHANNEL_URL} (lookahead={lookahead}) ...", flush=True)
     result = subprocess.run(cmd, capture_output=True, text=True)
-    if result.returncode != 0:
+    # yt-dlp exits non-zero when --break-on-reject fires; that's expected
+    if result.returncode not in (0, 1) and not result.stdout.strip():
         print(f"yt-dlp error:\n{result.stderr}", file=sys.stderr)
         sys.exit(1)
 
