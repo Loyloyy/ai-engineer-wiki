@@ -116,3 +116,9 @@ Source: https://www.youtube.com/watch?v=juoNbJiZUi0
 Pages added: Model-Rot, Model-Airplane, Breadcrumb-Prompting, Stop-Hook-Interrogation
 Pages updated: (none)
 4 entities extracted.
+
+## [2026-05-27] ingest | Replacing 12K LOC with a 200-LOC Skill — David Gomes, Cursor (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=WE_Gnowy3uw
+Pages added: Best-Event
+Pages updated: (none)
+1 entity extracted.
