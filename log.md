@@ -104,3 +104,9 @@ Source: https://www.youtube.com/watch?v=fLUtUkqYHnQ
 Pages added: Doom-Looping, LFM-2
 Pages updated: (none)
 2 entities extracted.
+
+## [2026-05-27] ingest | OpenAI Codex Masterclass — Vaibhav Srivastav & Katia Gil Guzman, OpenAI (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=MhHEGMFCEB0
+Pages added: OpenAI-Codex
+Pages updated: (none)
+1 entity extracted. Demo-heavy workshop; single entity (the Codex tool itself).

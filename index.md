@@ -33,6 +33,7 @@
 
 ## Tools
 - [ACE](wiki/ACE.md) — GitHub Next prototype; multiplayer coding sessions backed by micro-VMs for team-aligned agentic development
+- [OpenAI-Codex](wiki/OpenAI-Codex.md) — OpenAI's software engineering agent; plugins, sub-agents, automations, code review, guardian approvals
 - [Gemini-Interactions-API](wiki/Gemini-Interactions-API.md) — Google DeepMind's unified agent+model API; server-side state, async execution, tool combination, typed content blocks
 - [AgentCraft](wiki/AgentCraft.md) — RTS-inspired multi-agent orchestration interface; filesystem-as-map, collision detection, campaign mode
 - [Braintrust](wiki/Braintrust.md) — Agent quality platform; evals + production observability; purpose-built trace data layer
