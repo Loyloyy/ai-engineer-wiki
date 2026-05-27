@@ -21,6 +21,12 @@ Pages added: Nested-Context-Injection
 Pages updated: (none)
 1 entity extracted. Life-OS dropped (aspirational framing, no concrete mechanism); opinion claim placed on Nested-Context-Injection. Prompt-Inversion dropped (thin transcript material).
 
+## [2026-05-27] ingest | Full Walkthrough: Workflow for AI Coding — Matt Pocock (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=-QFHIoCo-Ko
+Pages added: Smart-Zone, AFK-Tasks, Vertical-Slices, Ralph-Loop
+Pages updated: Grill-Me
+4 entities extracted. Doc-Rot and Sandcastle dropped — insufficient transcript material.
+
 ## [2026-05-27] ingest | What Do Models Still Suck At? — Peter Gostev, Arena.ai (AI Engineer 2026)
 Source: https://www.youtube.com/watch?v=R7A8rX-09Zw
 Pages added: BullshitBench

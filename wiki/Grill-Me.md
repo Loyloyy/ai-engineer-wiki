@@ -8,7 +8,7 @@ Created by Matt Pocock, published in his GitHub repo `macpocockskills`. As of AI
 
 ## Mechanism
 
-When invoked, Grill-Me turns the model adversarial: instead of immediately generating a plan or code, it interrogates the developer about every dimension of what they want to build. It works through the design tree recursively — for each decision, it asks about downstream dependencies before moving on. Pocock reports 40–100 questions before the model is satisfied that a shared understanding has been reached. The resulting conversation can be used as input to a PRD, converted directly into GitHub issues, or handed to an AFK (background) agent.
+When invoked, Grill-Me turns the model adversarial: instead of immediately generating a plan or code, it interrogates the developer about every dimension of what they want to build. It works through the design tree recursively — for each decision, it asks about downstream dependencies before moving on. Pocock reports 40–100 questions before the model is satisfied that a shared understanding has been reached. The resulting conversation is used as input to a PRD. In Pocock's full workflow (documented in his "Workflow for AI Coding" workshop), the PRD is subsequently broken into [Vertical-Slices](Vertical-Slices.md) as ordered issue files, which are then executed autonomously via the [Ralph-Loop](Ralph-Loop.md). Grill-Me is the planning entry point; the loop is the execution half.
 
 The underlying concept Grill-Me operationalises comes from Frederick P. Brooks' *The Design of Design*: the idea of a **design concept** — the invisible, shared theory of what is being built that exists in the minds of collaborators. Pocock's diagnosis is that developer-AI pairs almost never establish a shared design concept before coding begins, and the mismatch manifests as "AI didn't do what I wanted" failures.
 
@@ -31,5 +31,6 @@ Developer wants to add a new feature. Without Grill-Me: types intent into Claude
 ## Sources
 
 - Matt Pocock, "Software Fundamentals Matter More Than Ever", AI Engineer 2026 — [https://www.youtube.com/watch?v=v4F1gFy-hqg](https://www.youtube.com/watch?v=v4F1gFy-hqg)
+- Matt Pocock, "Full Walkthrough: Workflow for AI Coding", AI Engineer 2026 — [https://www.youtube.com/watch?v=-QFHIoCo-Ko](https://www.youtube.com/watch?v=-QFHIoCo-Ko)
 
 ## Notes
