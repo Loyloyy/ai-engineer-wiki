@@ -21,6 +21,12 @@ Pages added: Nested-Context-Injection
 Pages updated: (none)
 1 entity extracted. Life-OS dropped (aspirational framing, no concrete mechanism); opinion claim placed on Nested-Context-Injection. Prompt-Inversion dropped (thin transcript material).
 
+## [2026-05-27] ingest | Cross-App Access for MCP — Garrett Galow, WorkOS (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=EmhRyw6xeT0
+Pages added: Cross-App-Access
+Pages updated: MCP
+1 entity extracted.
+
 ## [2026-05-27] ingest | Scaling GitHub for Your Agents — Sam Morrow, GitHub (AI Engineer 2026)
 Source: https://www.youtube.com/watch?v=0n3MKk7r60w
 Pages added: (none)
