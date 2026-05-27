@@ -293,3 +293,9 @@ Source: https://www.youtube.com/watch?v=3jGAU2sbAyY
 Pages added: (none)
 Pages updated: (none)
 0 entities extracted. TTS architecture survey: audio codec tokenization, autoregressive backbone, flow matching within-frame generation, Mistral Voix model details. Adjacent to AI engineering but no extractable patterns beyond obvious STT→LLM→TTS pipeline.
+
+## [2026-05-27] ingest | When Is the "Her" Moment? — Neil Zeghidour, Gradium AI (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=P_RI1kCkRbo
+Pages added: Voice-Agent-Design
+Pages updated: (none)
+1 entity extracted. Cascade vs. speech-to-speech tradeoffs, half/full-duplex distinction, tool-call latency as primary bottleneck, filler generation pattern, TTS cost dominance, paralinguistic training signal requirements captured.
