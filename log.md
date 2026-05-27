@@ -233,3 +233,9 @@ Source: https://www.youtube.com/watch?v=_QAVExf_1uw
 Pages added: Demand-Driven-Context
 Pages updated: (none)
 1 entity extracted. Pull-based methodology for enterprise knowledge base curation; context gap scanner pattern captured.
+
+## [2026-05-27] ingest | Full Walkthrough: Writing & Using Skills — Nick Nisi & Zack Proser, WorkOS (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=pFsfax19yOM
+Pages added: (none)
+Pages updated: Skills
+0 new entities. Substantial updates to Skills page: script interpolation syntax, constraints vs. prescriptions pattern, confidence scoring, progressive disclosure within skills, skills-as-agentic-tool-calls vs. RAG, descriptions as routing rules, location conventions.
