@@ -23,6 +23,9 @@
 - [Ralph-Loop](wiki/Ralph-Loop.md) — AFK agent execution loop over vertical slice issues until a plan is complete
 - [Vertical-Slices](wiki/Vertical-Slices.md) — Cross-layer task decomposition (DB + service + UI) enabling per-task self-verification by agents
 
+## Models
+- [Gemma-4](wiki/Gemma-4.md) — Google DeepMind open model family; 4 sizes, Apache 2.0, interleaved local/global attention, MoE, PLE for on-device
+
 ## Tools
 - [ACE](wiki/ACE.md) — GitHub Next prototype; multiplayer coding sessions backed by micro-VMs for team-aligned agentic development
 - [AgentCraft](wiki/AgentCraft.md) — RTS-inspired multi-agent orchestration interface; filesystem-as-map, collision detection, campaign mode

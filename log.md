@@ -21,6 +21,12 @@ Pages added: Nested-Context-Injection
 Pages updated: (none)
 1 entity extracted. Life-OS dropped (aspirational framing, no concrete mechanism); opinion claim placed on Nested-Context-Injection. Prompt-Inversion dropped (thin transcript material).
 
+## [2026-05-27] ingest | Gemma 4 Deep Dive — Cassidy Hardin, Google DeepMind (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=_A367W_qvc8
+Pages added: Gemma-4
+Pages updated: (none)
+1 entity extracted.
+
 ## [2026-05-27] ingest | Gateways are All You Need — Karan Sampath, Anthropic (AI Engineer 2026)
 Source: https://www.youtube.com/watch?v=CD6R4Wf3jnY
 Pages added: MCP-Gateway
