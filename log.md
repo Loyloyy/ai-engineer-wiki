@@ -21,6 +21,18 @@ Pages added: Nested-Context-Injection
 Pages updated: (none)
 1 entity extracted. Life-OS dropped (aspirational framing, no concrete mechanism); opinion claim placed on Nested-Context-Injection. Prompt-Inversion dropped (thin transcript material).
 
+## [2026-05-27] ingest | Build and Deploy AI-Powered Apps — Paige Bailey, Google DeepMind (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=G_bHFmEAarM
+Pages added: (none)
+Pages updated: Gemini-Interactions-API (combined with transcript 18)
+0 standalone entities. Content merged into Gemini-Interactions-API page (demo-heavy session; no entities beyond Interactions API and model announcements already on Gemma-4).
+
+## [2026-05-27] ingest | Building Conversational Agents — Thor Schaeff & Philipp Schmid, Google DeepMind (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=cVzf49yg0D8
+Pages added: Gemini-Interactions-API
+Pages updated: (none)
+1 entity extracted.
+
 ## [2026-05-27] ingest | Why Building Eval Platforms is Hard — Phil Hetzel, Braintrust (AI Engineer 2026)
 Source: https://www.youtube.com/watch?v=_fQ7Z_Wfouk
 Pages added: Braintrust, Eval-Flywheel
