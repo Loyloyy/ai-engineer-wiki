@@ -22,8 +22,27 @@ Braintrust originally used an open-source data warehouse stitched together with 
 
 Braintrust increasingly supports headless usage: coding agents (Claude Code, OpenAI Codex) that call the Braintrust API directly to retrieve eval data, run experiments, and update agent configurations without a human in the UI. This requires a data layer queryable via standard SQL, not only a visual interface.
 
+## Managed prompts and parameters
+
+Prompts, tools, and model parameters can be pushed to Braintrust-managed infrastructure (rather than living only in local code). This provides:
+- **Version history with diffs** — tracked per change with comments, enabling audit trails
+- **Non-technical access** — product managers and domain SMEs can update prompts and model selection via the UI without code changes or engineer involvement
+- **Reproducibility** — important in regulated industries; supports right-to-be-forgotten and change attribution requirements
+
+When managed mode is active, the application fetches its prompt and parameters from Braintrust at runtime rather than from local files.
+
+## Online scoring and sampling
+
+Production logs can be evaluated against scoring functions automatically via automation rules:
+- **Sampling rate**: start at 100% to establish a baseline; reduce to 5–10% once stable to control cost
+- **Deterministic scorers** (schema validation, field checks): cheap; recommended at 100% always
+- **LLM-as-judge scorers** (brand voice, helpfulness, nuanced criteria): expensive; reduce sampling after baseline is established
+
+The remediation workflow: identify failure from a trace → fix the prompt → re-run the eval set → compare delta across experiment runs.
+
 ## Sources
 
 - Phil Hetzel, "Why Building Eval Platforms is Hard", AI Engineer 2026 — [https://www.youtube.com/watch?v=_fQ7Z_Wfouk](https://www.youtube.com/watch?v=_fQ7Z_Wfouk)
+- Braintrust & Trainline, "Shipping Complex AI Applications", AI Engineer 2026 — [https://www.youtube.com/watch?v=ZdheJTfLu-s](https://www.youtube.com/watch?v=ZdheJTfLu-s)
 
 ## Notes

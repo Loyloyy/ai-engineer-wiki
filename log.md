@@ -137,3 +137,21 @@ Wiki size: 34 pages.
 **Contradictions**: None found.
 
 **Deferred until ~100 pages**: deep lint (cleanup, restructuring proposals).
+
+## [2026-05-27] ingest | Mastering AI Pricing — Mayank Pant, Stripe (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=CrqPcIZOOXA
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Vendor presentation on AI pricing strategy; no AI engineering entities meeting the entity bar.
+
+## [2026-05-27] ingest | Agents on the Canvas in tldraw — Steve Ruiz, tldraw (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=sPUjIBH5Cwg
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Demo-heavy talk; leader-follower pattern present but too thinly explained to meet depth bar. Dropped.
+
+## [2026-05-27] ingest | Shipping Complex AI Applications — Braintrust & Trainline (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=ZdheJTfLu-s
+Pages added: (none)
+Pages updated: Braintrust
+0 new entities. Workshop walkthrough; substantive additions (managed prompts, online scoring sampling) merged into existing Braintrust page.
