@@ -21,6 +21,12 @@ Pages added: Nested-Context-Injection
 Pages updated: (none)
 1 entity extracted. Life-OS dropped (aspirational framing, no concrete mechanism); opinion claim placed on Nested-Context-Injection. Prompt-Inversion dropped (thin transcript material).
 
+## [2026-05-27] ingest | Scaling GitHub for Your Agents — Sam Morrow, GitHub (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=0n3MKk7r60w
+Pages added: (none)
+Pages updated: MCP
+0 new pages. All content (tool set optimization, context reduction, evals for tool descriptions, OAuth security) merged into MCP page. GitHub-MCP standalone page dropped — single-source, narrow tool page not meeting entity bar.
+
 ## [2026-05-27] ingest | Gemma 4 Deep Dive — Cassidy Hardin, Google DeepMind (AI Engineer 2026)
 Source: https://www.youtube.com/watch?v=_A367W_qvc8
 Pages added: Gemma-4
