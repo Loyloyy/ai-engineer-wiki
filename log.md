@@ -21,6 +21,12 @@ Pages added: Nested-Context-Injection
 Pages updated: (none)
 1 entity extracted. Life-OS dropped (aspirational framing, no concrete mechanism); opinion claim placed on Nested-Context-Injection. Prompt-Inversion dropped (thin transcript material).
 
+## [2026-05-27] ingest | Why Building Eval Platforms is Hard — Phil Hetzel, Braintrust (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=_fQ7Z_Wfouk
+Pages added: Braintrust, Eval-Flywheel
+Pages updated: (none)
+2 entities extracted.
+
 ## [2026-05-27] ingest | Building Your Own Software Factory — Eric Zakariasson, Cursor (AI Engineer 2026)
 Source: https://www.youtube.com/watch?v=rnDm57Py54A
 Pages added: Software-Factory
