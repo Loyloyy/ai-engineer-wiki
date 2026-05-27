@@ -209,3 +209,15 @@ Source: https://www.youtube.com/watch?v=GmAQKINjv1E
 Pages added: Skills
 Pages updated: (none)
 1 entity extracted. Skills hub page created (triggered by lazy hub rule: concept appeared in 3+ existing pages). Eval-driven skill development pattern (define metrics → write → test → automate evals) captured.
+
+## [2026-05-27] ingest | Ralph Loops: Build Dumb AI Loops That Ship — Chris Parsons, Cherrypick (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=2TLXsxkz0zI
+Pages added: (none)
+Pages updated: Ralph-Loop
+1 entity updated. Added /loop command, reversibility heuristic, sub-agent validation, "pick next most important ticket" principle, and Chris Parsons as second source.
+
+## [2026-05-27] ingest | The Small Model Infrastructure Nobody Built — Filip Makraduli, Superlinked (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=qdh_x-uRs9g
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Vendor talk on Superlinked "Sie" inference engine; GPU hot-swapping and model architecture implementation details are product-specific and don't meet the entity bar.
