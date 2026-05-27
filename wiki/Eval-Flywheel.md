@@ -46,10 +46,13 @@ Hetzel recommends not building the connected flywheel from scratch. The data lay
 - **The best way to find failure modes is production data.** You can't pre-imagine how users will interact with your agent. The flywheel exists to surface what you didn't know to test for. — Phil Hetzel, Braintrust ("Why Building Eval Platforms is Hard", AI Engineer 2026), [https://www.youtube.com/watch?v=_fQ7Z_Wfouk](https://www.youtube.com/watch?v=_fQ7Z_Wfouk)
 - **Most practitioners don't run evals.** They write a decent prompt, ask their coding agent if it looks good, eyeball it, and ship — the next model release often supersedes whatever optimization they did anyway. This is defensible for broad tasks but not at scale on private data. — Samuel Colvin, Pydantic ("GEPA: Evals & Feedback Loops", AI Engineer 2026), [https://www.youtube.com/watch?v=A48uhxfxbsM](https://www.youtube.com/watch?v=A48uhxfxbsM)
 - **Implicit feedback beats explicit.** No one clicks thumbs up/down. The strongest eval signal is what the user does next after the model responds. — Samuel Colvin, Pydantic ("GEPA: Evals & Feedback Loops", AI Engineer 2026), [https://www.youtube.com/watch?v=A48uhxfxbsM](https://www.youtube.com/watch?v=A48uhxfxbsM)
+- **Eval calcification is real: static benchmarks become stale as agents and users evolve.** When agents self-modify via skills and harness updates, and when customer behavior shifts, pre-baked test datasets drift out of alignment. Evals need to be treated as living software, not point-in-time datasets. — Vincent Koc, Comet ("How OpenClaw Ships Faster Than You Can Read the Diff", AI Engineer 2026), [https://www.youtube.com/watch?v=4VhbYlfC7Gs](https://www.youtube.com/watch?v=4VhbYlfC7Gs)
+- **Agents should auto-curate their own eval suites from production traces.** When distribution drift is detected (e.g., customer base changes, new interaction patterns emerge), the agent should analyze its own traces, propose new test cases, and update its eval suite — not wait for a human to notice. — Vincent Koc, Comet ("How OpenClaw Ships Faster Than You Can Read the Diff", AI Engineer 2026), [https://www.youtube.com/watch?v=4VhbYlfC7Gs](https://www.youtube.com/watch?v=4VhbYlfC7Gs)
 
 ## Sources
 
 - Phil Hetzel, "Why Building Eval Platforms is Hard", AI Engineer 2026 — [https://www.youtube.com/watch?v=_fQ7Z_Wfouk](https://www.youtube.com/watch?v=_fQ7Z_Wfouk)
 - Samuel Colvin, "GEPA: Evals & Feedback Loops", AI Engineer 2026 — [https://www.youtube.com/watch?v=A48uhxfxbsM](https://www.youtube.com/watch?v=A48uhxfxbsM)
+- Vincent Koc, Comet, "How OpenClaw Ships Faster Than You Can Read the Diff", AI Engineer 2026 — [https://www.youtube.com/watch?v=4VhbYlfC7Gs](https://www.youtube.com/watch?v=4VhbYlfC7Gs)
 
 ## Notes

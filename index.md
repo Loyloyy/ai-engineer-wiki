@@ -8,17 +8,21 @@
 - [Context-Engine](wiki/Context-Engine.md) — Pre-computation layer supplying agents with expert graphs, organisational history, and resolved best practices
 - [Context-Lifecycle](wiki/Context-Lifecycle.md) — Engineering discipline for context: generate, test, distribute, observe, and adapt prompts/skills like software
 - [Context-Rot](wiki/Context-Rot.md) — Degradation in LLM output quality as context fills, even below stated limits
+- [Continuous-Compute](wiki/Continuous-Compute.md) — Infrastructure paradigm replacing CI/CD at agent scale; embeds validation in the loop, pre-merge queue, stateful compute, semantic human approval
 - [Coordination-Debt](wiki/Coordination-Debt.md) — Wasted work and misalignment from skipping team alignment before agents build; aggravated by fast implementation
 - [Deep-Modules](wiki/Deep-Modules.md) — Large functionality behind simple interfaces; improves AI navigability and testability
 - [Doom-Looping](wiki/Doom-Looping.md) — Infinite token repetition in small reasoning models on hard tasks; mitigated by DPO and RL with verifiable rewards
+- [Durable-Agent-Execution](wiki/Durable-Agent-Execution.md) — Framework for production agent durability: append-only context log + VM-level execution snapshots; replaces replay model for long-running sessions
 - [High-Bandwidth-Artifacts](wiki/High-Bandwidth-Artifacts.md) — Structured persistent interfaces (docs, tables) for human-agent collaboration, contrasted with linear chat
 - [Model-Rot](wiki/Model-Rot.md) — Progressive staleness of LLM domain knowledge as training data ages; acute for fast-moving frameworks and APIs
+- [Smart-Truncation](wiki/Smart-Truncation.md) — Context management technique: preserve head + tail of conversation window, offload middle to retrievable memory store
 - [Smart-Zone](wiki/Smart-Zone.md) — First ~100K tokens of context window where LLM output quality is highest; tasks should be sized to fit
 - [Spec-Driven-Code-Generation](wiki/Spec-Driven-Code-Generation.md) — Workflow of generating code from a spec iteratively without engaging with the codebase directly
 - [Ubiquitous-Language](wiki/Ubiquitous-Language.md) — Shared domain glossary maintained consistently across developer, codebase, and AI interactions
 - [Verifiers-Rule](wiki/Verifiers-Rule.md) — AI solves tasks in proportion to how easy they are to verify; defines a verifiability spectrum
 
 ## Patterns
+- [Agent-Computer](wiki/Agent-Computer.md) — Giving agents a persistent file system/sandbox for scratchpad planning, memory files, and self-extending script libraries
 - [Agent-Self-Diagnostics](wiki/Agent-Self-Diagnostics.md) — Pattern for agent self-reporting via a report tool; catches capability gaps, tool failures, and workarounds; framing as "feedback to creators" is key
 - [Best-Event](wiki/Best-Event.md) — Dispatching the same task to multiple models in parallel work trees; parent agent compares and combines outputs
 - [Breadcrumb-Prompting](wiki/Breadcrumb-Prompting.md) — Incremental task disclosure to agents to prevent early-step sprint and late-step quality collapse
@@ -39,8 +43,8 @@
 - [Software-Factory](wiki/Software-Factory.md) — Autonomous agent pipeline for 24/7 software production; human provides intent, agents decompose and implement
 - [Stop-Hook-Interrogation](wiki/Stop-Hook-Interrogation.md) — Querying the agent at run end about what would have helped; surfaces contradictory directives, missing tools, config errors
 - [Validation-Contract](wiki/Validation-Contract.md) — Pre-implementation correctness spec written during planning; defines done independently of implementation to prevent agent drift
-- [Voice-Agent-Design](wiki/Voice-Agent-Design.md) — Design considerations and failure modes for voice-first AI agents, covering latency architecture, conversational naturalness, and cost structure
 - [Vertical-Slices](wiki/Vertical-Slices.md) — Cross-layer task decomposition (DB + service + UI) enabling per-task self-verification by agents
+- [Voice-Agent-Design](wiki/Voice-Agent-Design.md) — Design considerations and failure modes for voice-first AI agents, covering latency architecture, conversational naturalness, and cost structure
 
 ## Models
 - [Gemma-4](wiki/Gemma-4.md) — Google DeepMind open model family; 4 sizes, Apache 2.0, interleaved local/global attention, MoE, PLE for on-device
@@ -54,6 +58,7 @@
 - [LiteRT-LM](wiki/LiteRT-LM.md) — Google cross-platform LLM inference runtime for edge devices; progressive skill loading, LoRA hot-swapping
 - [MCP](wiki/MCP.md) — Model Context Protocol; open standard connecting agents to external tools via client-server protocol
 - [MCP-Apps](wiki/MCP-Apps.md) — Official MCP extension for embedding interactive HTML UI inside chat agents; bidirectional messaging, generative UI spectrum
+- [MLX](wiki/MLX.md) — Apple Silicon ML framework; on-device inference for frontier models via unified memory; modular audio/vision/video pipelines; TurboQuant for 1M context on device
 - [n8n](wiki/n8n.md) — Visual low-code workflow automation with AI agent node and human-in-the-loop tool call interceptor
 - [OpenAI-Codex](wiki/OpenAI-Codex.md) — OpenAI's software engineering agent; plugins, sub-agents, automations, code review, guardian approvals
 - [Unblocked](wiki/Unblocked.md) — Context engine product for engineering teams; expert graphs, org history, best practices via MCP/CLI/API

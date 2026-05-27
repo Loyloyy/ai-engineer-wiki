@@ -299,3 +299,81 @@ Source: https://www.youtube.com/watch?v=P_RI1kCkRbo
 Pages added: Voice-Agent-Design
 Pages updated: (none)
 1 entity extracted. Cascade vs. speech-to-speech tradeoffs, half/full-duplex distinction, tool-call latency as primary bottleneck, filler generation pattern, TTS cost dominance, paralinguistic training signal requirements captured.
+
+## [2026-05-27] ingest | Give Your Chat Agent a Voice — Luke Harries, ElevenLabs (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=DCZZ3AJKzuc
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Product announcement for ElevenLabs Voice Engine (SDK wrapper to add voice to existing chat agents); insufficient substance beyond what Voice-Agent-Design covers.
+
+## [2026-05-27] ingest | Replay vs. Snapshot: Two Roads to Durable Agents — Eric Allam, Trigger.dev (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=svCnShDvgQg
+Pages added: Durable-Agent-Execution
+Pages updated: (none)
+1 entity extracted. Replay model limitations for agent sessions, context log + VM snapshot architecture, stateless→stateful compute shift, Firecracker microVM snapshot/restore performance captured.
+
+## [2026-05-27] ingest | Feedback Loops Are All You Need — Mehedi Hassan, Granola (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=ON5LIT0M4do
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Product engineering talk on custom LLM tracing tools and Electron→web-shell pattern; no novel AI engineering entities.
+
+## [2026-05-27] ingest | How We Solved Context Management in Agents — Sally-Ann Delucia, Arize (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=esY99nYXxR4
+Pages added: Smart-Truncation
+Pages updated: (none)
+1 entity extracted. Head+tail truncation with middle-segment memory offload, long session evals (10-turn simulation), sub-agent delegation for heavy data contexts captured.
+
+## [2026-05-27] ingest | AI Coworker That Lives in Slack — Fryderyk Wiatrowski, Viktor (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=ohKt066uFhg
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Product pitch for Viktor.ai Slack agent; engineering insights (channel-scoped access control, multi-modal input handling) brief and product-specific.
+
+## [2026-05-27] ingest | Embedding the OpenClaw Coding Agent in Your Product — Matthias, TAI (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=vAIDdLKB6-w
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Intro/tinkering talk on OpenClaw/Pi SDK with demo; session-per-customer pattern thinly covered.
+
+## [2026-05-27] ingest | Why MLX — Prince Canuma, Neywa Labs (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=zTLJNHj0DeQ
+Pages added: MLX
+Pages updated: (none)
+1 entity extracted. Apple Silicon ML framework; MLX VLM, MLX Audio modular pipeline, TurboQuant (4x KV cache compression, 1M on-device context), robotics/accessibility use cases captured.
+
+## [2026-05-27] ingest | How OpenClaw Ships Faster Than You Can Read the Diff — Vincent Koc, Comet (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=4VhbYlfC7Gs
+Pages added: (none)
+Pages updated: Eval-Flywheel
+0 new entities. Two opinions added to Eval-Flywheel: eval calcification problem; agents auto-curating eval suites from production traces on distribution drift.
+
+## [2026-05-27] ingest | Give Your Agent a Computer — Nico Albanese, Vercel (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=wflNENRSUb4
+Pages added: Agent-Computer
+Pages updated: (none)
+1 entity extracted. Persistent file system as behavioral substrate; scratchpad plan files; memories.md memory architecture; agent self-extension via script generation; named sandbox + snapshot model; provider tool taxonomy captured.
+
+## [2026-05-27] ingest | Lessons from Trillion Token Deployments at Fortune 500s — Alessandro Cappelli, Adaptive ML (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=X6NShR2ccOg
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. RL ops for enterprise model training; targets companies doing custom RL fine-tuning, not general AI engineering practice.
+
+## [2026-05-27] ingest | Self-Training Agents: Hermes — Merve Noyan, HuggingFace (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=OV56RddyFuU
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Product showcase of HuggingFace Hub features (Hermes agent, Traces, Skills, MCP); spread too thin across product announcements.
+
+## [2026-05-27] ingest | Building a Chess Coach — Anant Dole & Asbjorn, Play Magnus (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=FlzpEGHNVKQ
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Domain-specific application talk; insights (domain engine + LLM translator, autonomous feedback loop via Claude Code Channel) briefly stated; Channel is research preview, not stable pattern.
+
+## [2026-05-27] ingest | CI/CD Is Dead: Agents Need Continuous Compute — Madison (NEA) & Hugo Santos, Namespace (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=VktrqzQgytY
+Pages added: Continuous-Compute
+Pages updated: (none)
+1 entity extracted. CI/CD failure modes at agent scale, stateful compute loop, pre-merge queue, semantic human approval, multiverse/parallel candidate architecture captured.
