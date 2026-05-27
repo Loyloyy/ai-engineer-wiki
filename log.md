@@ -377,3 +377,24 @@ Source: https://www.youtube.com/watch?v=VktrqzQgytY
 Pages added: Continuous-Compute
 Pages updated: (none)
 1 entity extracted. CI/CD failure modes at agent scale, stateful compute loop, pre-merge queue, semantic human approval, multiverse/parallel candidate architecture captured.
+
+## [2026-05-27] lint | post-batch scan (T39–T60, 30 transcripts)
+Wiki size: 53 pages.
+
+**Orphans**: 20 pages have no inbound cross-links from other wiki pages. Breakdown by section:
+- Tool/Model/Benchmark pages (expected sparse cross-links at this wiki size): Agent-Computer, Best-Event, Braintrust, BullshitBench, GEPA, Gemini-Interactions-API, Gemma-4, MCP-Apps, MLX, OpenAI-Codex, Unblocked, n8n — no action needed.
+- Concept/Pattern pages with no cross-links yet: Agent-Self-Diagnostics, Continuous-Compute, Demand-Driven-Context, Library-Source-Context, Search-Tool-Design, Smart-Truncation, Validation-Contract, Voice-Agent-Design — will acquire links organically as cross-referencing grows. No action needed at 53 pages.
+
+**Hub candidates**: Several terms appear in 2+ pages without own pages:
+- "sub-agent" (8 pages) — deferred. Sub-agent is a capability primitive used across many tools/patterns; no unique mechanism warrants a standalone page yet.
+- "sandbox" (6 pages, including new Agent-Computer and Durable-Agent-Execution) — deferred. Sandbox is an infrastructure primitive; coverage split across Agent-Computer, Durable-Agent-Execution, ACE is appropriate.
+- "compaction" (4 pages) — deferred. Auto-compaction is a side topic on each page (Smart-Truncation, Agent-Computer, Context-Rot, Smart-Zone); no single page needed.
+- "cache" (4 pages) — deferred. Context caching (prompt cache hits) appears across pages as a practical consideration, not a primary concept.
+- "tool description" (4 pages) — deferred. Tool description best practices appear in Search-Tool-Design, MCP, Progressive-Tool-Discovery, Skills; well covered by existing pages.
+- "handoff" (4 pages) — deferred. Agent handoff appears as a technique within larger patterns, not a standalone concept.
+
+**Opinion threads**: No single opinion claim repeated verbatim across 3+ topic pages. No Debate pages proposed.
+
+**Contradictions**: None found. Agent-Computer and Smart-Truncation both recommend against LLM summarization for different reasons (lossy + dangerous vs. inconsistent); these are compatible, not contradicting.
+
+**Deferred until ~100 pages**: deep lint (cleanup, restructuring proposals).
