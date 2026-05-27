@@ -28,6 +28,7 @@
 - [Eval-Flywheel](wiki/Eval-Flywheel.md) — Continuous loop: production traces → offline evals → agent improvement → deployment; requires purpose-built data layer
 - [GEPA](wiki/GEPA.md) — Genetic Prompt Algorithm; iterative prompt optimization via Pareto-frontier sampling and a proposer agent; most valuable for private-data tasks at scale
 - [Grill-Me](wiki/Grill-Me.md) — Claude Code skill that exhaustively interviews the developer before planning to build a shared design concept
+- [Library-Source-Context](wiki/Library-Source-Context.md) — Add library source as git subtree so agents treat it as first-party code; paired with ESLint back-pressure rules to prevent anti-patterns
 - [MCP-Gateway](wiki/MCP-Gateway.md) — Enterprise layer centralising auth, access control, and observability across all MCP servers
 - [Model-Airplane](wiki/Model-Airplane.md) — Simplified reference implementation showing correct integration shape; thin production simulacrum for agent context
 - [Nested-Context-Injection](wiki/Nested-Context-Injection.md) — Inject parent topic descriptions hierarchically into agent conversations instead of relying on memory retrieval

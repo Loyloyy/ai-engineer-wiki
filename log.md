@@ -263,3 +263,9 @@ Source: https://www.youtube.com/watch?v=-aM2EDTiaMs
 Pages added: Agent-Self-Diagnostics
 Pages updated: (none)
 1 entity extracted. Self-diagnostics pattern (report tool + system prompt), implicit/explicit signal taxonomy, small classifiers vs LLM-as-judge captured.
+
+## [2026-05-27] ingest | Vibe Engineering: Effect Apps — Michael Arnaldi, Effectful (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=Wmp2Tku2PrI
+Pages added: Library-Source-Context
+Pages updated: (none)
+1 entity extracted. Git subtree approach for library pattern discovery, ESLint back-pressure rules, pattern extraction workflow captured.
