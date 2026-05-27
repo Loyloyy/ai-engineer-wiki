@@ -197,3 +197,15 @@ Source: https://www.youtube.com/watch?v=bSG9wUYaHWU
 Pages added: Context-Lifecycle
 Pages updated: (none)
 1 entity extracted. Context SBOM and Context Filter captured as sections within Context-Lifecycle.
+
+## [2026-05-27] ingest | LLMs Workshop — ElevenLabs (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=Lgqk5SdSKnY
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Vendor workshop on ElevenLabs audio generation; no AI engineering entities meeting the entity bar.
+
+## [2026-05-27] ingest | Skill Issue: How We Used AI to Make Agents Actually Good at Supabase — Pedro Rodrigues (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=GmAQKINjv1E
+Pages added: Skills
+Pages updated: (none)
+1 entity extracted. Skills hub page created (triggered by lazy hub rule: concept appeared in 3+ existing pages). Eval-driven skill development pattern (define metrics → write → test → automate evals) captured.
