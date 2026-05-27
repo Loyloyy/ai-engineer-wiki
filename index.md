@@ -1,5 +1,8 @@
 # Wiki Index
 
+## Benchmarks
+- [BullshitBench](wiki/BullshitBench.md) — 155-question benchmark testing model pushback on nonsense premises; measures epistemic calibration, not capability
+
 ## Concepts
 - [Context-Rot](wiki/Context-Rot.md) — Degradation in LLM output quality as context fills, even below stated limits
 - [Deep-Modules](wiki/Deep-Modules.md) — Large functionality behind simple interfaces; improves AI navigability and testability

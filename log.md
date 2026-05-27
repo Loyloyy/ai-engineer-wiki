@@ -20,3 +20,9 @@ Source: https://www.youtube.com/watch?v=4fntwuOoedA
 Pages added: Nested-Context-Injection
 Pages updated: (none)
 1 entity extracted. Life-OS dropped (aspirational framing, no concrete mechanism); opinion claim placed on Nested-Context-Injection. Prompt-Inversion dropped (thin transcript material).
+
+## [2026-05-27] ingest | What Do Models Still Suck At? — Peter Gostev, Arena.ai (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=R7A8rX-09Zw
+Pages added: BullshitBench
+Pages updated: (none)
+1 entity extracted. Arena.ai company page dropped (entity bar not met independently; attributed as source on BullshitBench).
