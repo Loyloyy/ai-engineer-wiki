@@ -42,4 +42,5 @@
 - [Braintrust](wiki/Braintrust.md) — Agent quality platform; evals + production observability; purpose-built trace data layer
 - [Gemini-Interactions-API](wiki/Gemini-Interactions-API.md) — Google DeepMind's unified agent+model API; server-side state, async execution, tool combination, typed content blocks
 - [MCP](wiki/MCP.md) — Model Context Protocol; open standard connecting agents to external tools via client-server protocol
+- [n8n](wiki/n8n.md) — Visual low-code workflow automation with AI agent node and human-in-the-loop tool call interceptor
 - [OpenAI-Codex](wiki/OpenAI-Codex.md) — OpenAI's software engineering agent; plugins, sub-agents, automations, code review, guardian approvals

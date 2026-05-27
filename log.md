@@ -155,3 +155,15 @@ Source: https://www.youtube.com/watch?v=ZdheJTfLu-s
 Pages added: (none)
 Pages updated: Braintrust
 0 new entities. Workshop walkthrough; substantive additions (managed prompts, online scoring sampling) merged into existing Braintrust page.
+
+## [2026-05-27] ingest | Agents for Everything Else — Swyx (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=zepu8Kk6FBQ
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Keynote on AI-augmented conference operations (Devin for Figma→web, schedule management, procurement); inspirational framing, no concrete AI engineering entities meeting the entity bar.
+
+## [2026-05-27] ingest | Human-in-the-Loop Automation with n8n — Liam McGarrigle (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=tDArkCqjA-c
+Pages added: n8n
+Pages updated: (none)
+1 entity extracted.
