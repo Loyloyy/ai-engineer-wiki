@@ -257,3 +257,9 @@ Source: https://www.youtube.com/watch?v=A48uhxfxbsM
 Pages added: GEPA
 Pages updated: Eval-Flywheel
 1 entity extracted. Genetic Prompt Algorithm (Jeppa), Pareto-frontier sampling, proposer agent pattern, Shopify cost case study captured. Opinions on evals added to Eval-Flywheel.
+
+## [2026-05-27] ingest | Everything You Need to Know About Agent Observability — Zubin & Danny, Raindrop (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=-aM2EDTiaMs
+Pages added: Agent-Self-Diagnostics
+Pages updated: (none)
+1 entity extracted. Self-diagnostics pattern (report tool + system prompt), implicit/explicit signal taxonomy, small classifiers vs LLM-as-judge captured.

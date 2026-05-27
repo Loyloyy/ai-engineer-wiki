@@ -19,6 +19,7 @@
 - [Verifiers-Rule](wiki/Verifiers-Rule.md) — AI solves tasks in proportion to how easy they are to verify; defines a verifiability spectrum
 
 ## Patterns
+- [Agent-Self-Diagnostics](wiki/Agent-Self-Diagnostics.md) — Pattern for agent self-reporting via a report tool; catches capability gaps, tool failures, and workarounds; framing as "feedback to creators" is key
 - [Best-Event](wiki/Best-Event.md) — Dispatching the same task to multiple models in parallel work trees; parent agent compares and combines outputs
 - [Breadcrumb-Prompting](wiki/Breadcrumb-Prompting.md) — Incremental task disclosure to agents to prevent early-step sprint and late-step quality collapse
 - [Cross-App-Access](wiki/Cross-App-Access.md) — OAuth extension (XAA/ID-JAG) enabling automatic MCP auth via enterprise SSO; eliminates per-server consent screens
