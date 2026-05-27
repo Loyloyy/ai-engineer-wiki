@@ -122,3 +122,18 @@ Source: https://www.youtube.com/watch?v=WE_Gnowy3uw
 Pages added: Best-Event
 Pages updated: (none)
 1 entity extracted.
+
+## [2026-05-27] lint | post-batch scan (20-transcript bootstrap)
+Wiki size: 34 pages.
+
+**Orphans**: None. All pages are linked from index.md. 6 pages have no inbound cross-links from other wiki pages (Best-Event, Braintrust, BullshitBench, Gemini-Interactions-API, Gemma-4, OpenAI-Codex) — all are Tool/Benchmark/Model pages for which cross-linking from concept/pattern pages is sparse at this wiki size. No action needed.
+
+**Hub candidates**: Two terms appear in 3+ pages without their own page:
+- "sub-agent" (3+ pages: Software-Factory, Best-Event, OpenAI-Codex, AgentCraft) — deferred. Sub-agent is a capability primitive within multiple tools, not a standalone concept with its own distinct definition separate from the tools that implement it.
+- "reasoning mode" (3 pages: BullshitBench, Doom-Looping, Smart-Zone) — deferred. Appears as context in these pages, not as a subject warranting its own entry at this time.
+
+**Opinion threads**: No single opinion claim repeated verbatim across 3+ topic pages. No Debate pages proposed.
+
+**Contradictions**: None found.
+
+**Deferred until ~100 pages**: deep lint (cleanup, restructuring proposals).
