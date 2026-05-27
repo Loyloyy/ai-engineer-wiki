@@ -98,3 +98,9 @@ Source: https://www.youtube.com/watch?v=R7A8rX-09Zw
 Pages added: BullshitBench
 Pages updated: (none)
 1 entity extracted. Arena.ai company page dropped (entity bar not met independently; attributed as source on BullshitBench).
+
+## [2026-05-27] ingest | Everything I Learned Training Frontier Small Models — Maxime Labonne, Liquid AI (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=fLUtUkqYHnQ
+Pages added: Doom-Looping, LFM-2
+Pages updated: (none)
+2 entities extracted.

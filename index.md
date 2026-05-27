@@ -6,6 +6,7 @@
 ## Concepts
 - [AFK-Tasks](wiki/AFK-Tasks.md) — Implementation work delegable to agents without human presence; contrasted with always-HIL planning
 - [Context-Rot](wiki/Context-Rot.md) — Degradation in LLM output quality as context fills, even below stated limits
+- [Doom-Looping](wiki/Doom-Looping.md) — Infinite token repetition in small reasoning models on hard tasks; mitigated by DPO and RL with verifiable rewards
 - [Coordination-Debt](wiki/Coordination-Debt.md) — Wasted work and misalignment from skipping team alignment before agents build; aggravated by fast implementation
 - [Deep-Modules](wiki/Deep-Modules.md) — Large functionality behind simple interfaces; improves AI navigability and testability
 - [High-Bandwidth-Artifacts](wiki/High-Bandwidth-Artifacts.md) — Structured persistent interfaces (docs, tables) for human-agent collaboration, contrasted with linear chat
@@ -28,6 +29,7 @@
 
 ## Models
 - [Gemma-4](wiki/Gemma-4.md) — Google DeepMind open model family; 4 sizes, Apache 2.0, interleaved local/global attention, MoE, PLE for on-device
+- [LFM-2](wiki/LFM-2.md) — Liquid AI edge-optimised model family (350M–24B); hybrid short-conv + GQA architecture designed via on-device profiling
 
 ## Tools
 - [ACE](wiki/ACE.md) — GitHub Next prototype; multiplayer coding sessions backed by micro-VMs for team-aligned agentic development
