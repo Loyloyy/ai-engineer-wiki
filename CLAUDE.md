@@ -18,7 +18,7 @@ Three-layer architecture:
 3. **Never silently overwrite existing pages.** If new content contradicts existing content, append to `## Opinions` and flag with `[CONTRADICTION: <brief>]` for user review.
 4. **Never create folders, taxonomies, schemas, or topic-level CLAUDE.md files beyond what's specified here.** If you find yourself wanting to add structure, STOP, log the observation in `log.md`, wait for user instruction.
 5. **Never create speaker pages.** Speakers are metadata on sources, not entities.
-6. **Never include customer-identifying information** (Daiwa, Dell client names, etc.) in any committed file.
+6. **Never include customer-identifying information** in any committed file.
 7. **Never fabricate transcript content** if auto-subs are unintelligible. Log as `unprocessable` in `log.md` and skip.
 
 ## Folder structure
@@ -214,7 +214,7 @@ When writing this script, it must:
 
 ## User working style
 
-The user is a production GenAI data scientist (Dell Singapore). Direct, surgical, low tolerance for verbose or hedged responses. When proposing actions:
+The user is a production GenAI data scientist. Direct, surgical, low tolerance for verbose or hedged responses. When proposing actions:
 - State the action concisely; no preamble.
 - Push back if you disagree with a request, but briefly.
 - No excessive caveats or apologies.
