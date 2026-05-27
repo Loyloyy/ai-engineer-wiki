@@ -239,3 +239,9 @@ Source: https://www.youtube.com/watch?v=pFsfax19yOM
 Pages added: (none)
 Pages updated: Skills
 0 new entities. Substantial updates to Skills page: script interpolation syntax, constraints vs. prescriptions pattern, confidence scoring, progressive disclosure within skills, skills-as-agentic-tool-calls vs. RAG, descriptions as routing rules, location conventions.
+
+## [2026-05-27] ingest | The Multi-Agent Architecture That Actually Ships — Luke Alvoeiro, Factory (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=ow1we5PzK-o
+Pages added: Validation-Contract
+Pages updated: (none)
+1 entity extracted. Validation contract concept (pre-implementation correctness spec), multi-agent communication taxonomy, serial execution principle, and model role assignment captured.

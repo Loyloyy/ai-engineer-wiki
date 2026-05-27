@@ -34,6 +34,7 @@
 - [Skills](wiki/Skills.md) — Portable context-packaging format for coding agents: skill.md with progressive disclosure, optional reference files and scripts
 - [Software-Factory](wiki/Software-Factory.md) — Autonomous agent pipeline for 24/7 software production; human provides intent, agents decompose and implement
 - [Stop-Hook-Interrogation](wiki/Stop-Hook-Interrogation.md) — Querying the agent at run end about what would have helped; surfaces contradictory directives, missing tools, config errors
+- [Validation-Contract](wiki/Validation-Contract.md) — Pre-implementation correctness spec written during planning; defines done independently of implementation to prevent agent drift
 - [Vertical-Slices](wiki/Vertical-Slices.md) — Cross-layer task decomposition (DB + service + UI) enabling per-task self-verification by agents
 
 ## Models
