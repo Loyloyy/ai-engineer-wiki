@@ -185,3 +185,15 @@ Source: https://www.youtube.com/watch?v=BKWpYIWvAo4
 Pages added: LiteRT-LM
 Pages updated: Gemma-4
 2 entities extracted (LiteRT-LM new page; Gemma-4 context window data added).
+
+## [2026-05-27] ingest | Mergeable by Default: Building the Context Engine — Peter Werry, Unblocked (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=5ID22ACI7IM
+Pages added: Context-Engine, Unblocked
+Pages updated: (none)
+2 entities extracted. Satisfaction-of-search concept captured as section within Context-Engine.
+
+## [2026-05-27] ingest | Context Is the New Code — Patrick Debois, Tessl (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=bSG9wUYaHWU
+Pages added: Context-Lifecycle
+Pages updated: (none)
+1 entity extracted. Context SBOM and Context Filter captured as sections within Context-Lifecycle.

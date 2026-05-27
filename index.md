@@ -5,6 +5,8 @@
 
 ## Concepts
 - [AFK-Tasks](wiki/AFK-Tasks.md) — Implementation work delegable to agents without human presence; contrasted with always-HIL planning
+- [Context-Engine](wiki/Context-Engine.md) — Pre-computation layer supplying agents with expert graphs, organisational history, and resolved best practices
+- [Context-Lifecycle](wiki/Context-Lifecycle.md) — Engineering discipline for context: generate, test, distribute, observe, and adapt prompts/skills like software
 - [Context-Rot](wiki/Context-Rot.md) — Degradation in LLM output quality as context fills, even below stated limits
 - [Coordination-Debt](wiki/Coordination-Debt.md) — Wasted work and misalignment from skipping team alignment before agents build; aggravated by fast implementation
 - [Deep-Modules](wiki/Deep-Modules.md) — Large functionality behind simple interfaces; improves AI navigability and testability
@@ -45,3 +47,4 @@
 - [MCP](wiki/MCP.md) — Model Context Protocol; open standard connecting agents to external tools via client-server protocol
 - [n8n](wiki/n8n.md) — Visual low-code workflow automation with AI agent node and human-in-the-loop tool call interceptor
 - [OpenAI-Codex](wiki/OpenAI-Codex.md) — OpenAI's software engineering agent; plugins, sub-agents, automations, code review, guardian approvals
+- [Unblocked](wiki/Unblocked.md) — Context engine product for engineering teams; expert graphs, org history, best practices via MCP/CLI/API
