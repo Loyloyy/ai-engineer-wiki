@@ -21,6 +21,12 @@ Pages added: Nested-Context-Injection
 Pages updated: (none)
 1 entity extracted. Life-OS dropped (aspirational framing, no concrete mechanism); opinion claim placed on Nested-Context-Injection. Prompt-Inversion dropped (thin transcript material).
 
+## [2026-05-27] ingest | Putting the Orc in Orchestration — Ido Salomon, AgentCraft (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=kR64LOqBBCU
+Pages added: AgentCraft
+Pages updated: (none)
+1 entity extracted.
+
 ## [2026-05-27] ingest | MCP = Mega Context Problem — Matt Carey, Cloudflare (AI Engineer 2026)
 Source: https://www.youtube.com/watch?v=YBYUvGOuotE
 Pages added: MCP, Progressive-Tool-Discovery
