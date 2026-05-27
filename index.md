@@ -25,6 +25,7 @@
 - [Decision-Log](wiki/Decision-Log.md) — Agent self-unblocks on ambiguous decisions and records them for async human review
 - [Demand-Driven-Context](wiki/Demand-Driven-Context.md) — Pull-based methodology for curating enterprise knowledge bases: let agents fail on real tasks, surface gaps, document what's missing
 - [Eval-Flywheel](wiki/Eval-Flywheel.md) — Continuous loop: production traces → offline evals → agent improvement → deployment; requires purpose-built data layer
+- [GEPA](wiki/GEPA.md) — Genetic Prompt Algorithm; iterative prompt optimization via Pareto-frontier sampling and a proposer agent; most valuable for private-data tasks at scale
 - [Grill-Me](wiki/Grill-Me.md) — Claude Code skill that exhaustively interviews the developer before planning to build a shared design concept
 - [MCP-Gateway](wiki/MCP-Gateway.md) — Enterprise layer centralising auth, access control, and observability across all MCP servers
 - [Model-Airplane](wiki/Model-Airplane.md) — Simplified reference implementation showing correct integration shape; thin production simulacrum for agent context

@@ -251,3 +251,9 @@ Source: https://www.youtube.com/watch?v=o-zkvb0iFDQ
 Pages added: MCP-Apps
 Pages updated: (none)
 1 entity extracted. MCP Apps (formerly MCPUI) — official MCP extension for embedded interactive HTML UI in chat agents; bidirectional messaging spectrum; generative UI spectrum captured.
+
+## [2026-05-27] ingest | GEPA: Evals & Feedback Loops — Samuel Colvin, Pydantic (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=A48uhxfxbsM
+Pages added: GEPA
+Pages updated: Eval-Flywheel
+1 entity extracted. Genetic Prompt Algorithm (Jeppa), Pareto-frontier sampling, proposer agent pattern, Shopify cost case study captured. Opinions on evals added to Eval-Flywheel.

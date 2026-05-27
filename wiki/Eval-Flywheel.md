@@ -44,9 +44,12 @@ Hetzel recommends not building the connected flywheel from scratch. The data lay
 
 - **Evals are a systems problem, not a UI/UX problem.** The frontend is easy to vibe-code. The data layer — handling large, semi-structured, high-velocity traces with multiple query patterns — is the hard part that teams consistently underestimate. — Phil Hetzel, Braintrust ("Why Building Eval Platforms is Hard", AI Engineer 2026), [https://www.youtube.com/watch?v=_fQ7Z_Wfouk](https://www.youtube.com/watch?v=_fQ7Z_Wfouk)
 - **The best way to find failure modes is production data.** You can't pre-imagine how users will interact with your agent. The flywheel exists to surface what you didn't know to test for. — Phil Hetzel, Braintrust ("Why Building Eval Platforms is Hard", AI Engineer 2026), [https://www.youtube.com/watch?v=_fQ7Z_Wfouk](https://www.youtube.com/watch?v=_fQ7Z_Wfouk)
+- **Most practitioners don't run evals.** They write a decent prompt, ask their coding agent if it looks good, eyeball it, and ship — the next model release often supersedes whatever optimization they did anyway. This is defensible for broad tasks but not at scale on private data. — Samuel Colvin, Pydantic ("GEPA: Evals & Feedback Loops", AI Engineer 2026), [https://www.youtube.com/watch?v=A48uhxfxbsM](https://www.youtube.com/watch?v=A48uhxfxbsM)
+- **Implicit feedback beats explicit.** No one clicks thumbs up/down. The strongest eval signal is what the user does next after the model responds. — Samuel Colvin, Pydantic ("GEPA: Evals & Feedback Loops", AI Engineer 2026), [https://www.youtube.com/watch?v=A48uhxfxbsM](https://www.youtube.com/watch?v=A48uhxfxbsM)
 
 ## Sources
 
 - Phil Hetzel, "Why Building Eval Platforms is Hard", AI Engineer 2026 — [https://www.youtube.com/watch?v=_fQ7Z_Wfouk](https://www.youtube.com/watch?v=_fQ7Z_Wfouk)
+- Samuel Colvin, "GEPA: Evals & Feedback Loops", AI Engineer 2026 — [https://www.youtube.com/watch?v=A48uhxfxbsM](https://www.youtube.com/watch?v=A48uhxfxbsM)
 
 ## Notes
