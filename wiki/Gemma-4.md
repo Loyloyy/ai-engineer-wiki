@@ -13,6 +13,16 @@ Google DeepMind's fourth-generation family of open-source models, released April
 
 The 31B ranked #3 on the global LM Arena leaderboard at launch. The 26B ranked top 6 among open-source models. Both outperform models 20× their size on various benchmarks.
 
+## E2B and E4B edge capabilities
+
+The on-device models (E2B and E4B) in Gemma 4 ship with agent-oriented features built into the model architecture rather than achieved via prompt engineering:
+
+- **Function calling**: native support for tool calling to local APIs and external services; enables on-device agent loops
+- **Structured JSON output**: model-native structured output without prompt workarounds
+- **Chain-of-thought (thinking mode)**: on-device reasoning trace; Google AI Gallery app exposes this as a visible thinking panel
+
+RAM requirements after quantization: E2B ≈ 1–2 GB (usable on mid-range phones); E4B higher (suited for laptops and IoT devices).
+
 ## Architecture highlights
 
 **Interleaved local/global attention (5:1 ratio)**: Local layers use a sliding window of 1,024 tokens (512 for E2B); global layers attend to all preceding tokens. The last layer is always global. GQA groups 2 queries per KV head in local layers, 8 queries per KV head in global layers (with doubled KV head length to compensate for quality). This reduces memory cost significantly while maintaining quality.
@@ -31,5 +41,6 @@ Apache 2.0 — explicit commercial use permitted, enabling seamless integration 
 
 - Cassidy Hardin, "Gemma 4 Deep Dive", AI Engineer 2026 — [https://www.youtube.com/watch?v=_A367W_qvc8](https://www.youtube.com/watch?v=_A367W_qvc8)
 - Cormac Brick, "TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM", AI Engineer 2026 — [https://www.youtube.com/watch?v=BKWpYIWvAo4](https://www.youtube.com/watch?v=BKWpYIWvAo4)
+- Chintan Parikh & Weiyi Wang, Google, "Accelerating AI on Edge", AI Engineer 2026 — [https://www.youtube.com/watch?v=Lm8BLHkxiAo](https://www.youtube.com/watch?v=Lm8BLHkxiAo)
 
 ## Notes

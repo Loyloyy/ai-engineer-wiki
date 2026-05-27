@@ -221,3 +221,15 @@ Source: https://www.youtube.com/watch?v=qdh_x-uRs9g
 Pages added: (none)
 Pages updated: (none)
 0 entities extracted. Vendor talk on Superlinked "Sie" inference engine; GPU hot-swapping and model architecture implementation details are product-specific and don't meet the entity bar.
+
+## [2026-05-27] ingest | Accelerating AI on Edge — Chintan Parikh & Weiyi Wang, Google (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=Lm8BLHkxiAo
+Pages added: (none)
+Pages updated: LiteRT-LM, Gemma-4
+0 new entities. Performance data (35x vs Llama on mobile, NPU 3-10x) added to LiteRT-LM; E2B/E4B agent capabilities (function calling, structured JSON, chain-of-thought, RAM requirements) added to Gemma-4.
+
+## [2026-05-27] ingest | Demand-Driven Context: A Methodology for Coherent Knowledge Bases Through Agent Failure — Raj, IKEA (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=_QAVExf_1uw
+Pages added: Demand-Driven-Context
+Pages updated: (none)
+1 entity extracted. Pull-based methodology for enterprise knowledge base curation; context gap scanner pattern captured.

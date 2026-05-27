@@ -8,7 +8,9 @@ LiteRT-LM is the auto-regressive inference layer of the Google AI Edge stack, pr
 
 **LiteRT** (the parent library) is the non-auto-regressive runtime for other model types — voice activity detection, image tracking, denoising — that typically accompany an LLM in a full production app. LiteRT-LM builds on LiteRT specifically for LLMs.
 
-For NPU acceleration, an ahead-of-time (AOT) compilation step is required to produce a device-specific artifact; CPU/GPU use a just-in-time (JIT) workflow with a single portable file.
+For NPU acceleration, an ahead-of-time (AOT) compilation step is required to produce a device-specific artifact; CPU/GPU use a just-in-time (JIT) workflow with a single portable file. LiteRT has completed NPU integrations with Qualcomm and MediaTek; NPU execution yields 3–10x performance improvements over CPU, and up to 13x in specific accelerator configurations.
+
+**Benchmark performance vs. Llama**: On mobile, LiteRT-LM runs up to 35× faster than Llama.cpp. On desktop, performance is at par. On IoT devices (e.g. Raspberry Pi), roughly 3× faster.
 
 ## Skill system (progressive on-demand loading)
 
@@ -42,5 +44,6 @@ For 2–4B models (system GenAI), customization via prompting and skills is pref
 ## Sources
 
 - Cormac Brick, "TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM", AI Engineer 2026 — [https://www.youtube.com/watch?v=BKWpYIWvAo4](https://www.youtube.com/watch?v=BKWpYIWvAo4)
+- Chintan Parikh & Weiyi Wang, Google, "Accelerating AI on Edge", AI Engineer 2026 — [https://www.youtube.com/watch?v=Lm8BLHkxiAo](https://www.youtube.com/watch?v=Lm8BLHkxiAo)
 
 ## Notes

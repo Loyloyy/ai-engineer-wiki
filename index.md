@@ -23,6 +23,7 @@
 - [Breadcrumb-Prompting](wiki/Breadcrumb-Prompting.md) — Incremental task disclosure to agents to prevent early-step sprint and late-step quality collapse
 - [Cross-App-Access](wiki/Cross-App-Access.md) — OAuth extension (XAA/ID-JAG) enabling automatic MCP auth via enterprise SSO; eliminates per-server consent screens
 - [Decision-Log](wiki/Decision-Log.md) — Agent self-unblocks on ambiguous decisions and records them for async human review
+- [Demand-Driven-Context](wiki/Demand-Driven-Context.md) — Pull-based methodology for curating enterprise knowledge bases: let agents fail on real tasks, surface gaps, document what's missing
 - [Eval-Flywheel](wiki/Eval-Flywheel.md) — Continuous loop: production traces → offline evals → agent improvement → deployment; requires purpose-built data layer
 - [Grill-Me](wiki/Grill-Me.md) — Claude Code skill that exhaustively interviews the developer before planning to build a shared design concept
 - [MCP-Gateway](wiki/MCP-Gateway.md) — Enterprise layer centralising auth, access control, and observability across all MCP servers
