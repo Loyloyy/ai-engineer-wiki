@@ -16,6 +16,7 @@
 
 ## Patterns
 - [Cross-App-Access](wiki/Cross-App-Access.md) — OAuth extension (XAA/ID-JAG) enabling automatic MCP auth via enterprise SSO; eliminates per-server consent screens
+- [Software-Factory](wiki/Software-Factory.md) — Autonomous agent pipeline for 24/7 software production; human provides intent, agents decompose and implement
 - [Decision-Log](wiki/Decision-Log.md) — Agent self-unblocks on ambiguous decisions and records them for async human review
 - [MCP-Gateway](wiki/MCP-Gateway.md) — Enterprise layer centralising auth, access control, and observability across all MCP servers
 - [Grill-Me](wiki/Grill-Me.md) — Claude Code skill that exhaustively interviews the developer before planning to build a shared design concept
