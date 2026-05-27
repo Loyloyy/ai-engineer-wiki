@@ -58,7 +58,17 @@ During batch T48–T60, the `Edit` tool returned ENOENT on `index.md` despite th
 
 Claude Code compacts context when the conversation grows long. The compaction summary is accurate for entity lists and log entries, but exact wording of opinions and opinions-section formatting may be slightly paraphrased. Always re-read the relevant wiki pages before appending new opinions to existing pages within the same session (after compaction).
 
-The `## Notes` sections are user-owned and must never be touched — this is the most compaction-sensitive rule, since a compacted summary might lose the distinction between user-written and agent-written sections.
+The `## Notes` sections are user-owned and must never be touched — this is the most compaction-sensitive rule, since a compacted summary might lose the distinction between user-written and agent-written sections. **If CLAUDE.md hard rules feel uncertain after compaction, re-read CLAUDE.md before continuing. Hard rules being lost is the highest-cost failure mode.**
+
+## Channel exhaustion
+
+At some point `fetch_transcripts.py --limit 30` will return fewer than 30 results. That's not a bug — it's the natural end state of the AI Engineer channel as the primary source. When fetch returns significantly fewer than `--limit`, options are:
+
+- Lower the `--after` date floor to backfill older content
+- Add a new channel (e.g. Latent Space podcast, other conference recordings)
+- Switch to a different source class (papers, blog posts, podcast transcripts)
+
+The wiki's ingest machinery is source-agnostic — any transcript-style text file in `transcripts/` with the right frontmatter works. The schema doesn't need to change, only the fetch script.
 
 ## Transcript quality signals
 

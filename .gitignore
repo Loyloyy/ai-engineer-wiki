@@ -3,3 +3,6 @@ transcripts/
 __pycache__/
 *.pyc
 .venv/
+.claude/settings.local.json
+.claude/.session/
+.claude/cache/

@@ -6,7 +6,7 @@ A living knowledge base distilled from AI Engineer conference talks, built and m
 
 Conference talks are dense with practitioner opinion — things people won't write in blog posts because they're too specific, too controversial, or too tied to their current production situation. But talks are ephemeral: you watch once, maybe take a few notes, and the insight evaporates.
 
-Andrej Karpathy published a note in April 2026 sketching the "LLM Wiki" pattern: feed raw transcripts into an agent, have it extract and accumulate entities into a flat markdown wiki. The key insight is that the wiki *compounds* — each new transcript either creates a new page or enriches an existing one with a new opinion, a new cross-link, a new contradiction. After 60 talks, you have a reference that no single talk could produce.
+Andrej Karpathy sketched the "LLM Wiki" pattern: feed raw transcripts into an agent, have it extract and accumulate entities into a flat markdown wiki. The key insight is that the wiki *compounds* — each new transcript either creates a new page or enriches an existing one with a new opinion, a new cross-link, a new contradiction. After 60 talks, you have a reference that no single talk could produce.
 
 I wanted this specifically for AI Engineering material. The field moves fast enough that "what practitioners think today" is often more useful than any textbook treatment. The wiki captures exactly that: what real teams are actually doing, what they've burned on, and where they disagree.
 
@@ -19,14 +19,15 @@ transcripts/          ← raw yt-dlp output (gitignored, local only)
     2026-05-13-hugo-santos-cicd-is-dead.md
     ...
 
-wiki/                 ← the compounding artifact
+wiki/                 ← the compounding artifact (flat, no subfolders)
     Continuous-Compute.md
     Durable-Agent-Execution.md
     Eval-Flywheel.md
-    ...               ← one file per entity, flat (no subfolders)
+    ...               ← one file per entity
 
 index.md              ← catalog of all pages, grouped by type
 log.md                ← append-only event log (ingest, lint, system entries)
+DEV_NOTES.md          ← setup gotchas and implementation notes
 scripts/
     fetch_transcripts.py   ← yt-dlp wrapper, writes to transcripts/
 CLAUDE.md             ← operational schema; Claude Code reads this first
@@ -47,7 +48,7 @@ CLAUDE.md             ← operational schema; Claude Code reads this first
 ### Prerequisites
 
 - Python 3 (`python3` — not `python`)
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp): `pip install yt-dlp`
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp): `pip install yt-dlp` (on Ubuntu/WSL with PEP 668, use `pip install yt-dlp --break-system-packages` or `pipx install yt-dlp`)
 - Claude Code CLI
 
 ### Fetch transcripts
@@ -64,11 +65,7 @@ Transcripts land in `transcripts/` (gitignored). The script maintains `transcrip
 
 ### Ingest a batch
 
-```
-/ingest
-```
-
-Or give Claude Code a `/goal` specifying the transcript range. CLAUDE.md drives the full workflow.
+Give Claude Code a `/goal` specifying the transcript range. CLAUDE.md drives the full workflow.
 
 ## Project structure
 
