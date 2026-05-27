@@ -6,9 +6,9 @@ Google DeepMind's fourth-generation family of open-source models, released April
 
 | Model | Type | Active params | Notes |
 |---|---|---|---|
-| E2B | Dense effective | 2.3B (5.1B total) | On-device; audio+vision+text input |
-| E4B | Dense effective | ~4B | On-device; audio+vision+text input |
-| 26B | MoE | 3.8B active (26B total) | First Gemma MoE; 128 experts, 8 active |
+| E2B | Dense effective | 2.3B (5.1B total) | On-device; audio+vision+text; 32K context |
+| E4B | Dense effective | ~4B | On-device; audio+vision+text; 32K context |
+| 26B | MoE | 3.8B active (26B total) | First Gemma MoE; 128 experts, 8 active; 128K context |
 | 31B | Dense | 31B | State-of-the-art multimodal; 256K context |
 
 The 31B ranked #3 on the global LM Arena leaderboard at launch. The 26B ranked top 6 among open-source models. Both outperform models 20× their size on various benchmarks.
@@ -30,5 +30,6 @@ Apache 2.0 — explicit commercial use permitted, enabling seamless integration 
 ## Sources
 
 - Cassidy Hardin, "Gemma 4 Deep Dive", AI Engineer 2026 — [https://www.youtube.com/watch?v=_A367W_qvc8](https://www.youtube.com/watch?v=_A367W_qvc8)
+- Cormac Brick, "TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM", AI Engineer 2026 — [https://www.youtube.com/watch?v=BKWpYIWvAo4](https://www.youtube.com/watch?v=BKWpYIWvAo4)
 
 ## Notes

@@ -167,3 +167,21 @@ Source: https://www.youtube.com/watch?v=tDArkCqjA-c
 Pages added: n8n
 Pages updated: (none)
 1 entity extracted.
+
+## [2026-05-27] ingest | I Gave an AI Agent the Keys to My Life — Radek Sienkiewicz (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=sJ2jc7leKBk
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Personal life-OS talk (OpenClaw for emails/notes/calendar/automation); incremental trust expansion pattern present but insufficiently formalized; content overlaps AFK-Tasks.
+
+## [2026-05-27] ingest | Software Engineering Is Becoming Plan and Review — Louis Knight-Webb (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=W76woOYHlvY
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Conceptual talk on plan-heavy vs. review-heavy agent workflows; Vibe Kanban product being shut down; no entities beyond what Spec-Driven-Code-Generation covers.
+
+## [2026-05-27] ingest | TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM — Cormac Brick, Google (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=BKWpYIWvAo4
+Pages added: LiteRT-LM
+Pages updated: Gemma-4
+2 entities extracted (LiteRT-LM new page; Gemma-4 context window data added).
