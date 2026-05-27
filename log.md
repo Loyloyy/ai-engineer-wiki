@@ -269,3 +269,9 @@ Source: https://www.youtube.com/watch?v=Wmp2Tku2PrI
 Pages added: Library-Source-Context
 Pages updated: (none)
 1 entity extracted. Git subtree approach for library pattern discovery, ESLint back-pressure rules, pattern extraction workflow captured.
+
+## [2026-05-27] ingest | Agentic Search for Context Engineering — Leonie Monigatti, Elastic (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=ynJyIKwjonM
+Pages added: Search-Tool-Design
+Pages updated: (none)
+1 entity extracted. Low-floor/high-ceiling search tool strategy, shell tool limitations, error return pattern, log-then-specialize workflow captured.

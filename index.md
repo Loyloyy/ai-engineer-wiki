@@ -34,6 +34,7 @@
 - [Nested-Context-Injection](wiki/Nested-Context-Injection.md) — Inject parent topic descriptions hierarchically into agent conversations instead of relying on memory retrieval
 - [Progressive-Tool-Discovery](wiki/Progressive-Tool-Discovery.md) — Loading only relevant tools into agent context rather than dumping full API surfaces; CLI, search, and code-mode approaches
 - [Ralph-Loop](wiki/Ralph-Loop.md) — AFK agent execution loop over vertical slice issues until a plan is complete
+- [Search-Tool-Design](wiki/Search-Tool-Design.md) — Low-floor/high-ceiling strategy for agent search tools; start general, log behavior, add specialized tools for frequent patterns
 - [Skills](wiki/Skills.md) — Portable context-packaging format for coding agents: skill.md with progressive disclosure, optional reference files and scripts
 - [Software-Factory](wiki/Software-Factory.md) — Autonomous agent pipeline for 24/7 software production; human provides intent, agents decompose and implement
 - [Stop-Hook-Interrogation](wiki/Stop-Hook-Interrogation.md) — Querying the agent at run end about what would have helped; surfaces contradictory directives, missing tools, config errors
