@@ -106,23 +106,32 @@ Otherwise, link inline as plain text without creating the page yet. Lint will ca
 5. Extract opinion claims and attribute every one. Unattributed claims rejected.
 6. Update `index.md` with new/modified pages.
 7. Append an entry to `log.md`.
-8. Commit: `ingest: <talk-title> (N added, M updated)`
-9. Push to origin in batches: push after every 5 ingest commits, and once more after the final lint commit. Do not push after every individual commit.
+8. Do NOT commit after each transcript. Continue to the next transcript without committing.
 
 ### Lint (after every batch ingest, or on user request)
 
 1. Scan `wiki/` for:
    - **Orphans**: pages with no inbound links from other pages or index.md
    - **Hub candidates**: terms appearing in 2+ pages without their own page
-   - **Opinion threads**: same opinion claim recurring across 3+ topic pages → propose `wiki/Debates/<Theme>.md`
+   - **Opinion threads**: same opinion claim recurring across 3+ topic pages → propose `wiki/Debates/<Theme>.md`. Detection is **semantic, not lexical**: two opinions arguing the same position from different framings count as one thread. Example: "self-eval is unreliable" and "evaluators need adversarial pressure" are the same thread despite no shared words. Ask: would a practitioner treat these as the same debate? If yes, count them together.
    - **Contradictions**: opposing claims across pages
 2. Write findings to `log.md` as a `lint:` entry.
 3. Do NOT auto-apply. Wait for user approval before creating Debate pages or restructuring.
 4. Deep lint (cleanup, restructuring proposals): defer until wiki has ~100 pages.
 
+### End-of-session commit and push
+
+After lint is complete, make ONE commit covering the entire batch:
+
+```
+ingest: batch of N transcripts (M pages added, K updated) + lint
+```
+
+Then ONE push to origin. No commits or pushes at any earlier point in the session.
+
 ## Opinions: scaling and structure
 
-Opinions live on the most specific topic page they apply to (topic-first). Lint will propose a `Debates/<Theme>.md` aggregator page only when the same opinion-thread appears across 3+ topic pages. Speaker views are achieved via grep (`grep "— Ash, Anthropic" wiki/`), not via dedicated pages.
+Opinions live on the most specific topic page they apply to (topic-first). Lint will propose a `Debates/<Theme>.md` aggregator page only when the same opinion-thread (judged semantically, not lexically) appears across 3+ topic pages. Speaker views are achieved via grep (`grep "— Ash, Anthropic" wiki/`), not via dedicated pages.
 
 The user cares specifically about accumulating opinionated practitioner advice. Bias toward capturing more opinions, not fewer. Every opinion needs full attribution.
 
@@ -180,13 +189,12 @@ Grep-friendly: `grep "^## \[" log.md | tail -10` gives recent events.
 Format: `<type>: <description>`
 
 Types:
-- `ingest:` — wiki pages added/updated from a new source
-- `lint:` — lint findings written to log.md
-- `update:` — non-ingest edits to existing pages
-- `system:` — changes to CLAUDE.md, scripts, structure
+- `ingest:` — end-of-session batch commit covering all transcripts processed + lint in that session
+- `update:` — non-ingest edits to existing pages (single commit, push immediately)
+- `system:` — changes to CLAUDE.md, scripts, structure (single commit, push immediately)
 - `init:` — initial scaffolding only
 
-Push to origin after every commit.
+**Batching rule**: during an ingest session, do all work in the working tree without committing. One commit at the end (`ingest: batch of N transcripts (M pages added, K updated) + lint`), then one push. Never commit mid-session.
 
 ## /goal usage for bootstrap
 
