@@ -48,6 +48,7 @@
 - [Gemini-Interactions-API](wiki/Gemini-Interactions-API.md) — Google DeepMind's unified agent+model API; server-side state, async execution, tool combination, typed content blocks
 - [LiteRT-LM](wiki/LiteRT-LM.md) — Google cross-platform LLM inference runtime for edge devices; progressive skill loading, LoRA hot-swapping
 - [MCP](wiki/MCP.md) — Model Context Protocol; open standard connecting agents to external tools via client-server protocol
+- [MCP-Apps](wiki/MCP-Apps.md) — Official MCP extension for embedding interactive HTML UI inside chat agents; bidirectional messaging, generative UI spectrum
 - [n8n](wiki/n8n.md) — Visual low-code workflow automation with AI agent node and human-in-the-loop tool call interceptor
 - [OpenAI-Codex](wiki/OpenAI-Codex.md) — OpenAI's software engineering agent; plugins, sub-agents, automations, code review, guardian approvals
 - [Unblocked](wiki/Unblocked.md) — Context engine product for engineering teams; expert graphs, org history, best practices via MCP/CLI/API

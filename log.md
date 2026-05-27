@@ -245,3 +245,9 @@ Source: https://www.youtube.com/watch?v=ow1we5PzK-o
 Pages added: Validation-Contract
 Pages updated: (none)
 1 entity extracted. Validation contract concept (pre-implementation correctness spec), multi-agent communication taxonomy, serial execution principle, and model role assignment captured.
+
+## [2026-05-27] ingest | MCP Apps: Extending the Frontier — Ido Salomon & Liad Yosef, Ergo Labs (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=o-zkvb0iFDQ
+Pages added: MCP-Apps
+Pages updated: (none)
+1 entity extracted. MCP Apps (formerly MCPUI) — official MCP extension for embedded interactive HTML UI in chat agents; bidirectional messaging spectrum; generative UI spectrum captured.
