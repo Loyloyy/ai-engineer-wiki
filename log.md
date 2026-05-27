@@ -275,3 +275,21 @@ Source: https://www.youtube.com/watch?v=ynJyIKwjonM
 Pages added: Search-Tool-Design
 Pages updated: (none)
 1 entity extracted. Low-floor/high-ceiling search tool strategy, shell tool limitations, error return pattern, log-then-specialize workflow captured.
+
+## [2026-05-27] ingest | Flux Open Research — Stephen Batifoul, Black Forest Labs (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=x8Yb4RidLgM
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. ML research talk: Flux model evolution, Self-Flow training technique (student-teacher dual-noise), Klein real-time generation. Focused on image generation research, not AI engineering practice.
+
+## [2026-05-27] ingest | How Transformers Finally Ate Vision — Isaac Robinson, Roboflow (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=VhfAVA3BG2I
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. ML research talk: ViT vs CNN architecture evolution survey, MAE/DINOv2 pretraining, FlashAttention speedups, Roboflow's RFDetR deployment flexibility. No actionable AI engineering concepts.
+
+## [2026-05-27] ingest | Why TTS Models Now Look Like LLMs — Samuel Humeau, Mistral (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=3jGAU2sbAyY
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. TTS architecture survey: audio codec tokenization, autoregressive backbone, flow matching within-frame generation, Mistral Voix model details. Adjacent to AI engineering but no extractable patterns beyond obvious STT→LLM→TTS pipeline.
