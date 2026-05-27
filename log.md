@@ -110,3 +110,9 @@ Source: https://www.youtube.com/watch?v=MhHEGMFCEB0
 Pages added: OpenAI-Codex
 Pages updated: (none)
 1 entity extracted. Demo-heavy workshop; single entity (the Codex tool itself).
+
+## [2026-05-27] ingest | LLM Codegen Fails and How to Stop 'Em — Danilo Campos, PostHog (AI Engineer 2026)
+Source: https://www.youtube.com/watch?v=juoNbJiZUi0
+Pages added: Model-Rot, Model-Airplane, Breadcrumb-Prompting, Stop-Hook-Interrogation
+Pages updated: (none)
+4 entities extracted.
