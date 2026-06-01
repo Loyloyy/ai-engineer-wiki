@@ -80,3 +80,44 @@ Auto-subtitles vary significantly in quality. Signals that a transcript will be 
 - Unintelligible technical terms rendered as phonetic approximations
 
 When quality is low enough that extracting accurate claims would require guessing, log as `unprocessable` and skip rather than risk fabricating content.
+
+## Claude Code config architecture
+
+The operational contract is split across CLAUDE.md and `.claude/` so the hard
+rules get maximum adherence and reference material loads only when needed.
+
+- **`CLAUDE.md`** (always loaded) — project description, the 7 hard rules,
+  entity selection, commit conventions, working style. Kept under ~120 lines
+  deliberately: the docs note files >200 lines lose adherence, and the hard
+  rules are the highest-cost content to lose after compaction.
+- **`.claude/rules/wiki-page-conventions.md`** — page template, section rules,
+  opinion attribution, lazy hub creation. **Path-scoped to `wiki/**/*.md`**, so
+  it loads only when a wiki page is touched (covers `/ingest` and ad-hoc edits).
+- **`.claude/skills/ingest/SKILL.md`** — full per-transcript workflow + the
+  `index.md` and `log.md` ingest-entry formats. Loads on `/ingest`.
+- **`.claude/skills/lint/SKILL.md`** — `/lint` orchestrator. Stateless full-state
+  scan; decoupled from `/ingest` so an interrupted ingest can't swallow it.
+- **`.claude/agents/lint-scanner.md`** — read-only (Read/Glob/Grep), Haiku
+  subagent that does the corpus scan and returns a findings block, keeping ~85+
+  page reads out of the main context. No write tools = it physically can't
+  auto-apply.
+- **`.claude/hooks/guard.py` + `.claude/settings.json`** — PreToolUse hook on
+  `Edit|Write` enforcing two irreversible rules at the tool level: `transcripts/`
+  is immutable, and a wiki page's `## Notes` section can't be modified. Exit 2 =
+  deny. Fails open (exit 0) on any parse/IO error so it never blocks legit work.
+
+### Gotchas
+
+- **Config loads at session start.** Editing CLAUDE.md / rules / settings does
+  *not* affect the running session — start a fresh `claude` to test changes.
+- **Path-scoped rules load lazily.** `wiki-page-conventions` won't appear in
+  `/memory` until Claude reads a `wiki/` file in that session. Not a bug.
+- **Glob `**/` may need an intermediate dir.** `wiki/**/*.md` did NOT match flat
+  files like `wiki/MCP.md` (the `**/` wanted a subdirectory). The rule lists both
+  `wiki/*.md` (flat) and `wiki/**/*.md` (future `Debates/`) to cover both.
+- **The hook needs workspace trust.** First load after adding `settings.json`
+  prompts a trust dialog; accept it or the guard won't run.
+- **Verify with:** `/memory` (loaded instruction files), `/agents`, `/hooks`,
+  `/doctor`, `claude --debug` (startup discovery + JSON parse errors).
+- **The guard only fires on Claude's Edit/Write tools** — the user editing
+  `## Notes` by hand is unaffected, which is the point.

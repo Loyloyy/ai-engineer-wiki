@@ -43,37 +43,7 @@ ai-engineer-wiki/
 
 ## Page conventions
 
-**Filename**: `Title-Case-Kebab.md`. Examples: `Generator-Evaluator-Pattern.md`, `Context-Rot.md`, `Heterogeneous-Intelligence.md`.
-
-**Page structure**:
-
-```markdown
-# <Entity Name>
-
-<One-sentence definition. Lead with what it IS.>
-
-<Body: as long as the source material warrants. No fixed length. Subheadings allowed. Cross-link other wiki pages inline using [Page-Name](Page-Name.md).>
-
-## Practical application
-<Optional. Include only when the source describes concrete steps to apply the concept — a workflow, a checklist, a skill prompt, a decision procedure. Omit if the source is purely descriptive or theoretical. Placed between body and ## Opinions.>
-
-## Opinions
-- **<Claim summary>** <Brief context.> — Speaker Name, Affiliation (Talk Title, Event Year), [link with timestamp](https://...)
-
-## Sources
-- Speaker Name, "Talk Title", Event Year — [YouTube URL](https://...)
-
-## Notes
-
-### YYYY-MM-DD (source)
-<User note. Source is optional, e.g. "desk", "commute". Each entry gets its own H3.>
-```
-
-**Rules**:
-- `## Practical application` is optional. Include only when the source gives concrete steps to apply the concept. Never invent steps not in the source.
-- `## Opinions` is omitted entirely if the page has no opinion claims (e.g., a tool definition page).
-- `## Sources` is mandatory; list every source that contributed to the page, not just the most recent.
-- `## Notes` is mandatory and always present, even when empty. Never edit content under this heading. User entries use `### YYYY-MM-DD (source)` subheadings.
+Page structure, filename rules, the section conventions (`## Practical application` / `## Opinions` / `## Sources` / `## Notes`), opinion attribution format, and lazy hub creation live in `.claude/rules/wiki-page-conventions.md`, which loads automatically whenever you create or edit a page under `wiki/`.
 
 ## Entity selection
 
@@ -85,104 +55,20 @@ Examples of invalid entities: `Agents`, `Better-RAG`, `AI-Engineering-In-2026`, 
 
 When in doubt, prefer fewer, more concrete entities.
 
-## Lazy hub creation
-
-Create a new page only when:
-- (a) The source spends substantial time on the concept (it's a primary topic, not a passing mention), OR
-- (b) The concept is already mentioned in 2+ existing pages without a page of its own.
-
-Otherwise, link inline as plain text without creating the page yet. Lint will catch it later.
-
 ## Workflows
 
-### Ingest (per transcript)
+The ingest and lint procedures live in skills that load on demand:
 
-1. Read the transcript fully.
-2. Read `index.md` to know what pages exist.
-3. Identify entities worth a page (per Entity Selection above).
-4. For each entity:
-   - If page exists: update it. Append to `## Opinions` if new opinions, add to `## Sources`, integrate factual additions. Preserve prior content. Apply contradiction rule if needed.
-   - If page doesn't exist: create it per Page Conventions, respecting lazy hub creation.
-5. Extract opinion claims and attribute every one. Unattributed claims rejected.
-6. Update `index.md` with new/modified pages.
-7. Append an entry to `log.md`.
-8. Do NOT commit after each transcript. Continue to the next transcript without committing.
+- **Ingest** (`/ingest`, `.claude/skills/ingest/SKILL.md`): per-transcript workflow, `index.md` and `log.md` ingest-entry formats, and end-of-batch commit/push (one commit per batch, never mid-session).
+- **Lint** (`/lint`, `.claude/skills/lint/SKILL.md`): stateless full-state scan for orphans, hub candidates, semantic opinion threads, and contradictions, backed by the read-only `lint-scanner` subagent. Records findings to `log.md`; never auto-applies; waits for approval before any Debate page or restructuring. Run after every batch ingest, or on user request.
 
-### Lint (after every batch ingest, or on user request)
+## Opinions
 
-1. Scan `wiki/` for:
-   - **Orphans**: pages with no inbound links from other pages or index.md
-   - **Hub candidates**: terms appearing in 2+ pages without their own page
-   - **Opinion threads**: same opinion claim recurring across 3+ topic pages → propose `wiki/Debates/<Theme>.md`. Detection is **semantic, not lexical**: two opinions arguing the same position from different framings count as one thread. Example: "self-eval is unreliable" and "evaluators need adversarial pressure" are the same thread despite no shared words. Ask: would a practitioner treat these as the same debate? If yes, count them together.
-   - **Contradictions**: opposing claims across pages
-2. Write findings to `log.md` as a `lint:` entry.
-3. Do NOT auto-apply. Wait for user approval before creating Debate pages or restructuring.
-4. Deep lint (cleanup, restructuring proposals): defer until wiki has ~100 pages.
+Bias toward capturing more opinions, not fewer — the user specifically values accumulated practitioner advice. Every opinion needs full attribution. Placement, attribution format, and Debate-thread aggregation are specified in `.claude/rules/wiki-page-conventions.md`.
 
-### End-of-session commit and push
+## Catalog and log
 
-After lint is complete, make ONE commit covering the entire batch:
-
-```
-ingest: batch of N transcripts (M pages added, K updated) + lint
-```
-
-Then ONE push to origin. No commits or pushes at any earlier point in the session.
-
-## Opinions: scaling and structure
-
-Opinions live on the most specific topic page they apply to (topic-first). Lint will propose a `Debates/<Theme>.md` aggregator page only when the same opinion-thread (judged semantically, not lexically) appears across 3+ topic pages. Speaker views are achieved via grep (`grep "— Ash, Anthropic" wiki/`), not via dedicated pages.
-
-The user cares specifically about accumulating opinionated practitioner advice. Bias toward capturing more opinions, not fewer. Every opinion needs full attribution.
-
-## index.md format
-
-Catalog of all pages. Maintain alphabetical order within sections. Sections are descriptive groupings, not folders. **Only include sections that have at least one entry — omit empty sections entirely. No "(none yet)" placeholders.**
-
-```markdown
-# Wiki Index
-
-## Concepts
-- [Context-Rot](wiki/Context-Rot.md) — Degradation in LLM output quality as context window fills, even below stated limits
-
-## Patterns
-- [Generator-Evaluator-Pattern](wiki/Generator-Evaluator-Pattern.md) — GAN-style harness pairing a builder with an adversarial critic
-- [Ralph-Loop](wiki/Ralph-Loop.md) — Looping a single prompt through Claude Code until completion criteria are met
-
-## Tools
-- [Claude-Code](wiki/Claude-Code.md) — Anthropic's CLI coding agent
-
-## Companies
-- [Colossum](wiki/Colossum.md) — UK startup building heterogeneous compute orchestration
-```
-
-Section vocabulary: Concepts, Patterns, Tools, Models, Benchmarks, Papers, Companies, Debates.
-
-## log.md format
-
-Append-only. Most recent entries at the bottom. Every entry prefixed with `## [YYYY-MM-DD] <type> | <description>`.
-
-Types: `ingest`, `lint`, `update`, `system`, `unprocessable`.
-
-```markdown
-# Wiki Log
-
-## [2026-05-27] ingest | Long-Running Agents — Ash & Andrew (Anthropic, AI Engineer 2026)
-Source: https://youtube.com/watch?v=...
-Pages added: Generator-Evaluator-Pattern, Context-Rot, Context-Anxiety, Sprint-Decomposition
-Pages updated: Claude-Code, Ralph-Loop
-17 entities extracted.
-
-## [2026-05-27] lint | post-bootstrap scan
-Orphans: none.
-Hub candidates: "MCP" mentioned in 4 pages, no page exists. Proposed: create MCP.md.
-Awaiting user approval.
-
-## [2026-05-28] unprocessable | <Talk Title>
-Auto-subs were unreadable. Skipped.
-```
-
-Grep-friendly: `grep "^## \[" log.md | tail -10` gives recent events.
+`index.md` is the page catalog; `log.md` is the append-only event log (entries prefixed `## [YYYY-MM-DD] <type> | <description>`; types: `ingest`, `lint`, `update`, `system`, `unprocessable`). The exact formats are documented in the ingest and lint skills, where those files are written. `log.md` stays grep-friendly: `grep "^## \[" log.md | tail -10` gives recent events.
 
 ## Commit conventions
 
