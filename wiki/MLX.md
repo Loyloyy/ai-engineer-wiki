@@ -37,8 +37,19 @@ MLX uses the GPU, not the Neural Engine. Neural Engine access requires Core ML (
 - **Vision-language**: real-time camera analysis (accessibility, security, dash cam).
 - **Robotics**: MLX Audio + MLX VLM as perception layer for embedded robots.
 
+## iOS / iPhone support
+
+MLX runs on iPhone via **MLX Swift LM** — an iOS/macOS Swift package that downloads models from HuggingFace and provides inference via the same unified-memory architecture as Mac. Quantised model variants are typically available in the MLX Community on HuggingFace within 30 minutes of a new model release.
+
+Performance benchmark: [Gemma 4](Gemma-4.md) at 8-bit, 4-bit quantised on the latest iPhone: **~40 tok/s**. Older iPhones achieve ~20 tok/s — still usable for most interactive applications.
+
+**Locally AI** is a native iPhone/iPad/macOS chatbot built on MLX Swift LM; acquired by **LM Studio** (the cross-platform AI studio for local models) in April 2026. LM Studio runs models via llama.cpp or MLX, opens a local API server with OpenAI-compatible endpoints, and enables desktop users to serve models to their own apps. The acquisition brings MLX Swift LM's iOS ecosystem into LM Studio's multi-platform distribution.
+
+Structured generation (constrained output) is not yet built into MLX Swift LM as of April 2026; third-party packages are available. Tool calling is supported natively.
+
 ## Sources
 
 - Prince Canuma, Neywa Labs, "Why MLX", AI Engineer 2026 — [https://www.youtube.com/watch?v=zTLJNHj0DeQ](https://www.youtube.com/watch?v=zTLJNHj0DeQ)
+- Adrien Grondin, Locally AI, "40 tok/s Gemma 4 with MLX: Running LLMs on Your iPhone", AI Engineer 2026 — [https://www.youtube.com/watch?v=a2muGkT4WD4](https://www.youtube.com/watch?v=a2muGkT4WD4)
 
 ## Notes

@@ -37,10 +37,22 @@ RAM requirements after quantization: E2B ≈ 1–2 GB (usable on mid-range phone
 
 Apache 2.0 — explicit commercial use permitted, enabling seamless integration from development through production deployment.
 
+## Gemmaverse and community adoption
+
+As of April 2026:
+- **500 million total downloads** across the Gemma model family
+- **100,000+ derivative models** on HuggingFace — quantisations, fine-tunes, and specialised variants from the community
+- Gemma 4 reached **10 million downloads** in its first 7 days, trending top on HuggingFace at launch
+
+Notable official variants: **Shield Gemma** (safety classification, for content moderation in production), **Med-Gemini** (multimodal Gemma 3-based model for medical imaging and clinical tasks — radiology, chest X-ray understanding).
+
+Ecosystem partners: Unsloth, [MLX](MLX.md), llama.cpp, HuggingFace Transformers, vLLM, C Lang. Models are designed to work with existing fine-tuning frameworks without framework migration.
+
 ## Sources
 
 - Cassidy Hardin, "Gemma 4 Deep Dive", AI Engineer 2026 — [https://www.youtube.com/watch?v=_A367W_qvc8](https://www.youtube.com/watch?v=_A367W_qvc8)
 - Cormac Brick, "TLMs: Tiny LLMs and Agents on Edge Devices with LiteRT-LM", AI Engineer 2026 — [https://www.youtube.com/watch?v=BKWpYIWvAo4](https://www.youtube.com/watch?v=BKWpYIWvAo4)
 - Chintan Parikh & Weiyi Wang, Google, "Accelerating AI on Edge", AI Engineer 2026 — [https://www.youtube.com/watch?v=Lm8BLHkxiAo](https://www.youtube.com/watch?v=Lm8BLHkxiAo)
+- Omar Sanseviero, Google, "Gemma: DeepMind's Family of Open Models", AI Engineer 2026 — [https://www.youtube.com/watch?v=_gVFUEdhCyI](https://www.youtube.com/watch?v=_gVFUEdhCyI)
 
 ## Notes

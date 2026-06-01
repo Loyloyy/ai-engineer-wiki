@@ -37,7 +37,7 @@ Use cases where context engines provide the most value:
 - **Incident triage** — agent instantly correlates current symptoms with past incidents, relevant code areas, and Slack history
 - **Engineering support channels** — auto-answers repetitive questions from other teams using accumulated org knowledge
 
-Benchmark (Unblocked internal task — implementing Anthropic's adaptive thinking mode): with context engine: 25 min, 10M tokens; without: 2.5 hours, 21M tokens. Difference is mostly reduced doom-looping, not raw execution speed.
+Benchmark ([Unblocked](Unblocked.md) internal task — implementing Anthropic's adaptive thinking mode): with context engine: 25 min, 10M tokens; without: 2.5 hours, 21M tokens. Difference is mostly reduced doom-looping, not raw execution speed.
 
 ## Sources
 

@@ -39,8 +39,11 @@ See [ACE](ACE.md) for GitHub Next's prototype implementation of this model.
 - **More individual output doesn't solve problems that require communication and coordination — it makes them worse.** The "one dev with two dozen agents" model assumes software is made by one person. It's not. Scaling individual throughput without scaling team alignment amplifies the cost of misalignment. — Maggie Appleton, GitHub Next ("Collaborative AI Engineering", AI Engineer 2026), [https://www.youtube.com/watch?v=ClWD8OEYgp8](https://www.youtube.com/watch?v=ClWD8OEYgp8)
 - **All our coordination tools are from another era.** GitHub, Slack, Jira were built for sequential, human-paced development. They are not designed for agentic development. Funneling agentic outputs into them amplifies coordination debt rather than reducing it. — Maggie Appleton, GitHub Next ("Collaborative AI Engineering", AI Engineer 2026), [https://www.youtube.com/watch?v=ClWD8OEYgp8](https://www.youtube.com/watch?v=ClWD8OEYgp8)
 
+- **AI jargon actively excludes domain experts — and that exclusion is often unconscious.** When engineers say "we're building agents" instead of "we're writing a prompt," mental health experts, legal analysts, and other domain SMEs don't know how to participate. Coordination debt accumulates because the people with the most relevant context can't engage with the process. — Hamel Husain ("How to Fail at AI Strategy", AI Engineer 2025), [https://www.youtube.com/watch?v=89aQ7T6cMwA](https://www.youtube.com/watch?v=89aQ7T6cMwA)
+
 ## Sources
 
 - Maggie Appleton, "Collaborative AI Engineering", AI Engineer 2026 — [https://www.youtube.com/watch?v=ClWD8OEYgp8](https://www.youtube.com/watch?v=ClWD8OEYgp8)
+- Hamel Husain & Greg Ceccarelli, "How to Fail at AI Strategy", AI Engineer 2025 — [https://www.youtube.com/watch?v=89aQ7T6cMwA](https://www.youtube.com/watch?v=89aQ7T6cMwA)
 
 ## Notes

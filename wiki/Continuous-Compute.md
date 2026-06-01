@@ -21,15 +21,15 @@ The emerging pattern at agent-scale shops (companies like Fall, Zed, Ramp):
 
 **3. Pre-merge queue.** Validated agent changes accumulate in a staging queue rather than going directly to the main branch. Serialization (making sure concurrent agent changes don't conflict) is handled here — analogous to optimistic concurrency control in databases. Multiple agents can produce changes in parallel; the pre-merge queue reconciles them.
 
-**4. Semantic approval.** The human reviewer no longer reads diffs. They review: (a) the original intent, and (b) the output — a video of the feature working, the output of a security-focused LLM review, functional test results. At 4× historical PR volume, this is the only review model that scales.
+**4. Semantic approval.** The human reviewer no longer reads diffs. They review: (a) the original intent, and (b) the output — a video of the feature working, the output of a security-focused [LLM review](AI-Code-Review.md), functional test results. At 4× historical PR volume, this is the only review model that scales.
 
 ## Multiverse / parallel candidates
 
-In the near-future state: when inference is fast enough and the inner loop is tight enough, agents may explore multiple implementations of the same spec simultaneously — working on different candidate commits in parallel ("the multiverse"). The pre-merge queue selects the best candidate, or human judgment chooses among semantic alternatives. Resource consumption scales accordingly (more parallel candidates = more compute).
+In the near-future state: when inference is fast enough and the inner loop is tight enough, agents may [explore multiple implementations of the same spec simultaneously](Best-Event.md) — working on different candidate commits in parallel ("the multiverse"). The pre-merge queue selects the best candidate, or human judgment chooses among semantic alternatives. Resource consumption scales accordingly (more parallel candidates = more compute).
 
 ## Governance and invariants
 
-CI did not only test code — it enforced compliance invariants (well-known checkout, no unvetted code sources, audit trail). These invariants don't disappear with continuous compute; they move into the harness. The harness enforces that every iteration starts from a known-good state, that compliance rules are checked on every generated commit, and that the governance log is maintained. The difference is enforcement is continuous, not gated.
+CI did not only test code — it enforced compliance invariants (well-known checkout, no unvetted code sources, audit trail). These invariants don't disappear with continuous compute; they move into the [harness](Harness-Engineering.md). The harness enforces that every iteration starts from a known-good state, that compliance rules are checked on every generated commit, and that the governance log is maintained. The difference is enforcement is continuous, not gated.
 
 ## Connection to durable agents
 

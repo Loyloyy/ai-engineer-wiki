@@ -20,6 +20,8 @@ Lauritzen describes the contract review case: an agent reviewing dozens of emplo
 
 **[High-Bandwidth-Artifacts](High-Bandwidth-Artifacts.md)** provide the interface through which the Decision-Log is typically surfaced. A tabular review or document with inline comments is the right surface for flagged decisions; a chat thread is not.
 
+**[Compressed-Research](Compressed-Research.md)** takes the opposite split of labour: the agent does the research and never decides, leaving the human decision point untouched — where the Decision-Log lets the agent decide but makes the decision discoverable and reversible.
+
 ## Opinions
 
 - **Blocking the agent is often the wrong tradeoff.** If the agent is unsure about something mid-task, the right design is: make a decision, unblock yourself, write it to a Decision-Log. — Jacob Lauritzen, Legora ("Agents need more than a chat", AI Engineer 2026), [https://www.youtube.com/watch?v=XNtkiQJ49Ps](https://www.youtube.com/watch?v=XNtkiQJ49Ps)

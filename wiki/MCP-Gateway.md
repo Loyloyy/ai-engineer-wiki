@@ -28,7 +28,7 @@ Components a gateway typically includes:
 
 **Root of trust**: the security team blesses one platform (the gateway) rather than evaluating every individual MCP server. All servers inherit the gateway's security posture.
 
-**Delegated identity for agents**: as agent identity becomes more important, gateways can define novel agent identity primitives (distinct from user identity) and scope them to specific servers and tools.
+**Delegated identity for agents**: as [agent identity](Agent-Identity.md) becomes more important, gateways can define novel agent identity primitives (distinct from user identity) and scope them to specific servers and tools.
 
 ## Practical application
 

@@ -23,7 +23,7 @@ This design intentionally avoids distillation from large teacher models with hug
 
 ## Training
 
-Four stages: pre/mid-training → SFT → DPO → RL.
+[Four stages](Fine-Tuning.md): pre/mid-training → SFT → DPO → RL.
 
 Key findings:
 - **More pre-training tokens always helps**, even at 350M scale — contrary to naive Chinchilla interpretation

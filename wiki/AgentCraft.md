@@ -24,7 +24,9 @@ The core thesis: the bottleneck in multi-agent development is not spawning agent
 
 **[ACE](ACE.md)** (GitHub Next) also provides multiplayer agent collaboration, but targets team alignment through a shared chat/session model. AgentCraft emphasizes individual developer throughput and visual orchestration at scale.
 
-**[AgentCraft](AgentCraft.md)** is inspired by RTS games; the RTS analogy is explicit — Salomon argues that managing dozens of agents in a game is a familiar skill most developers already have, just not applied to productivity contexts.
+AgentCraft is inspired by RTS games; the RTS analogy is explicit — Salomon argues that managing dozens of agents in a game is a familiar skill most developers already have, just not applied to productivity contexts.
+
+**[Paperclip](Paperclip.md)** is a different response to the same management bottleneck — an org-chart control plane with skills, QA, and approval workflows rather than an RTS map.
 
 ## Sources
 

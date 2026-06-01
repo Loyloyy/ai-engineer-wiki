@@ -35,7 +35,7 @@ Cloudflare's implementation uses V8 Workers as the sandbox (Cloudflare Workers i
 
 ## Practical application
 
-The three approaches are not mutually exclusive. A single MCP deployment may use tool sets (coarse grouping) + tool search (fine-grained retrieval within a set) + code-mode for full-API access when available.
+The three approaches are not mutually exclusive. A single MCP deployment may use tool sets (coarse grouping) + tool search (fine-grained retrieval within a set) + [code-mode](Code-Mode.md) for full-API access when available.
 
 The emerging direction: agents will select tools programmatically — "server discovery will be automatic and tool use will become compositional, like bash piping" — so that thousands of tools become the norm rather than an exception (Sam Morrow, GitHub).
 
@@ -49,10 +49,13 @@ The emerging direction: agents will select tools programmatically — "server di
 
 - **We shouldn't be dumping loads of tools into context. That's the main thing.** MCP as a protocol is fine; naive exposure of full API surfaces over MCP is the mistake. — Matt Carey, Cloudflare ("MCP = Mega Context Problem", AI Engineer 2026), [https://www.youtube.com/watch?v=YBYUvGOuotE](https://www.youtube.com/watch?v=YBYUvGOuotE)
 - **Code is a very compact plan.** Instead of many individual tool calls, one tool called `code` gives the agent much more degrees of freedom at a fraction of the context cost. As models get smarter, programmatic tool calling will be the default. — Matt Carey, Cloudflare ("MCP = Mega Context Problem", AI Engineer 2026), [https://www.youtube.com/watch?v=YBYUvGOuotE](https://www.youtube.com/watch?v=YBYUvGOuotE)
+- **Progressive discovery is primarily a client responsibility, not a protocol responsibility** — the MCP protocol just moves data across the wire; it's the agent harness that decides whether to preload all tools or load on demand. Every harness that dumps all tools into context from the start is making the wrong default choice. — David Soria Parra, Anthropic ("The Future of MCP", AI Engineer 2026), [https://www.youtube.com/watch?v=v3Fr2JR47KA](https://www.youtube.com/watch?v=v3Fr2JR47KA)
+- **Sequential tool-call chains are the wrong default for MCP composition** — the model should write code to compose tools together rather than calling them one by one; each sequential call adds latency, burns inference, and is doing orchestration work that could be done in a single code execution. — David Soria Parra, Anthropic ("The Future of MCP", AI Engineer 2026), [https://www.youtube.com/watch?v=v3Fr2JR47KA](https://www.youtube.com/watch?v=v3Fr2JR47KA)
 
 ## Sources
 
 - Matt Carey, "MCP = Mega Context Problem", AI Engineer 2026 — [https://www.youtube.com/watch?v=YBYUvGOuotE](https://www.youtube.com/watch?v=YBYUvGOuotE)
 - Sam Morrow, "Scaling GitHub for Your Agents", AI Engineer 2026 — [https://www.youtube.com/watch?v=0n3MKk7r60w](https://www.youtube.com/watch?v=0n3MKk7r60w)
+- David Soria Parra, "The Future of MCP", AI Engineer 2026 — [https://www.youtube.com/watch?v=v3Fr2JR47KA](https://www.youtube.com/watch?v=v3Fr2JR47KA)
 
 ## Notes

@@ -36,6 +36,8 @@ Combine with [Eval-Flywheel](Eval-Flywheel.md) for systematic improvement: inter
 
 **[Decision-Log](Decision-Log.md)**: Decision-Log captures agent decisions for human review; Stop-Hook-Interrogation captures agent complaints about the environment. Complementary: one audits what the agent did, the other audits what the agent was given to work with.
 
+**[Agent-Self-Diagnostics](Agent-Self-Diagnostics.md)**: the report-tool version of the same idea — the agent volunteers noteworthy observations mid-run, where stop-hook interrogation asks one fixed question at the end.
+
 ## Sources
 
 - Danilo Campos, "LLM Codegen Fails and How to Stop 'Em", AI Engineer 2026 — [https://www.youtube.com/watch?v=juoNbJiZUi0](https://www.youtube.com/watch?v=juoNbJiZUi0)

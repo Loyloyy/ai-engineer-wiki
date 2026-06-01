@@ -39,8 +39,14 @@ Both examples give the human high *control* (easy to instil judgment at a specif
 
 - **Chat is the wrong primary interface for complex agent collaboration.** It is a low-bandwidth, one-dimensional medium trying to represent work that is naturally two-dimensional or graph-structured. Agents aren't humans — we should not constrain them to human language as the primary collaboration medium. — Jacob Lauritzen, Legora ("Agents need more than a chat", AI Engineer 2026), [https://www.youtube.com/watch?v=XNtkiQJ49Ps](https://www.youtube.com/watch?v=XNtkiQJ49Ps)
 
+- **Chat has concurrency of one: every background-agent future runs through document interfaces, not chat.** Chat forces sequential interaction — you can only have one "conversation" at a time. Documents with triggers (cron, Gmail event, Slack message) allow ambient agents to run in the background and surface only issues needing approval. The human's job becomes reviewing and approving results, not driving the conversation. — Filip Kozera, Wordware ("Beyond Conversation: Why Documents Transform Natural Language", AI Engineer 2025), [https://www.youtube.com/watch?v=2Jom-4Brg6Q](https://www.youtube.com/watch?v=2Jom-4Brg6Q)
+
+- **Proactive AI systems outperform chat interfaces by an order of magnitude in engagement.** A system that pushes daily digests and insights ("here's what you need to know today") generated 20 points higher NPS and order-of-magnitude higher engagement than the same AI in chat format. The best interface is the one you never need to use — AI should anticipate next steps, not wait for queries. — Jan Siml ("Stop Ordering AI Takeout: A Cookbook for Winning When You Build In-House", AI Engineer 2025), [https://www.youtube.com/watch?v=DjUIecgpYAo](https://www.youtube.com/watch?v=DjUIecgpYAo)
+
 ## Sources
 
 - Jacob Lauritzen, "Agents need more than a chat", AI Engineer 2026 — [https://www.youtube.com/watch?v=XNtkiQJ49Ps](https://www.youtube.com/watch?v=XNtkiQJ49Ps)
+- Jan Siml, "Stop Ordering AI Takeout: A Cookbook for Winning When You Build In-House", AI Engineer 2025 — [https://www.youtube.com/watch?v=DjUIecgpYAo](https://www.youtube.com/watch?v=DjUIecgpYAo)
+- Filip Kozera, Wordware, "Beyond Conversation: Why Documents Transform Natural Language", AI Engineer 2025 — [https://www.youtube.com/watch?v=2Jom-4Brg6Q](https://www.youtube.com/watch?v=2Jom-4Brg6Q)
 
 ## Notes

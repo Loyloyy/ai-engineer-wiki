@@ -42,6 +42,8 @@ For production deployments, the practical mechanism for persistence between turn
 - On next request: restore from snapshot into a fresh instance — transparent to the agent.
 - The agent experiences it as the same machine, even across multi-hour or multi-day gaps.
 
+For multi-agent isolation specifically — each agent developing inside its own containerized filesystem rather than sharing one workspace — see [Container-Use](Container-Use.md).
+
 This complements [Durable-Agent-Execution](Durable-Agent-Execution.md) (context log + VM snapshot) — the file system state is part of the execution snapshot.
 
 ## Three tool types (AI SDK taxonomy)
@@ -58,9 +60,11 @@ Provider-executed tools are the fastest to integrate but introduce provider lock
 - **Adding a file system to an agent is the single biggest behavioral improvement.** An agent with a scratchpad plan file stays on task for 100+ minute runs across 300+ tool calls using only 32% of a 1M token window. The file system offloads memory management from context to disk. — Nico Albanese, Vercel ("Give Your Agent a Computer", AI Engineer 2026), [https://www.youtube.com/watch?v=wflNENRSUb4](https://www.youtube.com/watch?v=wflNENRSUb4)
 - **Memory is a file, not a database.** The ideal memory system is `memories.md` injected into the system prompt, backed by files the agent can read and write with bash. The file system is the playground; bash is the interface. — Nico Albanese, Vercel ("Give Your Agent a Computer", AI Engineer 2026), [https://www.youtube.com/watch?v=wflNENRSUb4](https://www.youtube.com/watch?v=wflNENRSUb4)
 - **LLM summarization (auto-compaction) is lossy and dangerous.** The case of an agent deleting an entire email inbox because auto-compaction dropped the "stop" instruction illustrates the risk. Prefer sub-agents that return a short summary over compacting the main thread. — Nico Albanese, Vercel ("Give Your Agent a Computer", AI Engineer 2026), [https://www.youtube.com/watch?v=wflNENRSUb4](https://www.youtube.com/watch?v=wflNENRSUb4)
+- **A resetable stateful environment gives you agent tree search for free.** Once you can roll back environment state (not just context), you can run agent branches in parallel, pick the best result, and converge — a form of Language Agent Tree Search (LATS) that emerges naturally from the abstraction. This becomes critical for long-horizon vertical agents (finance, health, accounting) where backtracking matters. — Josh Purtell, Synth ("Stateful Environments for Vertical Agents", AI Engineer 2025), [https://www.youtube.com/watch?v=5rMc-moNVx0](https://www.youtube.com/watch?v=5rMc-moNVx0)
 
 ## Sources
 
 - Nico Albanese, Vercel, "Give Your Agent a Computer", AI Engineer 2026 — [https://www.youtube.com/watch?v=wflNENRSUb4](https://www.youtube.com/watch?v=wflNENRSUb4)
+- Josh Purtell, Synth, "Stateful Environments for Vertical Agents", AI Engineer 2025 — [https://www.youtube.com/watch?v=5rMc-moNVx0](https://www.youtube.com/watch?v=5rMc-moNVx0)
 
 ## Notes

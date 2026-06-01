@@ -32,6 +32,8 @@ In Pocock's workflow, the issue-generation skill explicitly labels each generate
 
 **[Decision-Log](Decision-Log.md)** is a complementary pattern: during AFK execution, the agent logs ambiguous decisions rather than blocking, enabling async review without interrupting the AFK run.
 
+**[Software-Factory](Software-Factory.md)**: orchestrated AFK tasks, equipped with guardrails and enablers, compose into a software factory — AFK is the building block, the factory is the end-state.
+
 ## Opinions
 
 - **Planning has to be human-in-the-loop. It has to be.** Implementation can be made AFK, but alignment — deciding what to build and whether it's right — cannot be delegated. The value of AFK execution depends on the quality of the HIL planning that preceded it. — Matt Pocock, independent educator ("Full Walkthrough: Workflow for AI Coding", AI Engineer 2026), [https://www.youtube.com/watch?v=-QFHIoCo-Ko](https://www.youtube.com/watch?v=-QFHIoCo-Ko)

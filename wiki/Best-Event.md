@@ -22,7 +22,7 @@ The parent agent's comparative summary provides more insight than unaided compar
 
 **Cursor** (`/best-event` command): Spawns sub-agents per model into separate git work trees. The entire implementation fits ~40 lines of markdown (a skill file). Judges output by running a parent model as a synthetic reviewer. David Gomes: this replaced a ~4,000-line hardcoded implementation with comparable capability plus improved judging and the ability to combine outputs across sub-agents.
 
-**OpenAI Codex** (cloud mode): Run the same task N times in parallel in the cloud, select best output. Available from the app, IDE extension, and web interface.
+**[OpenAI Codex](OpenAI-Codex.md)** (cloud mode): Run the same task N times in parallel in the cloud, select best output. Available from the app, IDE extension, and web interface.
 
 ## Limitations
 

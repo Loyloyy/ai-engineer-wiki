@@ -35,6 +35,8 @@ BullshitBench is not a test of capability. It is a test of calibration: does the
 
 **Arena dissatisfaction rate** (from the same talk) is a complementary signal: the percentage of battles where users judge both models as giving a bad response. This captures user-facing quality failures from the outside, while BullshitBench probes a specific failure mode from the inside.
 
+**[Benchmark-Design](Benchmark-Design.md)**: BullshitBench is an instance of the properties argued there — experiential, and probing a real failure mode rather than a saturable test set.
+
 ## Opinions
 
 - **Extended reasoning makes epistemic compliance worse, not better.** Models trained to solve problems at all costs will produce elaborate answers to nonsense questions. The capability is there; the judgment to withhold it is not. — Peter Gostev, Arena.ai ("What Do Models Still Suck At?", AI Engineer 2026), [https://www.youtube.com/watch?v=R7A8rX-09Zw](https://www.youtube.com/watch?v=R7A8rX-09Zw)

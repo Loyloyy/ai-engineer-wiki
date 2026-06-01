@@ -38,11 +38,11 @@ Zakariasson frames factory prerequisites as three categories:
 
 The shift is from implementation to management: "Am I making the right things? Are we spending energy in the right place?" The factory produces more code per unit of human time; the bottleneck moves to judgment and taste.
 
-Zakariasson describes the pre-factory role as "verifiable systems": before launching an AFK factory run, the human ensures the agent can verify its own work — through unit tests, integration tests, or UI tests (clicking through the DOM to confirm buttons work, loading spinners render, etc.). Backend systems are easier to verify; UI systems require more setup to make AFK-safe.
+Zakariasson describes the pre-factory role as "verifiable systems": before launching an AFK factory run, the human ensures the agent can verify its own work — through unit tests, integration tests, or UI tests (clicking through the DOM to confirm buttons work, loading spinners render, etc. — increasingly the domain of [browser agents](Browser-Agents.md)). Backend systems are easier to verify; UI systems require more setup to make AFK-safe.
 
 ## Contrast with adjacent ideas
 
-**[Software-Factory](Software-Factory.md)** is the end-state; [AFK-Tasks](AFK-Tasks.md) are the building block. Individual AFK tasks compose into a factory when orchestrated and equipped with the right guardrails and enablers.
+**Software-Factory** is the end-state; [AFK-Tasks](AFK-Tasks.md) are the building block. Individual AFK tasks compose into a factory when orchestrated and equipped with the right guardrails and enablers.
 
 **[Deep-Modules](Deep-Modules.md)** is a prerequisite: a shallow-module codebase makes factory-scale agents ineffective because they must traverse too many files to understand any one operation.
 

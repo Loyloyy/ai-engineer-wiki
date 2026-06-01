@@ -40,6 +40,10 @@ Hetzel recommends not building the connected flywheel from scratch. The data lay
 
 **[High-Bandwidth-Artifacts](High-Bandwidth-Artifacts.md)**: production traces are a form of high-bandwidth artifact — structured records of agent work that enable human review and improvement. The flywheel converts these artifacts into agent improvement.
 
+**[Braintrust](Braintrust.md)** is a purpose-built implementation of this loop — evals plus production observability over a trace store designed for the dual query patterns described above.
+
+**[Agent-Eval-Map](Agent-Eval-Map.md)** and **[Eval-Design](Eval-Design.md)** supply, respectively, the taxonomy of what to score and the design principles for the scoring functions the flywheel iterates on.
+
 ## Opinions
 
 - **Evals are a systems problem, not a UI/UX problem.** The frontend is easy to vibe-code. The data layer — handling large, semi-structured, high-velocity traces with multiple query patterns — is the hard part that teams consistently underestimate. — Phil Hetzel, Braintrust ("Why Building Eval Platforms is Hard", AI Engineer 2026), [https://www.youtube.com/watch?v=_fQ7Z_Wfouk](https://www.youtube.com/watch?v=_fQ7Z_Wfouk)
@@ -49,10 +53,15 @@ Hetzel recommends not building the connected flywheel from scratch. The data lay
 - **Eval calcification is real: static benchmarks become stale as agents and users evolve.** When agents self-modify via skills and harness updates, and when customer behavior shifts, pre-baked test datasets drift out of alignment. Evals need to be treated as living software, not point-in-time datasets. — Vincent Koc, Comet ("How OpenClaw Ships Faster Than You Can Read the Diff", AI Engineer 2026), [https://www.youtube.com/watch?v=4VhbYlfC7Gs](https://www.youtube.com/watch?v=4VhbYlfC7Gs)
 - **Agents should auto-curate their own eval suites from production traces.** When distribution drift is detected (e.g., customer base changes, new interaction patterns emerge), the agent should analyze its own traces, propose new test cases, and update its eval suite — not wait for a human to notice. — Vincent Koc, Comet ("How OpenClaw Ships Faster Than You Can Read the Diff", AI Engineer 2026), [https://www.youtube.com/watch?v=4VhbYlfC7Gs](https://www.youtube.com/watch?v=4VhbYlfC7Gs)
 
+- **Evals are smoke alarms — they don't run the building.** Track revenue, not F1 scores. Instrument everything until you can say "this AI task led to $20 here." Once linked to dollars, decisions become easy: which idea is worth prioritizing? Evals tell you something is wrong; the revenue funnel tells you if it matters. — Jan Siml ("Stop Ordering AI Takeout: A Cookbook for Winning When You Build In-House", AI Engineer 2025), [https://www.youtube.com/watch?v=DjUIecgpYAo](https://www.youtube.com/watch?v=DjUIecgpYAo)
+
+- **Good data beats great models.** Switching from o3 to 4.1-mini only changed costs and eval scores — not revenue. The highest-impact investments were adding more data triggers and going deeper into user needs. Build for what users actually need, not for model benchmarks. — Jan Siml ("Stop Ordering AI Takeout: A Cookbook for Winning When You Build In-House", AI Engineer 2025), [https://www.youtube.com/watch?v=DjUIecgpYAo](https://www.youtube.com/watch?v=DjUIecgpYAo)
+
 ## Sources
 
 - Phil Hetzel, "Why Building Eval Platforms is Hard", AI Engineer 2026 — [https://www.youtube.com/watch?v=_fQ7Z_Wfouk](https://www.youtube.com/watch?v=_fQ7Z_Wfouk)
 - Samuel Colvin, "GEPA: Evals & Feedback Loops", AI Engineer 2026 — [https://www.youtube.com/watch?v=A48uhxfxbsM](https://www.youtube.com/watch?v=A48uhxfxbsM)
 - Vincent Koc, Comet, "How OpenClaw Ships Faster Than You Can Read the Diff", AI Engineer 2026 — [https://www.youtube.com/watch?v=4VhbYlfC7Gs](https://www.youtube.com/watch?v=4VhbYlfC7Gs)
+- Jan Siml, "Stop Ordering AI Takeout: A Cookbook for Winning When You Build In-House", AI Engineer 2025 — [https://www.youtube.com/watch?v=DjUIecgpYAo](https://www.youtube.com/watch?v=DjUIecgpYAo)
 
 ## Notes

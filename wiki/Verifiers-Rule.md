@@ -43,6 +43,7 @@ The practical value of Verifiers-Rule is as a design prompt: if a task currently
 
 - **The verifiability of a task is the primary design variable for vertical AI.** Before choosing an agent architecture, ask where the task sits on the spectrum and whether you can move it. — Jacob Lauritzen, Legora ("Agents need more than a chat", AI Engineer 2026), [https://www.youtube.com/watch?v=XNtkiQJ49Ps](https://www.youtube.com/watch?v=XNtkiQJ49Ps)
 - **Verifier's Rule originated as a claim about RL training, not agents** — the verification signal enables post-training optimisation. Extension to deployed agents is Lauritzen's contribution, not Wei's. — Jason Wei ("Asymmetry of verification and verifier's law", 2025), [jasonwei.net/blog/asymmetry-of-verification-and-verifiers-law](https://www.jasonwei.net/blog/asymmetry-of-verification-and-verifiers-law)
+- **Coding is the ideal domain for RL because it has automated verification.** Unit tests, compilers, and execution feedback give a fast, accurate, objective signal. This is why inference time scaling (majority voting, chain of thought) works best in coding and math — you can verify the answer. Domains without automated verification cannot benefit from the same scaling techniques. — Aakanksha Chowdhery, Reflection AI ("RL for Autonomous Coding", AI Engineer 2025), [https://www.youtube.com/watch?v=QluDzKVfp6A](https://www.youtube.com/watch?v=QluDzKVfp6A)
 
 ## Sources
 

@@ -41,6 +41,22 @@ Shopify used GEPA to optimize an agent classifying e-commerce sites (fraud detec
 
 DSPy (Stanford) introduced the concept of agent optimization and has had GEPA available within it. GEPA is also available standalone. DSPy uses similar key-value selection patterns (choosing the best few-shot examples to include). Samuel Colvin describes DSPy as having a machine-learning-centric API style; GEPA is more straightforward to integrate but also less mature.
 
+## LLM-as-judge calibration with GEPA
+
+GEPA can be used to calibrate an LLM-as-judge — optimising the judge's prompt to align with human annotations rather than with the model's built-in biases. The calibration workflow:
+
+1. **Design task-specific binary metrics** — not generic "hallucination" scores; metrics derived from domain error analysis. Binary (compliant / non-compliant) rather than 0–5 scales; 0–5 is too hard for humans to agree on and too hard for the optimizer to learn. For a complex domain, build one judge per error type rather than one omnibus judge.
+
+2. **Annotate with reasoning** — each human annotation must include the reasoning ("non-compliant because it approved the cancellation without verifying membership status"). Without reasoning in the annotation, the GEPA algorithm has no signal about *why* a trajectory failed; it can only observe that it did.
+
+3. **Seed prompt matters critically** — start with a prompt that assumes compliance ("assume the agent is compliant unless there is a specific reason otherwise"). Without this prior, the judge starts from random bias and is very hard to correct. Starting from a policy-text-included seed actually performs *worse* than starting without policy text — the model gets stuck in a local minimum and can't explore; with only annotations to guide it, it can discover the policy from examples.
+
+4. **Customise the reflection template** — the default GEPA reflection prompt doesn't understand domain-specific tasks (it doesn't know it's building a policy compliance judge). Write a domain-specific reflection template that tells the proposer agent what the judge is evaluating and instructs it to extract policy rules from annotation failures.
+
+5. **Budget ~$200–300 per experiment** on API calls — long trajectories mean high token counts. GPT-4o mini is the practical sweet spot; GPT-4o is cost-prohibitive for exploration.
+
+**Results on TaBench (airline customer support, 480 train / 112 validation)**: seed judge at 61% accuracy (98% bias toward "compliant") → optimised judge at 74% accuracy with genuine recall on non-compliant cases. The Pareto frontier reached 100% accuracy on training examples, but merging diverse solutions into a single generalising prompt remains the hard step.
+
 ## Opinions
 
 - **Optimization matters most for private data.** Models handle public-knowledge tasks well without tuning; the gap appears when prompting with proprietary context the model was never trained on — internal specs, domain-specific taxonomies, org-specific business logic. — Samuel Colvin, Pydantic ("GEPA: Evals & Feedback Loops", AI Engineer 2026), [https://www.youtube.com/watch?v=A48uhxfxbsM](https://www.youtube.com/watch?v=A48uhxfxbsM)
@@ -51,5 +67,6 @@ DSPy (Stanford) introduced the concept of agent optimization and has had GEPA av
 ## Sources
 
 - Samuel Colvin, Pydantic, "GEPA: Evals & Feedback Loops", AI Engineer 2026 — [https://www.youtube.com/watch?v=A48uhxfxbsM](https://www.youtube.com/watch?v=A48uhxfxbsM)
+- Mahmoud Mabrouk, Agenta AI, "Building LLM Evaluators That Actually Work with GEPA", AI Engineer 2026 — [https://www.youtube.com/watch?v=X4dEHRzBLmc](https://www.youtube.com/watch?v=X4dEHRzBLmc)
 
 ## Notes

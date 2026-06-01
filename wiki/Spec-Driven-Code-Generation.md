@@ -28,13 +28,31 @@ Pocock's counter-claim: **bad code is now more expensive than it has ever been**
 
 **Test-driven development** ([Grill-Me](Grill-Me.md) → TDD chain) is the structural alternative: the feedback loop is built from automated tests rather than human observation of outputs, forcing small deliberate steps and giving the model a verifiable signal on each change.
 
+**[Validation-Contract](Validation-Contract.md)** is the multi-agent form of the same instinct: define correctness as a contract written during planning, before implementation, so adversarial validators check behaviour the agent never got to shape.
+
+## The case for specification-first development
+
+Sean Grove (OpenAI, 2025) argues the opposite valence: specifications are *more* powerful than code, not a naive shortcut to it.
+
+His argument: code is a **lossy projection from the specification**. A compiled binary cannot be decompiled back to well-commented, intention-revealing source — you have to infer what the programmer was trying to do. In the same way, even well-written code typically doesn't embody the full intentions and values behind it. The source specification has that. A sufficiently robust specification given to an LLM can produce TypeScript, Rust, documentation, tutorials, and blog posts — targeting any architecture from a single source.
+
+The vibe coding critique from this view: "When we vibe code, we communicate intent via prompts, get code as output, and throw the prompt away. We kept the generated binary and deleted the source." The fix is to treat the specification as the valuable, version-controlled artifact and the code as the generated output.
+
+This reframes the entropy criticism: the spec-driven loop compounds entropy not because specs are the wrong idea, but because developers fail to evolve the spec as the primary artifact — they end up maintaining the generated code, which is the mistake.
+
+Grove extends the model to AI alignment: a written specification (like OpenAI's model spec) serves as a trust anchor for humans and as both training and eval material for models (via "deliberative alignment": spec + challenging prompt → model response → grader scores alignment → reinforce weights). Specifications are composable, executable, testable, and have interfaces — they are code for intent rather than syntax.
+
 ## Opinions
 
 - **Spec-to-code is vibe coding with extra steps.** The spec is just a structured way of ignoring the codebase. The underlying problem — no ongoing investment in the design of the system — is the same. — Matt Pocock, independent educator ("Software Fundamentals Matter More Than Ever", AI Engineer 2026), [https://www.youtube.com/watch?v=v4F1gFy-hqg](https://www.youtube.com/watch?v=v4F1gFy-hqg)
 - **Code is not cheap. Bad code is the most expensive it has ever been.** AI performs well in a good codebase and poorly in a bad one, so code quality is now a multiplier on AI leverage. — Matt Pocock, independent educator ("Software Fundamentals Matter More Than Ever", AI Engineer 2026), [https://www.youtube.com/watch?v=v4F1gFy-hqg](https://www.youtube.com/watch?v=v4F1gFy-hqg)
 
+- **Code is only 10–20% of the value a programmer produces; 80–90% is structured communication.** The person who communicates most effectively is the most valuable programmer. "In the near future, if you can communicate effectively, you can program." — Sean Grove, OpenAI ("The New Code", AI Engineer 2025), [https://www.youtube.com/watch?v=8rABwKRsec4](https://www.youtube.com/watch?v=8rABwKRsec4)
+- **You shred the source and version-control the binary.** Keeping generated code while throwing away prompts is the vibe coding failure mode — the prompt is the source specification, and that's what deserves to be preserved and evolved. — Sean Grove, OpenAI ("The New Code", AI Engineer 2025), [https://www.youtube.com/watch?v=8rABwKRsec4](https://www.youtube.com/watch?v=8rABwKRsec4)
+
 ## Sources
 
 - Matt Pocock, "Software Fundamentals Matter More Than Ever", AI Engineer 2026 — [https://www.youtube.com/watch?v=v4F1gFy-hqg](https://www.youtube.com/watch?v=v4F1gFy-hqg)
+- Sean Grove, "The New Code", AI Engineer 2025 — [https://www.youtube.com/watch?v=8rABwKRsec4](https://www.youtube.com/watch?v=8rABwKRsec4)
 
 ## Notes
