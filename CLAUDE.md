@@ -66,6 +66,8 @@ The ingest and lint procedures live in skills that load on demand:
 
 Bias toward capturing more opinions, not fewer — the user specifically values accumulated practitioner advice. Every opinion needs full attribution. Placement, attribution format, and Debate-thread aggregation are specified in `.claude/rules/wiki-page-conventions.md`.
 
+Debate pages require contested positions, not consensus. Consensus patterns across the corpus (different speakers independently reaching the same conclusion) may become Synthesis pages — a separate page type, TBD at the 100-page mark. Do not create either page type without user approval.
+
 ## Catalog and log
 
 `index.md` is the page catalog; `log.md` is the append-only event log (entries prefixed `## [YYYY-MM-DD] <type> | <description>`; types: `ingest`, `lint`, `update`, `system`, `unprocessable`). The exact formats are documented in the ingest and lint skills, where those files are written. `log.md` stays grep-friendly: `grep "^## \[" log.md | tail -10` gives recent events.
