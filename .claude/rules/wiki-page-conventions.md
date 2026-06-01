@@ -7,7 +7,8 @@ paths:
 # Wiki page conventions
 
 These apply whenever you create or edit a page under `wiki/`. The operational
-contract and the hard rules (including "never edit `## Notes`") are in CLAUDE.md.
+contract and the hard rules (including "never edit `## Notes`") are in AGENTS.md
+(imported by CLAUDE.md).
 
 ## Filename
 

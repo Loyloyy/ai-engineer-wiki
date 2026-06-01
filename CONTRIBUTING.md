@@ -15,4 +15,4 @@ Anyone can reconstruct the full transcript corpus from the URLs in `log.md` usin
 
 ## Schema
 
-The operational rules governing page structure, entity selection, opinion attribution, and commit conventions are in [CLAUDE.md](CLAUDE.md). All wiki edits — whether by Claude Code or a human contributor — must follow that schema.
+The operational rules governing page structure, entity selection, opinion attribution, and commit conventions are in [AGENTS.md](AGENTS.md) (imported by `CLAUDE.md`/`GEMINI.md` for those tools). All wiki edits — whether by an AI agent or a human contributor — must follow that schema.

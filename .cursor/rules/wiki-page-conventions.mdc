@@ -1,0 +1,13 @@
+---
+description: Conventions for creating/editing wiki pages
+globs: wiki/**/*.md
+---
+
+You are editing a wiki entity page. Follow the **Wiki page conventions** section in
+`AGENTS.md` (repo root): filename `Title-Case-Kebab.md`, the page structure (one-sentence
+definition first; optional `## Practical application`; `## Opinions`; mandatory `## Sources`;
+mandatory `## Notes`), the opinion attribution format, and lazy hub creation.
+
+Hard rules that apply here: never edit content under `## Notes` (user-owned), never invent
+sources or facts, never silently overwrite — append contradictions to `## Opinions` with a
+`[CONTRADICTION: <brief>]` flag.

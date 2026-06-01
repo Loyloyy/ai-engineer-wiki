@@ -1,6 +1,6 @@
 # AI Engineer Wiki
 
-A living knowledge base distilled from AI Engineer conference talks, built and maintained with Claude Code as the writer.
+A living knowledge base distilled from AI Engineer conference talks, built and maintained with an AI coding agent as the writer (tool-agnostic via [`AGENTS.md`](AGENTS.md) — Claude Code, Codex, Cursor, or Gemini).
 
 ## Why I built this
 
@@ -10,7 +10,7 @@ Andrej Karpathy sketched the "LLM Wiki" pattern: feed raw transcripts into an ag
 
 I wanted this specifically for AI Engineering material. The field moves fast enough that "what practitioners think today" is often more useful than any textbook treatment. The wiki captures exactly that: what real teams are actually doing, what they've burned on, and where they disagree.
 
-The operational contract ([CLAUDE.md](CLAUDE.md)) enforces that every opinion is attributed to a specific speaker and timestamp, pages are never invented, and the user-authored `## Notes` sections are never touched. Claude Code writes; I curate.
+The operational contract ([AGENTS.md](AGENTS.md)) enforces that every opinion is attributed to a specific speaker and timestamp, pages are never invented, and the user-authored `## Notes` sections are never touched. The agent writes; I curate.
 
 ## Architecture
 
@@ -30,10 +30,11 @@ log.md                ← append-only event log (ingest, lint, system entries)
 DEV_NOTES.md          ← setup gotchas and implementation notes
 scripts/
     fetch_transcripts.py   ← yt-dlp wrapper, writes to transcripts/
-CLAUDE.md             ← operational schema; Claude Code reads this first
+AGENTS.md             ← operational schema (source of truth, cross-tool)
+CLAUDE.md             ← Claude Code bridge; imports AGENTS.md + automation notes
 ```
 
-**Ingest flow**: fetch transcript → Claude Code reads it → extracts entities → creates or updates wiki pages → updates index.md and log.md → lint → single commit at end of batch.
+**Ingest flow**: fetch transcript → the agent reads it → extracts entities → creates or updates wiki pages → updates index.md and log.md → lint → single commit at end of batch.
 
 ## Features
 
@@ -49,7 +50,7 @@ CLAUDE.md             ← operational schema; Claude Code reads this first
 
 - Python 3 (`python3` — not `python`)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp): `pip install yt-dlp` (on Ubuntu/WSL with PEP 668, use `pip install yt-dlp --break-system-packages` or `pipx install yt-dlp`)
-- Claude Code CLI
+- An `AGENTS.md`-compatible coding agent (Claude Code, Codex, Cursor, or Gemini). Claude Code additionally runs the `/ingest` and `/lint` automation under `.claude/`.
 
 ### Fetch transcripts
 
@@ -65,13 +66,17 @@ Transcripts land in `transcripts/` (gitignored). The script maintains `transcrip
 
 ### Ingest a batch
 
-Give Claude Code a `/goal` specifying the transcript range. CLAUDE.md drives the full workflow.
+Point your agent at the transcript range and ask it to ingest the batch; `AGENTS.md` drives the full workflow. With Claude Code, use `/goal` (it runs the `/ingest` and `/lint` skills end to end).
 
 ## Project structure
 
 ```
 ai-engineer-wiki/
-├── CLAUDE.md                  # operational schema
+├── AGENTS.md                  # operational schema (source of truth, cross-tool)
+├── CLAUDE.md                  # Claude Code bridge (imports AGENTS.md + automation notes)
+├── GEMINI.md                  # Gemini bridge (imports AGENTS.md)
+├── .cursor/rules/             # Cursor rules (project + wiki-page-conventions glob rule)
+├── .claude/                   # Claude Code automation layer (skills, subagent, hook, rule)
 ├── README.md
 ├── DEV_NOTES.md               # setup gotchas and implementation notes
 ├── index.md                   # wiki catalog
@@ -82,8 +87,23 @@ ai-engineer-wiki/
 └── wiki/                      # flat markdown pages
 ```
 
+## AI agent compatibility
+
+The operational contract follows the [`AGENTS.md`](https://agents.md/) open standard, so the
+wiki can be maintained from any AI coding tool:
+
+- **OpenAI Codex, Cursor, Copilot, Windsurf** — read `AGENTS.md` natively.
+- **Claude Code** — reads `CLAUDE.md`, which imports `AGENTS.md` and adds the Claude-only automation layer below.
+- **Gemini** — reads `GEMINI.md`, which imports `AGENTS.md`.
+- **Cursor** — also gets `.cursor/rules/`, including a glob-scoped rule that auto-attaches the page conventions when editing `wiki/*.md`.
+
+`AGENTS.md` is the single source of truth. On top of it, Claude Code runs an automation layer
+under `.claude/`: `/ingest` and `/lint` skills, a read-only `lint-scanner` subagent, and a
+`PreToolUse` guard hook enforcing the hard rules. Other tools follow the same rules manually —
+the rules live in `AGENTS.md`, the automation is a Claude-Code convenience on top.
+
 ## Tech stack
 
 - **yt-dlp** — transcript fetching
-- **Claude Code** — ingestion and maintenance agent
+- **Any AGENTS.md-compatible agent** (Claude Code, Codex, Cursor, Gemini) — ingestion and maintenance
 - **Markdown + git** — storage and version history

@@ -1,0 +1,10 @@
+---
+description: Operational contract for the AI Engineer Wiki
+alwaysApply: true
+---
+
+This repo is a knowledge wiki maintained by an AI agent. The full operational contract —
+hard rules, entity selection, page conventions, ingest/lint workflows, commit conventions —
+lives in `AGENTS.md` at the repo root. Read it fully before any action.
+
+@AGENTS.md

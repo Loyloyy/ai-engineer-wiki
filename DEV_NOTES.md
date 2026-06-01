@@ -81,15 +81,21 @@ Auto-subtitles vary significantly in quality. Signals that a transcript will be 
 
 When quality is low enough that extracting accurate claims would require guessing, log as `unprocessable` and skip rather than risk fabricating content.
 
-## Claude Code config architecture
+## Agent config architecture
 
-The operational contract is split across CLAUDE.md and `.claude/` so the hard
-rules get maximum adherence and reference material loads only when needed.
+The contract is cross-tool: `AGENTS.md` is the single source of truth, and each
+tool reads it through a thin bridge. Claude Code's `.claude/` automation layer sits
+on top so the hard rules get maximum adherence and reference material loads only when needed.
 
-- **`CLAUDE.md`** (always loaded) — project description, the 7 hard rules,
-  entity selection, commit conventions, working style. Kept under ~120 lines
-  deliberately: the docs note files >200 lines lose adherence, and the hard
-  rules are the highest-cost content to lose after compaction.
+- **`AGENTS.md`** (source of truth) — project description, the 7 hard rules, entity
+  selection, the inlined page conventions, workflows, and commit conventions. Read
+  natively by Codex/Cursor/Copilot/Windsurf.
+- **`CLAUDE.md`** (always loaded by Claude Code) — a thin bridge: `@AGENTS.md` import
+  plus the Claude-only automation notes. Claude-specific lines win on conflict, but
+  they only enforce the AGENTS.md rules, they don't change them.
+- **`GEMINI.md`** — imports `AGENTS.md` for Gemini.
+- **`.cursor/rules/`** — `agents.mdc` (always-apply pointer) + `wiki-page-conventions.mdc`
+  (glob-scoped to `wiki/**/*.md`, mirroring the Claude rule below).
 - **`.claude/rules/wiki-page-conventions.md`** — page template, section rules,
   opinion attribution, lazy hub creation. **Path-scoped to `wiki/**/*.md`**, so
   it loads only when a wiki page is touched (covers `/ingest` and ad-hoc edits).
@@ -108,8 +114,8 @@ rules get maximum adherence and reference material loads only when needed.
 
 ### Gotchas
 
-- **Config loads at session start.** Editing CLAUDE.md / rules / settings does
-  *not* affect the running session — start a fresh `claude` to test changes.
+- **Config loads at session start.** Editing AGENTS.md / CLAUDE.md / rules / settings
+  does *not* affect the running session — start a fresh `claude` to test changes.
 - **Path-scoped rules load lazily.** `wiki-page-conventions` won't appear in
   `/memory` until Claude reads a `wiki/` file in that session. Not a bug.
 - **Glob `**/` may need an intermediate dir.** `wiki/**/*.md` did NOT match flat
