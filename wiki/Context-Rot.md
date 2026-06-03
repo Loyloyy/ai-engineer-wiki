@@ -20,6 +20,8 @@ Jacob Lauritzen (CTO, Legora) describes a representative failure: a legal agent 
 
 **Context-Anxiety** is a related but distinct downstream effect: the human-side tendency to avoid giving agents long tasks because of anticipated context-rot, leading to overly conservative task scoping.
 
+**Context-sense anxiety** (model-side) is a different phenomenon: as the agent approaches the end of the context window, it becomes aware of shrinking space and behaviorally *hurries* — rushing to complete tasks and finishing them half-baked rather than doing them correctly. The model detects context pressure and shifts into a "wrap it up" mode that degrades output quality. Distinct from the progressive degradation of context-rot; this is an abrupt behavioral shift triggered by context awareness itself.
+
 ## Strategies for mitigation
 
 Lauritzen frames the primary countermeasures as structural rather than prompting tricks:
@@ -31,9 +33,11 @@ Lauritzen frames the primary countermeasures as structural rather than prompting
 ## Opinions
 
 - **Compaction is a reliable signal of context-rot onset in long-running agents.** Once you see it fire, expect the agent to have forgotten context-critical constraints from earlier in the run. — Jacob Lauritzen, Legora ("Agents need more than a chat", AI Engineer 2026), [https://www.youtube.com/watch?v=XNtkiQJ49Ps](https://www.youtube.com/watch?v=XNtkiQJ49Ps)
+- **Context-sense anxiety is a distinct failure mode from context-rot.** As agents approach the end of the context window, they behaviorally hurry — building half-finished features or implementing buttons with no back end — because the model detects context pressure and shifts into a "wrap it up" mode. Agents must be made context-aware (tracking token consumption) and taught to manage their own context rather than sprint to the finish. — Andrew Wilson & Ash Prabaker, Anthropic Applied AI ("Build Agents That Run for Hours", AI Engineer 2026), [https://www.youtube.com/watch?v=mR-WAvEPRwE](https://www.youtube.com/watch?v=mR-WAvEPRwE)
 
 ## Sources
 
 - Jacob Lauritzen, "Agents need more than a chat", AI Engineer 2026 — [https://www.youtube.com/watch?v=XNtkiQJ49Ps](https://www.youtube.com/watch?v=XNtkiQJ49Ps)
+- Andrew Wilson & Ash Prabaker, Anthropic Applied AI, "Build Agents That Run for Hours", AI Engineer 2026 — [https://www.youtube.com/watch?v=mR-WAvEPRwE](https://www.youtube.com/watch?v=mR-WAvEPRwE)
 
 ## Notes

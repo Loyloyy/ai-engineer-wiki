@@ -60,6 +60,7 @@
 - [Model-Airplane](wiki/Model-Airplane.md) — Simplified reference implementation showing correct integration shape; thin production simulacrum for agent context
 - [Nested-Context-Injection](wiki/Nested-Context-Injection.md) — Inject parent topic descriptions hierarchically into agent conversations instead of relying on memory retrieval
 - [Progressive-Tool-Discovery](wiki/Progressive-Tool-Discovery.md) — Loading only relevant tools into agent context rather than dumping full API surfaces; CLI, search, and code-mode approaches
+- [Proactive-Agents](wiki/Proactive-Agents.md) — AI agents that continuously monitor context and act without explicit prompts, triggered by natural workflow events (four ingredients: observation, personalization, timeliness, workflow integration)
 - [Ralph-Loop](wiki/Ralph-Loop.md) — AFK agent execution loop over vertical slice issues until a plan is complete
 - [Reasoning-Data-Recipe](wiki/Reasoning-Data-Recipe.md) — SFT distillation pipeline for training reasoning models: multiple traces per question, teacher model selection, synthetic questions, filtering strategies
 - [RL-Agent-Fine-Tuning](wiki/RL-Agent-Fine-Tuning.md) — Using RL to fine-tune smaller LLMs for specific agent tasks; realistic environment + multi-component reward + reward hacking mitigation

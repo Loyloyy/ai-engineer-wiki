@@ -34,6 +34,31 @@ Scripts (bash, python, etc.) can be included and executed by the agent in the lo
 
 **Progressive disclosure within skills**: reference additional markdown files that are only loaded when relevant. Example: a routing rubric for scoring commits loaded only during the scoring phase, not during analysis. This keeps individual runs lean while supporting complex multi-phase workflows.
 
+## The emerging agent architecture stack
+
+Anthropic's Barry Zhang & Mahesh Murali describe skills as the "application layer" above the agent runtime:
+
+- **Model** (processor): Claude, GPT, etc. — massive investment, immense potential, but not useful alone
+- **Agent runtime** (operating system): the agent loop + file system — manages context, orchestrates tools
+- **Skills** (applications): domain-specific procedural knowledge that make the agent effective in a vertical
+
+The insight: instead of building separate domain-specific agents for each use case, build a universal agent (Claude Code or similar) and equip it with a library of skills. Just as millions of developers have written software encoding domain expertise on top of processors and operating systems, skills open that layer to anyone with a computer.
+
+**MCP + skills architecture**: MCP provides connectivity to the outside world (external data, APIs); skills provide domain expertise and procedural knowledge. An agent equipped with both can enter any vertical without being rebuilt.
+
+**Skills as continuous learning**: Because skills are just folders in the file system, Claude can:
+1. Write new skills as it learns patterns about how you work
+2. Update existing skills when better approaches are found
+3. Drop obsolete skills
+
+"Claude on day 30 of working with you is going to be a lot better than Claude on day one." The standardized format ensures "anything that Claude writes down can be used efficiently by a future version of itself."
+
+## Types of skills
+
+- **Foundational skills**: give the agent new general or domain capabilities it didn't have before (e.g., creating professional office documents, bioinformatics analysis, scientific research workflows)
+- **Partner/ecosystem skills**: built by third parties to help Claude work better with specific products (e.g., Browserbase built a skill for browser automation with Stagehand, Notion built workspace research skills)
+- **Enterprise skills**: company-specific — org best practices, internal tool workflows, code style guides, the "weird and unique ways" a company uses bespoke software
+
 ## MCP vs. skills
 
 | | MCP tools | Skills |
@@ -59,6 +84,8 @@ See [Context-Lifecycle](Context-Lifecycle.md) for the broader context developmen
 
 ## Opinions
 
+- **Code is the universal interface to the digital world; skills package domain expertise for it.** After building Claude Code, Anthropic realized a general-purpose coding agent can handle financial reports, data analysis, document generation — all through code. The bottleneck isn't capability but expertise: "agents are like a brilliant generalist who lacks domain knowledge." Skills solve this by encoding procedural knowledge from domain experts. — Barry Zhang & Mahesh Murali, Anthropic ("Don't Build Agents, Build Skills Instead", AIE Code Summit 2025), [https://www.youtube.com/watch?v=CEvIs9y1uog](https://www.youtube.com/watch?v=CEvIs9y1uog)
+- **Stop rebuilding agents, start building skills.** Customization remains important for each domain, but the agent underneath is more universal than expected. Instead of a separate agent per use case, a universal agent + skills library can handle every vertical. — Barry Zhang & Mahesh Murali, Anthropic ("Don't Build Agents, Build Skills Instead", AIE Code Summit 2025), [https://www.youtube.com/watch?v=CEvIs9y1uog](https://www.youtube.com/watch?v=CEvIs9y1uog)
 - **99.9% of skills in public registries are not production quality.** Registries are useful for learning patterns but almost none pass serious evals. — Patrick Debois, Tessl ("Context Is the New Code", AI Engineer 2026), [https://www.youtube.com/watch?v=bSG9wUYaHWU](https://www.youtube.com/watch?v=bSG9wUYaHWU)
 
 ## Sources
@@ -66,5 +93,6 @@ See [Context-Lifecycle](Context-Lifecycle.md) for the broader context developmen
 - Pedro Rodrigues, "Skill Issue: How We Used AI to Make Agents Actually Good at Supabase", AI Engineer 2026 — [https://www.youtube.com/watch?v=GmAQKINjv1E](https://www.youtube.com/watch?v=GmAQKINjv1E)
 - Patrick Debois, "Context Is the New Code", AI Engineer 2026 — [https://www.youtube.com/watch?v=bSG9wUYaHWU](https://www.youtube.com/watch?v=bSG9wUYaHWU)
 - Nick Nisi & Zack Proser, WorkOS, "Full Walkthrough: Writing & Using Skills", AI Engineer 2026 — [https://www.youtube.com/watch?v=pFsfax19yOM](https://www.youtube.com/watch?v=pFsfax19yOM)
+- Barry Zhang & Mahesh Murali, Anthropic, "Don't Build Agents, Build Skills Instead", AIE Code Summit 2025 — [https://www.youtube.com/watch?v=CEvIs9y1uog](https://www.youtube.com/watch?v=CEvIs9y1uog)
 
 ## Notes
