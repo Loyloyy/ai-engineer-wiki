@@ -44,14 +44,27 @@ When an LLM generates Cypher queries dynamically (text-to-graph), the graph sche
 5. Define retrieval tools: implement 3–5 targeted retrieval functions (get skills for person, find similar skills, find similar people, recommend people by skill set); these become LLM tools or MCP endpoints
 6. Build the agent: a LangGraph / React agent with access to these expert tools can answer complex queries by composing tool calls
 
+## Ontology-first construction (NVIDIA HybridRAG approach)
+
+For document-heavy GraphRAG (financial reports, legal docs, technical docs), the bottleneck is ontology quality, not retrieval:
+
+1. **Define your ontology first**: specify entity types and relationship types for your domain. Example for financial documents: `Company –[CUT]→ SpendingCategory` where CUT (reduced) is the relationship type. Ontology comes from domain knowledge, not from the documents.
+2. **LLM-driven triplet extraction**: prompt the LLM with the ontology spec and extract `(entity1, relationship, entity2)` triplets from raw text. Triplet quality is entirely dependent on the quality of the ontology prompt — expect significant iteration.
+3. **The 80/20 rule**: ~80% of GraphRAG implementation time is ontology definition and triplet extraction validation. Getting the ontology wrong means noisy triplets; noisy triplets mean retrieval noise that cannot be fixed downstream.
+4. **Parallel vector database**: maintain a standard embedding/vector database alongside the knowledge graph. At query time, run both: graph traversal for relational facts, vector search for semantics. Combine results before passing to LLM. This is the "hybrid" in HybridRAG.
+
+Key insight: GraphRAG is not a drop-in retrieval upgrade — it is a schema design project that happens to use an LLM for data loading.
+
 ## Opinions
 
 - **Semantic similarity is not business relevance.** Irrelevant facts pollute memory and vector retrieval because embedding distance has no causal or relational semantics. Domain-aware memory — not better semantic search — is the solution. — Daniel Chalef, Zep ("Stop Using RAG as Memory", AI Engineer 2025), [https://www.youtube.com/watch?v=T5IMo5ntyhA](https://www.youtube.com/watch?v=T5IMo5ntyhA)
 - **For agents, simpler graph data models work better with dynamic query generation.** When LLMs generate Cypher, the schema is effectively a prompt. Fewer labels and more natural-language relationship names reduce the model's task. Annotate the schema with example traversal patterns for best results. — Zach Blumenfeld, Neo4j ("Intro to GraphRAG", AI Engineer 2025), [https://www.youtube.com/watch?v=J-9EbJBxcbg](https://www.youtube.com/watch?v=J-9EbJBxcbg)
+- **80% of GraphRAG implementation time is ontology definition.** Getting the ontology wrong means noisy triplets; noisy triplets mean retrieval noise that cannot be fixed downstream. GraphRAG is a schema design project that happens to use an LLM for data loading. — Mitesh Patel, NVIDIA ("HybridRAG: A Fusion of Graph and Vector Retrieval", AI Engineer World's Fair 2025), [https://www.youtube.com/watch?v=-tgQa8Fzf80](https://www.youtube.com/watch?v=-tgQa8Fzf80)
 
 ## Sources
 
 - Zach Blumenfeld, "Intro to GraphRAG", AI Engineer 2025 — [https://www.youtube.com/watch?v=J-9EbJBxcbg](https://www.youtube.com/watch?v=J-9EbJBxcbg)
 - Daniel Chalef, Zep, "Stop Using RAG as Memory", AI Engineer 2025 — [https://www.youtube.com/watch?v=T5IMo5ntyhA](https://www.youtube.com/watch?v=T5IMo5ntyhA)
+- Mitesh Patel, NVIDIA, "HybridRAG: A Fusion of Graph and Vector Retrieval", AI Engineer World's Fair 2025 — [https://www.youtube.com/watch?v=-tgQa8Fzf80](https://www.youtube.com/watch?v=-tgQa8Fzf80)
 
 ## Notes

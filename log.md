@@ -1136,3 +1136,233 @@ Contradictions: none.
 
 Actions taken (approved by user): interlinked 42 of 43 orphans into related existing pages via contextually meaningful inline links (1–3 inbound each, no forced "See also" sections). Created hub pages RAG.md and Fine-Tuning.md (10 and 12 mentions respectively), added to index.md under Concepts. Fixed two self-link bugs found en route (Software-Factory, AgentCraft each linked to themselves). Skipped the prompt-injection hub (only 4 mentions, not urgent). Opinion threads NOT promoted to Debate pages — they are consensus, not contested positions.
 Left orphaned: Voice-Agent-Design — no non-forced conceptual host exists in the current corpus (it is the only voice-modality page). Revisit when a related page (voice/latency/conversation-design) is added.
+
+## [2026-06-04] lint | full-state scan (re-run, state unchanged)
+Orphans: Voice-Agent-Design — still the sole orphan with no inbound wiki links (index.md cataloging excluded). Intentionally left per 2026-06-01 decision: no non-forced conceptual host exists (only voice-modality page). Unchanged.
+Hub candidates: none new. RAG.md and Fine-Tuning.md hubs from 2026-06-01 hold. Prompt-injection (4 mentions) still below threshold.
+Opinion threads: Verifiability-enables-automation (Verifiers-Rule, Eval-Design, Eval-Flywheel, RL-Agent-Fine-Tuning, 4 pages) — same as previously-logged consensus pattern #1 (evaluation/verification as binding constraint). Consensus, not contested. Still deferred to 100-page mark as candidate Synthesis page.
+Contradictions: none.
+No action required; awaiting user input only if promoting consensus threads to Synthesis pages early.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Braintrust Day (June 27)
+Source: https://www.youtube.com/watch?v=bk0TmxoZlUY (Evals 101 — Doug Guthrie), https://www.youtube.com/watch?v=jJ45Yz1lJao (Why Should Anyone Care About Evals — Manu Goyal), https://www.youtube.com/watch?v=6YdPI9YbjbI (How to Build World-Class AI Products — Sarah Sachs, Notion)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Three Braintrust-sponsored talks: intro to evals (platform demo of offline/online evals, LLM-as-judge scoring, human review workflow), keynote intro, and Notion AI case study (10 months using Braintrust; 10% time prompting, 90% evals). All product-specific demos; no new AI engineering entities beyond existing Eval-Flywheel and Braintrust pages.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Arize AI Day (June 27)
+Source: https://www.youtube.com/watch?v=spvXj9tnWAQ
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Scalable LLM Evaluation Pipelines That Work — Dat Ngo, Aman Khan, Arize AI. Product talk covering observability → eval → online scoring pipeline at scale (Duolingo runs 20 evals/trace). No new entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Augment Code (June 27)
+Source: https://www.youtube.com/watch?v=6NIr_cYPglk
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. "To the Moon! Navigating Deep Context in Legacy Code" — Forest & Matt (Augment Code). Demo of Augment agent on Apollo 11 guidance computer codebase. Product demo; context engine mentioned but content already covered.
+
+## [2026-06-04] ingest | Serving Voice AI at Scale — Arjun Desai (Cartesia) & Rohit Talluri (AWS Engineer 2025 World's Fair)
+Source: https://www.youtube.com/watch?v=knH3fmGAteQ
+Pages added: (none)
+Pages updated: Voice-Agent-Design
+2 entities updated. Cartesia's SSM-based voice model (Sonic 2): O(1) generation vs quadratic for transformers; quality + latency + controllability as three design axes. Added SSM section and opinion to Voice-Agent-Design.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — AWS Day: Production Agents & Strands (June 27)
+Source: https://www.youtube.com/watch?v=HT4l0DeP69I (Ship It! Building Production Ready Agents — Mike Chambers, AWS), https://www.youtube.com/watch?v=Q3NreEAdKMc (Introducing Strands Agents — Suma, AWS)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. AWS product demos: "Ship It!" covers basic agent deployment patterns (framework-agnostic, single Python file approach). "Introducing Strands Agents" demos the open-source AWS SDK (model + tools are all you need, no scaffolding, MCP integration). Both are product introductions without new conceptual entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Cerebras: From MoE to Mixture of Agents (June 27)
+Source: https://www.youtube.com/watch?v=tzRvcTEapzo
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Workshop: Mixture of Experts architecture → Mixture of Agents (combining pre-trained models rather than MoE within a model). Cerebras product-focused; the conceptual content (routing multiple specialized models) maps to existing multi-agent patterns.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Contextual AI RAG Workshop (June 27)
+Source: https://www.youtube.com/watch?v=lArgRvBV3tQ
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. "Forget RAG Pipelines—Build Production Ready Agents in 15 Mins" — Nina Lopatina, Rajiv Shah, Contextual AI. Product workshop demonstrating Contextual AI's managed RAG service. No new entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — LlamaIndex: Agent Design Patterns (June 27)
+Source: https://www.youtube.com/watch?v=72XxWkd8Jrk
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. "Effective Agent Design Patterns in Production" — Laurie Voss, LlamaIndex. 15-min overview of Anthropic's 5 agent patterns (chain, routing, parallelization, orchestrator workers, evaluator optimizers) plus LlamaIndex product overview. Patterns already covered in existing wiki pages.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Traceloop: Prompt Engineering is Dead (June 27)
+Source: https://www.youtube.com/watch?v=jvKf6zXrNO4
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. "Prompt Engineering is Dead" — Nir Gazit, Traceloop. Demo of auto-improving prompt agent: RAG pipeline + LLM-as-judge evaluator + researcher agent that crawls web for prompt engineering techniques and iterates the prompt. Conceptually overlaps with GEPA. Product context (Traceloop OpenLLMetry) is the primary purpose.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — GitPod: CISO-Approved Agent Fleet Architecture (June 27)
+Source: https://www.youtube.com/watch?v=d9rsC6_VLoA
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. "Building Agent Fleet Architectures Your CISO Doesn't Hate" — Lou, GitPod Field CTO. Product talk about GitPod's secure dev environments for regulated industries and agent deployment. No new entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Modal: How Fast are LLM Inference Engines? (June 27)
+Source: https://www.youtube.com/watch?v=DeFF3J8T5Pk
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Charles Frye, Modal. Benchmarking open-source inference engines (vLLM, SGLang, TensorRT-LLM) across 10+ models and context lengths. Key finding: prefill-heavy workloads (1024 in, 128 out) get 4x higher throughput than decode-heavy (128 in, 1024 out). FP8/FP4 quantization matters more than engine choice. Interesting empirical content; no new named entity (vLLM page doesn't exist yet, and this is one talk).
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Windsurf Day (June 27)
+Source: https://www.youtube.com/watch?v=jUv5WSPo9fk (How Windsurf Gets to Know You — Sam Fertig), https://www.youtube.com/watch?v=jvKf6zXrNO4 (Mastering Engineering Flow — Eashan Sinha)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Windsurf product talks: context philosophy (user state + codebase state, relevance over size), engineering flow features. Product demos with no new entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Microsoft Day (June 27)
+Source: https://www.youtube.com/watch?v=sJMqMfkQG0 (The Agent Awakens — Christopher Harrison, GitHub), https://www.youtube.com/watch?v=hUBzuGV9UBo (AI Red Teaming Agent — Nagkumar Arkalgud & Keiji Kanazawa, Azure AI Foundry), https://www.youtube.com/watch?v=8sEeqe7GVKA (Collaborating with Agents — Jon Peck & Christopher Harrison), https://www.youtube.com/watch?v=9gMRCzTv6aE (Mastering AI Agent Evals Azure AI Evaluation SDK — Cedric Vi), https://www.youtube.com/watch?v=4hJQr1J7C5I (Building Code First AI Agents Azure AI Agent Service)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Five Microsoft-sponsored talks covering GitHub Copilot agent mode, Azure AI Foundry red teaming, collaborative development with agents, Azure AI Evaluation SDK, and Azure AI Agent Service. All product demonstrations.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — MongoDB Day (June 27)
+Source: https://www.youtube.com/watch?v=W_CYk2ogcDI (RAG in 2025 — Tengyu Ma, Voyage AI/MongoDB), https://www.youtube.com/watch?v=W2HVdB4Jbjs (Architecting Agent Memory — Richmond Alake, MongoDB), https://www.youtube.com/watch?v=Gao5qzM3wjM (Building Multimodal AI Agents — Apoorva Joshi, MongoDB), https://www.youtube.com/watch?v=pzmCdV0OLrA (Making LLMs Smarter with Knowledge Graphs — Michael Jesus)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. MongoDB-sponsored talks: Voyage AI's comparison of fine-tuning/long-context/RAG (RAG preferred for cost and controllability), agent memory taxonomy (short-term, long-term, episodic, semantic), multimodal agent demo, and GraphRAG workshop. Product-focused; RAG tradeoff content is already covered in RAG page.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Neo4j Day (June 27)
+Source: https://www.youtube.com/watch?v=BH6GZ9LlsGo (Why Your Agent's Brain Needs a Playbook — Jesús Barrasa), https://www.youtube.com/watch?v=2xf0_mXFl6o (Memory Masterclass — Mark Bain), https://www.youtube.com/watch?v=M1tXGY5l_Oc (Graph Intelligence — Alison Andreas), https://www.youtube.com/watch?v=R7XqZNmEiIA (GraphRAG Methods), https://www.youtube.com/watch?v=OChX0jzTgko (Agentic GraphRAG — simplifying retrieval)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Neo4j-sponsored GraphRAG talks: practical wins from knowledge graph playbooks, memory masterclass, graph intelligence retrieval patterns. Content supplements existing GraphRAG page but doesn't introduce distinct new entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Elastic: Vector Search Benchmarketing (June 27)
+Source: https://www.youtube.com/watch?v=qGnTT4D8i3g
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. "Vector Search Benchmark[eting]" — Philipp Krenn, Elastic. Benchmarking approach and results for Elastic's vector search. Product talk.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — Misc. June 27 talks
+Source: https://www.youtube.com/watch?v=fWY1FQwpWkY (Realtime Gemini Live + Pipecat — Daily/Google), https://www.youtube.com/watch?v=j_8FvFVGHBE (Realtime Conversational Video — Pipecat + Tavus), https://www.youtube.com/watch?v=xJXm4Wcw4m8 (Taming Rogue AI Agents — observability), https://www.youtube.com/watch?v=rGzH3YJa06k (Use AI to Test Review Merge Deploy — Tomas Reimers, Graphite), https://www.youtube.com/watch?v=cPKYxQsaFRY (Foundry Local ONNX Runtime), https://www.youtube.com/watch?v=Nc4j1mFu1_c (Unlocking AI Powered DevOps), https://www.youtube.com/watch?v=G2V2OHCkxu8 (Customizing AI Assistants for Enterprise — Harald Kirshner Windsurf, full workshop), https://www.youtube.com/watch?v=l7nFaZn3eQo (How to Build World-Class AI Products — Sarah Sachs intro), https://www.youtube.com/watch?v=J3xh1BSQJ5M (Revenue Engineering — Kshitij Grover, Orb), https://www.youtube.com/watch?v=X0gSbAZLwLo (Reliable AI with Semantic Layer), https://www.youtube.com/watch?v=Q_lrDh9OoHw (Building Agentic Apps Heroku)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Eleven miscellaneous June 27 talks from various vendor sponsors: Gemini Live API + Pipecat voice framework demo, realtime video with Pipecat+Tavus, observability-driven eval (hallucination case studies), AI code review/merge/deploy pipeline, on-device AI with ONNX Runtime/Olive Foundry, AI DevOps, Windsurf full workshop, Braintrust-hosted Notion talk, AI product pricing, semantic layer for RAG, Heroku agentic apps. All product-focused or introductory.
+
+## [2026-06-04] ingest | Building Voice Agents with OpenAI — Dominik Kundel, OpenAI (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=iXhba366fQc
+Pages added: (none)
+Pages updated: Voice-Agent-Design
+1 entity updated. Workshop launching OpenAI Agents SDK TypeScript with native voice support: WebRTC (browser) vs WebSocket (server/Twilio), interruption handling, handoffs, guardrails, resumable human-in-the-loop, audio trace replay. Added OpenAI SDK voice primitives section and opinion to Voice-Agent-Design.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 1 talks
+Source: https://www.youtube.com/watch?v=BFt_yS4LJ3s (The New Lean Startup — Sid Bendre, Oleve), https://www.youtube.com/watch?v=yASxPZ-tZe0 (Conquering Agent Chaos — Rick Blalock, Agentuity), https://www.youtube.com/watch?v=HFz_8r1i0Og (Optimizing Inference for Voice Models — Philip Kiely, Baseten), https://www.youtube.com/watch?v=T9BVXJG7cT0 (Evals Workshop — from Playground to Production)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Four July 1 talks: startup pivot story (Oleve), Agentuity agent deployment platform demo (product demo for company already covered in Agent-Native-Company), Baseten voice inference optimization (product talk), evals workshop. No new entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 2 talks
+Source: https://www.youtube.com/watch?v=U0TUV_4Bj3A (Humanoid Robot for $8999 — J.X. Mo), https://www.youtube.com/watch?v=dX8aBbOiUNk (Build-Operate Divide — bridging product vision and AI operational reality)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Open-source humanoid robot demo ($8999 personal robot) and product/operations divide talk. Out of scope for wiki (robotics hardware, product management).
+
+## [2026-06-04] ingest | A Case Study on NLP in Word Games — Shafik Quoraishee, NYT Games (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=IXpCuHX3VMg
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. NLP case study for NYT Connections word puzzle. Domain-specific application; no new AI engineering entities.
+
+## [2026-06-04] ingest | Trends Across the AI Frontier — George Cameron, Artificial Analysis (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=sRpqPgKeXNk
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Benchmarking overview from Artificial Analysis (independent AI benchmarking company tracking 150+ models). State of frontier models, speed/cost tradeoffs. Informational survey; no new named entities.
+
+## [2026-06-04] ingest | 2025 in LLMs so far — Simon Wilson (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=YpY83-kA7Bo
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Six-month LLM review using the "pelican riding a bicycle" SVG generation benchmark as a rough quality signal. Covers key releases: AWS Nova (cheap, 1M context), Llama 3.3 70B (GPT-4 class on local hardware), DeepSeek Christmas Day drop. Informational retrospective; no new entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 10 talks
+Source: https://www.youtube.com/watch?v=L6_NiGIEXZQ (Production Software Keeps Breaking — unnamed startup CEO), https://www.youtube.com/watch?v=2oXmqW1Mvb0 (Thinking Deeper in Gemini — Jack Rae, Google DeepMind), https://www.youtube.com/watch?v=9C9WA59DKMY (A Year of Gemini Progress — Logan Kilpatrick, Google)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Three July 10 talks: production troubleshooting startup pitch (AI-written code leaves humans with less context for debugging; "dashboard dumpster diving" problem), Gemini reasoning architecture (product talk), Google year-in-review for Gemini (product talk). The troubleshooting complexity thesis is interesting but doesn't warrant a standalone page at this point.
+
+## [2026-06-04] ingest | AI Engineering with Google Gemini 2.5 — Philipp Schmid, Google DeepMind (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=kJ2j0BAWL4A
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Gemini 2.5 model family overview and API usage patterns. Product talk.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 12-14 talks
+Source: https://www.youtube.com/watch?v=Z3_OqvJfhGE (Workshop AI Pipelines TypeScript), https://www.youtube.com/watch?v=Ishan_Anand_LLMs_web (How LLMs Work for Web Devs — Ishan Anand), https://www.youtube.com/watch?v=N2j7UwF-p1c (Prompt Engineering & AI Red Teaming — Sander Schulhoff), https://www.youtube.com/watch?v=1MVh05GDydE (Building Products that Win — Brian Balfour, Reforge), https://www.youtube.com/watch?v=corey_escrow (Automating Escrow with USDC and AI — Corey Cooper, Circle)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Workshop, educational intro to LLMs for web devs, red teaming overview, product strategy talk (AI competitive environment, "survive the AI knife fight"), and crypto/AI escrow use case. No new engineering entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 15 talks
+Source: https://www.youtube.com/watch?v=grant_lee_30person (Rethinking Team Building — Grant Lee, 30-person startup 50M users), https://www.youtube.com/watch?v=max_gumloop_unicorn (Building a 10-Person Unicorn — Max Brodeur-Urbas, Gumloop), https://www.youtube.com/watch?v=haseeb_oss_models (Using OSS Models to Build AI Apps — Haseeb Qureshi)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Three startup/business talks on team scaling and OSS models. No AI engineering entities.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 16 talks (Recommendations + RecSys)
+Source: https://www.youtube.com/watch?v=gorkem_fal_generative_media (State of Generative Media — Gorkem Yurtseven, fal), https://www.youtube.com/watch?v=devansh_youtube_gemini (Teaching Gemini to Speak YouTube — Devansh Tandon, Google), https://www.youtube.com/watch?v=tejaswi_search (Transforming Search — Tejaswi Vinesh), https://www.youtube.com/watch?v=yesu_netflix_recsys (Netflix's Big Bet — Yesu Feng, Netflix), https://www.youtube.com/watch?v=hamed_linkedin_360brew (360Brew — Hamed & Maziar, LinkedIn), https://www.youtube.com/watch?v=mukuntha_pinterest (Pinterest LLMs — Mukuntha Narayanan), https://www.youtube.com/watch?v=eugene_yan_amazon (Amazon Recsys Keynote — Eugene Yan, Amazon)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Seven talks from a recommender systems track: generative media tools (fal product), video-domain LLM adaptation (YouTube ranking), search/discovery transformation, Netflix's universal recommendation model, LinkedIn LLM-based ranking (360Brew), Pinterest LLM use cases, Amazon RecSys keynote. Interesting domain content but out of scope for the wiki's AI engineering entity model.
+
+## [2026-06-04] ingest | Rise of the Agentic Economy on the Shoulders of MCP — unknown (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=A5n6gBf_Mfk
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Opinion talk on MCP enabling an "agentic economy." Conceptual overview; MCP page already captures the key concepts.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 19 talks
+Source: https://www.youtube.com/watch?v=rl_kernels_workshop (Full Workshop: RL, Kernels, Reasoning, Quantization), https://www.youtube.com/watch?v=kelvin_google_photos (Google Photos Magic Editor — Kelvin Ma, Google), https://www.youtube.com/watch?v=keegan_luma_dreammachine (Dream Machine: Scaling to 1M Users — Keegan McCallum, Luma AI), https://www.youtube.com/watch?v=comfyui_workshop (ComfyUI Workshop), https://www.youtube.com/watch?v=huQPkrwVWwc (Design like Karpathy is Watching — Zeke Sikelianos, Replicate), https://www.youtube.com/watch?v=0F8mnGPUycY (On Curiosity — Sharif Shameem, Lexica), https://www.youtube.com/watch?v=jon_peck_mcp_copilot (Real World MCPs in GitHub Copilot — Jon Peck, Microsoft)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Seven July 19 talks: RL/quantization workshop, Google Photos GenAI, Luma AI scaling case study, ComfyUI image gen workshop, Replicate talk on Karpathy's MenuGen + llm.txt (machine-readable docs format), curiosity/demo talk, GitHub Copilot MCP real-world usage. The llm.txt concept is interesting (markdown docs optimized for LLM consumption) but mentioned only in passing; no new page warranted yet.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 20 talks
+Source: https://www.youtube.com/watch?v=toki_voice_agents (Building Effective Voice Agents — Toki Sherbakov & Anoop Kotha, OpenAI), https://www.youtube.com/watch?v=y-UGrYbJsJk (What Every AI Engineer Needs to Know About GPUs — Charles Frye, Modal), https://www.youtube.com/watch?v=nikhil_cloudchef_robots (Robots as Professional Chefs — Nikhil Abraham, CloudChef)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Three July 20 talks: voice agents best practices talk (complements OpenAI SDK workshop from June 29), GPU fundamentals for AI engineers (tensor cores, KV caching, quantization — educational, same speaker as June 27 benchmarking talk), robotics case study. GPU content is useful but spans two related talks and not yet at the wiki's threshold for a standalone page.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 21 talks
+Source: https://www.youtube.com/watch?v=tldraw_computer (tldraw.computer — Steve Ruiz, tldraw), https://www.youtube.com/watch?v=christopher_excalidraw (Excalidraw: AI and Human Whiteboarding — Christopher Chedeau), https://www.youtube.com/watch?v=max_model_picker (How I Learned to Love the Model Picker — Maximillian Piras), https://www.youtube.com/watch?v=stephen_neo4j_agentic_graphrag (AI's Logical Edge — Stephen Chin, Neo4j), https://www.youtube.com/watch?v=john_pham_good_design (Good Design Hasn't Changed with AI — John Pham)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Five July 21 talks: tldraw.computer demo (canvas-native agent computing), Excalidraw AI collaboration, model picker UX design talk, Neo4j agentic GraphRAG (overlaps with existing GraphRAG content), design principles talk. Note: UX Design Principles and Auth/AuthZ for Agents from this date were already processed.
+
+## [2026-06-04] ingest | AI World's Fair 2025 — July 22 talks (knowledge graphs + evals + infra)
+Source: https://www.youtube.com/watch?v=books_ai_new_experiences (Books Reimagined — Lukasz Gand), https://www.youtube.com/watch?v=critical_ai_inference (Critical AI Inference — Sahil Yadav), https://www.youtube.com/watch?v=muktesh_adobe_evals (Thinking Beyond Accuracy — Muktesh Mishra, Adobe), https://www.youtube.com/watch?v=matthias_gpu_profiling (Continuous GPU Profiling — Matthias Loibl, Polar Signals), https://www.youtube.com/watch?v=stephen_neo4j_agi (Top Ten Challenges to AGI — Stephen Chin & Andreas Kollegger), https://www.youtube.com/watch?v=michael_practical_graphrag (Making LLMs Smarter with Knowledge Graphs — Michael Jesus), https://www.youtube.com/watch?v=tom_smoker_knowledge_graphs (Knowledge Graphs in Litigation — Tom Smoker, Whyhow), https://www.youtube.com/watch?v=sam_julien_writer_graphrag (When Vectors Break Down — Sam Julien, Writer), https://www.youtube.com/watch?v=-tgQa8Fzf80 (HybridRAG — Mitesh Patel, NVIDIA)
+Pages added: (none)
+Pages updated: GraphRAG
+9 talks processed. Adobe's eval approach (thinking beyond accuracy/similarity for GenAI evals — segment by use case, measure what users care about), GPU profiling for ML workloads, AGI challenges panel, multiple GraphRAG/knowledge graph talks, NVIDIA HybridRAG (ontology-first construction, 80% effort on ontology, parallel vector+graph retrieval). GraphRAG page updated with NVIDIA HybridRAG content. Note: How to Hire AI Engineers, Stateful Environments, Lessons from AI Code Reviews from this date were already processed.
+
+## [2026-06-04] ingest | Monetizing AI — Alvaro Morales, Orb (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=alvaro_orb_monetizing
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Revenue engineering for AI products — pricing models, usage-based billing. Business talk; no AI engineering entities.
+
+## [2026-06-04] ingest | Telemedicine Support Agents with LangGraph + MCP — Dan Mason, Stride (AI Engineer 2025)
+Source: https://www.youtube.com/watch?v=sn79oS4MZFI
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Case study: LangGraph-based agent workflow for healthcare/telemedicine support (rebuilt traditional software pipeline with LLM at core). Workshop/show-and-tell; domain-specific application with no new AI engineering entities.
+
+## [2026-06-04] ingest | Fun Stories from Building OpenRouter — Alex Atallah, OpenRouter (AI Engineer 2025)
+Source: https://www.youtube.com/watch?v=84Vtz2IL1Ug
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. OpenRouter founding story (Jan 2023): started as investigation into whether LLM inference market would be winner-take-all; became LLM API routing marketplace. Interesting market analysis history but no new AI engineering entities for the wiki.
+
+## [2026-06-04] lint | post-batch scan (AI World's Fair + July 2025)
+Orphans: none. All 81 pages have inbound links.
+Hub candidates: none. State Space Models and HybridRAG each appear only in Voice-Agent-Design and GraphRAG respectively (single-page mentions). Pipecat not yet in corpus.
+Opinion threads: three consensus patterns continuing from prior lint (infrastructure/architecture as bottleneck; verification defines agent capability; chat as insufficient interface). All are consensus, not contested debates. Unchanged from prior scans.
+Contradictions: none.
+No action required.

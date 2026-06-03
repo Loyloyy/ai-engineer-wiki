@@ -62,11 +62,30 @@ Engineering challenges Gregory Bruss calls the **four horsemen of overlay engine
 
 Design principles: transparency and control over overlay involvement; minimum cognitive load; progressive autonomy (help more at start, less as user gains proficiency).
 
+## SSMs as alternative architecture for voice TTS
+
+Transformer-based TTS models scale quadratically with input length — the longer the context, the slower and more memory-intensive generation becomes. State Space Models (SSMs) maintain a fixed-size state that generates tokens in O(1) time regardless of context length. For voice, this makes SSMs inherently lower-latency at generation time.
+
+SSMs historically underperformed transformers on quality, but the gap has closed. The tradeoffs favor SSMs when voice generation quality + latency + controllability (accent, background noise, voice cloning) are all required simultaneously — a profile that pure-transformer TTS systems have difficulty satisfying without cost.
+
+Key design axes for voice model selection (Cartesia's framing): quality (naturalness of output), latency (time to first audio byte), and controllability (accent, tone, background noise injection, voice cloning). These are partly in tension: highly controllable models require more inference compute, which impacts latency.
+
+## OpenAI Agents SDK: voice support primitives
+
+The OpenAI Agents SDK (Python and TypeScript) ships native voice agent primitives, removing the need to wire STT → LLM → TTS manually:
+- **Interruption handling**: one of the hardest problems in voice; the SDK handles concurrent audio input during generation
+- **Transport layer**: WebRTC for browser/client-side agents; WebSocket for server-side (e.g., Twilio telephony)
+- **Handoffs and guardrails**: same abstractions as non-voice agents — routing between specialist agents, output filtering
+- **Resumability**: human-in-the-loop pauses can be held indefinitely; the agent resumes when human approval arrives
+- **Built-in tracing**: replay conversations as audio for debugging
+
 ## Opinions
 
 - **Tool call latency is the real bottleneck now.** Voice systems are fighting for 10ms of TTS improvement while a single tool call adds 500ms–4s. We need agents resilient to unpredictable and high-latency tool calls more than we need faster TTS. — Neil Zeghidour, Gradium AI ("When Is the Her Moment?", AI Engineer 2026), [https://www.youtube.com/watch?v=P_RI1kCkRbo](https://www.youtube.com/watch?v=P_RI1kCkRbo)
 - **Full-duplex is a solved architecture problem; intelligence and reliability are not.** The conversational naturalness of full-duplex models (like Moshi) is established — adding it to any system is technically feasible. The gap is giving those models the same intelligence, tool use, and observability as cascaded systems. — Neil Zeghidour, Gradium AI ("When Is the Her Moment?", AI Engineer 2026), [https://www.youtube.com/watch?v=P_RI1kCkRbo](https://www.youtube.com/watch?v=P_RI1kCkRbo)
 - **Voice is not a commodity.** Current systems are still "a glorified text model with a voice around it." Anything not expressible in text — tone, timing, backchannel, emotional cues — cannot be leveraged until the stack handles it natively. — Neil Zeghidour, Gradium AI ("When Is the Her Moment?", AI Engineer 2026), [https://www.youtube.com/watch?v=P_RI1kCkRbo](https://www.youtube.com/watch?v=P_RI1kCkRbo)
+- **SSMs achieve O(1) generation for voice; transformers cannot match their latency.** Cartesia's Sonic model uses state space model architecture and has closed the quality gap with transformers while offering substantially lower time-to-first-audio. This matters because voice agents compete on latency in a way text agents don't. — Arjun Desai, Cartesia ("Serving Voice AI at Scale", AI Engineer World's Fair 2025), [https://www.youtube.com/watch?v=knH3fmGAteQ](https://www.youtube.com/watch?v=knH3fmGAteQ)
+- **Interruption handling is harder than it appears.** Building proper voice interruption support from scratch is a significant engineering problem. Framework-level support (OpenAI Agents SDK) removes this from the application layer entirely. — Dominik Kundel, OpenAI ("Building Voice Agents with OpenAI", AI Engineer World's Fair 2025), [https://www.youtube.com/watch?v=iXhba366fQc](https://www.youtube.com/watch?v=iXhba366fQc)
 - **Voice is not just chat with sound.** Answer length, latency tolerance, and user mindset differ fundamentally. A voice agent requires separate conversation design from a chat agent — chunked answers, filler words for latency, shorter responses. Ship a version of the product before tackling the model improvements. — Peter Bar, Intercom ("Shipping an Enterprise Voice AI Agent in 100 Days", AI Engineer 2025), [https://www.youtube.com/watch?v=HOYLZ7IVgJo](https://www.youtube.com/watch?v=HOYLZ7IVgJo)
 - **In enterprise voice deployments, workflow integration matters more than model quality.** The majority of customer feedback was about escalation paths and context handoff — not about latency or resolution rates. The demo works, but the deployment fails if the support team can't integrate it into their existing workflow. — Peter Bar, Intercom ("Shipping an Enterprise Voice AI Agent in 100 Days", AI Engineer 2025), [https://www.youtube.com/watch?v=HOYLZ7IVgJo](https://www.youtube.com/watch?v=HOYLZ7IVgJo)
 
@@ -75,5 +94,7 @@ Design principles: transparency and control over overlay involvement; minimum co
 - Neil Zeghidour, Gradium AI, "When Is the 'Her' Moment?", AI Engineer 2026 — [https://www.youtube.com/watch?v=P_RI1kCkRbo](https://www.youtube.com/watch?v=P_RI1kCkRbo)
 - Peter Bar, Intercom, "Shipping an Enterprise Voice AI Agent in 100 Days", AI Engineer 2025 — [https://www.youtube.com/watch?v=HOYLZ7IVgJo](https://www.youtube.com/watch?v=HOYLZ7IVgJo)
 - Gregory Bruss, "The Voice-First AI Overlay: Designing Conversational Co-Pilots", AI Engineer 2025 — [https://www.youtube.com/watch?v=y9YQc9a3gNw](https://www.youtube.com/watch?v=y9YQc9a3gNw)
+- Arjun Desai, Cartesia & Rohit Talluri, AWS, "Serving Voice AI at Scale", AI Engineer World's Fair 2025 — [https://www.youtube.com/watch?v=knH3fmGAteQ](https://www.youtube.com/watch?v=knH3fmGAteQ)
+- Dominik Kundel, OpenAI, "Building Voice Agents with OpenAI", AI Engineer World's Fair 2025 — [https://www.youtube.com/watch?v=iXhba366fQc](https://www.youtube.com/watch?v=iXhba366fQc)
 
 ## Notes
