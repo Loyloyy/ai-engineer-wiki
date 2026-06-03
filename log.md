@@ -1366,3 +1366,154 @@ Hub candidates: none. State Space Models and HybridRAG each appear only in Voice
 Opinion threads: three consensus patterns continuing from prior lint (infrastructure/architecture as bottleneck; verification defines agent capability; chat as insufficient interface). All are consensus, not contested debates. Unchanged from prior scans.
 Contradictions: none.
 No action required.
+
+## [2026-06-04] lint | full-state scan
+Orphans: Voice-Agent-Design.md is in index.md but has no inbound links from any peer wiki page (peer-link orphan; not a true orphan by the index.md rule). Candidate cross-links: Voice-Agent / real-time agent pages, MCP, LangGraph.
+Hub candidates: none. All major concepts already have pages.
+Opinion threads (semantic, 3+ pages — all consensus, not contested):
+1. Planning/decision-making stays human; execution delegated to agents — AFK-Tasks, Harness-Engineering, Compressed-Research, Validation-Contract (4 pages).
+2. Verifiability determines agent capability — Verifiers-Rule, Fine-Tuning, Eval-Design, Validation-Contract (4 pages).
+3. Context management is the real bottleneck, not the absolute token limit — Smart-Zone, Context-Rot, Harness-Engineering (3 pages).
+4. Architectural clarity multiplies agent leverage — Agent-Legible-Codebase, Deep-Modules, Harness-Engineering, Software-Factory (4 pages).
+5. Tools/MCP must be designed for agents, not 1:1 API proxies — Code-Mode, MCP, Progressive-Tool-Discovery (3 pages).
+Contradictions: none.
+All five threads are consensus patterns (Synthesis candidates, deferred to ~100-page mark), not contested debates. Awaiting user approval; no Debate page warranted.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — July 24 talks
+Source: https://www.youtube.com/watch?v=C3geUfBR2js (Rise of the AI Architect — Clay Bavor, Sierra), https://www.youtube.com/watch?v=hxFpUcvWPcU (How to Build Enterprise-Aware Agents — Chau Tran, Glean), https://www.youtube.com/watch?v=Gp8Z4XQxVzU (AI That Pays — Nathan Wan, Ensemble Health), https://www.youtube.com/watch?v=jdKN2HJKuX0 (Structuring a Modern AI Team — Denys Linkov, Wisedocs), https://www.youtube.com/watch?v=T0YkVGxS9sU (Rise of Open Models in Enterprise — Amir Haghighat, Baseten), https://www.youtube.com/watch?v=A3bS3JrLVMQ (Mentoring the Machine — Eric Hou, Augment Code), https://www.youtube.com/watch?v=8I_CqxQM3Bk (Building Applications with AI Agents — Michael Albada, Microsoft), https://www.youtube.com/watch?v=ivan_daytona_ax (AX is the only Experience — Ivan Burazin, Daytona), https://www.youtube.com/watch?v=Gu_VhUMJy3Q (Building AI Products that Actually Work — Ben Hylak, Raindrop)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Nine July 24 talks: Clay Bavor/Sierra on the "AI Architect" role (webmaster analogy for AI era — manages agent personality, capabilities, brand), Chau Tran on workflows-vs-agents framing (agents generate workflows; agent trace = a workflow; use workflows as golden evals), Nathan Wan on revenue cycle AI case study, team structuring, open models in enterprise, Augment Code mentoring the machine (agents as junior devs), Microsoft Azure AI agents product, Daytona developer experience for agents, Raindrop's AI product lessons. No new wiki entities; "AI Architect" is an emerging role description rather than a distinct engineering pattern.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — July 25 talks
+Source: https://www.youtube.com/watch?v=TEnSv9k9_O4 (Ship Production Software in Minutes — Eno Reyes, Factory), https://www.youtube.com/watch?v=ZZGH3ZEg_VE (Beyond the Prototype — Josh Albrecht, Imbue), https://www.youtube.com/watch?v=o_hhkJtlbSs (Software Dev Agents: What Works — Robert Brennan, OpenHands), https://www.youtube.com/watch?v=MI83buT_23o (Devin 2.0 and Future of SWE — Scott Wu, Cognition), https://www.youtube.com/watch?v=iO7FhMcOQ5k (Your Coding Agent Got Cloned — Rustin Banks, Google Jules), https://www.youtube.com/watch?v=sTKEj2DqAkg (Latent Space Paper Club: AIEWF Special Edition), https://www.youtube.com/watch?v=o_LRtAomJCs (Human-Seeded Evals — Samuel Colvin, Pydantic)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Seven July 25 talks: Factory's agent-native CI/CD production (product talk), Imbue's approach to high-quality AI code beyond prototype stage, OpenHands/Robert Brennan on coding agent tools (editor + terminal + browser = complete agent loop), Scott Wu (Cognition) on "Moore's Law for AI agents" (doubling every 70 days for code tasks; 16–64x capability per year), Rustin Banks (Google Jules) on multi-clone agent patterns, Latent Space paper club, Samuel Colvin on human-seeded evals + type safety in PydanticAI. The Scott Wu "70-day doubling" stat is interesting but is an empirical observation, not a new entity page.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — July 26 talks
+Source: https://www.youtube.com/watch?v=Ahtaha9fEM0 (Introduction to LLM Serving with SGLang — Philip Kiely & Yineng Zhang, Baseten), https://www.youtube.com/watch?v=JBsquUpGGBs (Waymo's EMMA — Jyh Jing Hwang, Waymo), https://www.youtube.com/watch?v=QKy4M_fWDKQ (Robotics: Why Now? — Quan Vuong & Jost Tobias Springberg, Physical Intelligence), https://www.youtube.com/watch?v=kAFEkPzY6dA (A2A & MCP Workshop — Damien Murphy, Bench), https://www.youtube.com/watch?v=pFb_dRk4mvU (Piloting Agents in GitHub Copilot — Christopher Harrison, Microsoft)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Five July 26 talks: SGLang workshop (open-source LLM serving framework, used by xAI for Grok; 15K stars in 18 months; alternative to vLLM and TensorRT-LLM), Waymo's EMMA (end-to-end multimodal model for autonomous driving — teaching cars to reason about scenes rather than hand-coding perception modules), Physical Intelligence robotics talk (why now: foundation models + embodied learning), A2A+MCP workshop (automating business processes), Microsoft Copilot agent mode. No new wiki entities.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — July 27 talks (excl. Interpretability)
+Source: https://www.youtube.com/watch?v=h3u4bPKpE5Y (Ship Agents That Ship: Dagger Workshop — Kyle Penfound & Jeremy Adams, Dagger), https://www.youtube.com/watch?v=ujTKWlUgRAM (Strategies for LLM Evals — Guidellm, lm-eval-harness, OpenAI Evals Workbench), https://www.youtube.com/watch?v=nSaX27oRHWw (AI Engineer's Guide to Raising VC — Dani Grant, Jam & Chelcie Taylor), https://www.youtube.com/watch?v=HFN97RvRFQU (Information Retrieval from the Ground Up — Philipp Krenn, Elastic)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Four July 27 talks: Dagger workshop on container-based agent pipelines (CI/CD for agents), strategies for open-source LLM evals (GuideLL, lm-eval-harness, OpenAI workbench), VC fundraising guide for AI engineers, Elastic information retrieval overview. No new entities.
+
+## [2026-06-04] ingest | Why You Should Care About AI Interpretability — Mark Bissell, Goodfire AI (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=6AVMHZPjpTQ
+Pages added: Mechanistic-Interpretability
+Pages updated: (none)
+1 entity created. Mechanistic interpretability: finding and steering neural feature directions; attribution (what features fired for this token); sparse autoencoders; dynamic prompting on feature activation; model diffs for post-training; Goodfire Ember platform. Practical use cases: surgical behavioral control without prompt whack-a-mole, PII detection, red teaming, regulated industries. New page created.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — July 28 talks (excl. Building Platform for Agent Coordination)
+Source: https://www.youtube.com/watch?v=MRM7oA3JsFs (How to Build an Expert System — Christopher Lovejoy, Anterior), https://www.youtube.com/watch?v=3Rms9YQfBoo (Shipping Products When You Don't Know What They Can Do — Ben Stein, Temporal), https://www.youtube.com/watch?v=sXmsPqNKNXo (Shipping Something to Someone Always Wins — Kenneth Auchenberg), https://www.youtube.com/watch?v=iPZOQ8Hktqw (Why Your Product Needs an AI Product Manager — unknown), https://www.youtube.com/watch?v=Wnz4yvvF4Jc (Everything Is Ugly — Raiza Martin, ex-NotebookLM), https://www.youtube.com/watch?v=4vMNWuQi9qg (GR00T N1: Humanoid Foundation Model — Annika/Aastha, NVIDIA), https://www.youtube.com/watch?v=rBfYNwU53RA (Real-time Experiments with an AI Co-Scientist — Stefania Druga), https://www.youtube.com/watch?v=MN4r3vx4rC8 (Scaling AI Agents Without Breaking Reliability — Preeti Somal, Temporal)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Eight July 28 talks: Anterior's domain expert system for healthcare (last-mile problem — domain context gap is bigger than model capability gap; vertical AI requires deep domain knowledge embeddings), Temporal product talks, product strategy, NotebookLM design lessons ("everything is ugly" as design motivation), NVIDIA GR00T N1 humanoid foundation model, Stefania Druga co-scientist demo, Temporal scaling agents. The Christopher Lovejoy "last mile problem" framing (domain context gap > model capability gap) is a good opinion but maps to existing Coherence-Trap and Harness-Engineering pages.
+
+## [2026-06-04] ingest | Building the Platform for Agent Coordination — Tom Moor, Linear (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=UG9IAdmi2Dg
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Linear's AI journey and agent coordination platform: agents as first-class users with identity, history, audit trail, OAuth, GraphQL API access; hybrid search (BM25 + embeddings via Turbopuffer + Cohere embeddings); product intelligence (query rewriting, reranking, deterministic rules, relationship mapping); agents integrated into issue tracker (mention/assign agents like humans). Interesting product case study but no new engineering entity beyond what exists in Agent-Registry and related pages.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — July 29 talks
+Source: https://www.youtube.com/watch?v=KPj0fWHjEfQ (Evaluating AI Search — Quotient AI), https://www.youtube.com/watch?v=c7sMjBZ4OFY (Scaling Enterprise-Grade RAG: Legal Frontier — Calvin Qi, Harvey), https://www.youtube.com/watch?v=dqJaVJiJF6Y (Building Alice's Brain: AI Sales Rep — Sherwood/Satwik, 11x), https://www.youtube.com/watch?v=N3lzFHI8HUE (Layering Every Technique in RAG — David Karam, Pi Labs), https://www.youtube.com/watch?v=3B9RlHi5_J4 (Building a Smarter AI Agent with Neural RAG — Will Bryk, Exa.ai), https://www.youtube.com/watch?v=Q_xNxF4T3AQ (Full Workshop: Building Metrics that Actually Work — David Karam)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Six July 29 talks: AI search evaluation framework, Harvey's enterprise legal RAG (domain-specific chunking, entity extraction, citation tracking for legal documents), 11x's AI sales rep (learns from feedback like a new hire), layering RAG techniques (query rewriting, reranking, hybrid search, contextual compression, parent-child chunking), Neural RAG (Exa.ai's search-augmented RAG using neural document indexes), metrics workshop. Interesting RAG engineering content; the "layering RAG techniques" and "Neural RAG" concepts fit under existing RAG page.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — July 30 talks (security track)
+Source: https://www.youtube.com/watch?v=X4oIbpuvMjI (How to Defend Your Sites from AI Bots — David Mytton, Arcjet), https://www.youtube.com/watch?v=kNK3K6ZbhDw (The Unofficial Guide to Apple's Private Cloud Compute — Jmo, CONFSEC), https://www.youtube.com/watch?v=VJi2gJT_0Sw (How to Secure Agents Using OAuth — Jared Hanson, Keycard/Passport.js), https://www.youtube.com/watch?v=q4_t8fF8LwQ (How We Hacked YC Spring 2025 Batch's AI Agents — Rene Brandel, Casco), https://www.youtube.com/watch?v=2MVy7XqDZYA (OpenAI on Securing Code-Executing AI Agents — Fouad Matin, OpenAI)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Five July 30 security talks: defending sites against AI scraping bots, Apple's Private Cloud Compute architecture (confidential computing for AI), OAuth for agents (Passport.js patterns), YC batch agent security audit (prompt injection, tool misuse vulnerabilities), OpenAI's sandboxed code execution security model. Security content mostly product/demo focused; existing Agent-Identity page covers authorization patterns.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — July 31 voice track
+Source: https://www.youtube.com/watch?v=kwindla_pipecat_cloud (Pipecat Cloud: Enterprise Voice Agents — Kwindla Hultman Kramer, Daily), https://www.youtube.com/watch?v=thor_elevenlabs_workshop (Full Workshop: Conversational AI Agents — Thor Schaeff, ElevenLabs), https://www.youtube.com/watch?v=brooke_self_driving_voice (From Self-Driving to Autonomous Voice Agents — Brooke Hopkins, Coval), https://www.youtube.com/watch?v=sean_dubois_realtime (Your Realtime AI Is ngmi — Sean DuBois, OpenAI & Kwindla Kramer, Daily), https://www.youtube.com/watch?v=tom_shapland_chatgpt_interruption (Why ChatGPT Keeps Interrupting You — Dr. Tom Shapland, LiveKit), https://www.youtube.com/watch?v=neil_dwyer_voice_cost (Serving Voice AI at $1/hr — Neil Dwyer, Gabber)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Six July 31 voice agent talks: Pipecat (open-source voice agent framework) enterprise cloud product, ElevenLabs conversational AI workshop, self-driving → voice agent parallel (Coval evaluation framework), WebRTC vs WebSocket tradeoffs for realtime AI (Sean DuBois + Kwindla), ChatGPT interruption behavior analysis (half-duplex vs full-duplex, VAD thresholds), cost optimization for voice AI ($1/hr via LoRA adapters + load balancing). Voice content extends Voice-Agent-Design; no new standalone entities.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — August 1 talks
+Source: https://www.youtube.com/watch?v=barr_yaron_2025_report (The 2025 AI Engineering Report — Barr Yaron, Amplify), https://www.youtube.com/watch?v=sam_bhagwat_mastra_workflows (Agents vs Workflows: Why Not Both? — Sam Bhagwat, Mastra.ai), https://www.youtube.com/watch?v=dr_jasper_hyperbolic_compute (Why We Don't Need More Data Centers — Dr. Jasper Zhang, Hyperbolic), https://www.youtube.com/watch?v=jesse_han_morph_infra (Infrastructure for the Singularity — Jesse Han, Morph), https://www.youtube.com/watch?v=kyle_kranen_nvidia_inference (Hacking the Inference Pareto Frontier — Kyle Kranen, NVIDIA)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Five August 1 talks: AI Engineering Report 2025 overview (state of the field), Mastra.ai's hybrid agents+workflows framing (matches Chau Tran's "agents generate workflows"), serverless compute for AI inference (Hyperbolic), Morph infrastructure talk, NVIDIA's inference optimization (tensor cores, quantization, KV cache compression). NVIDIA inference talk is another version of Charles Frye's benchmarking content; no new entities.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — August 2-3 talks
+Source: https://www.youtube.com/watch?v=antje_barth_aws_agents (Building Agents at Cloud Scale — Antje Barth, AWS), https://www.youtube.com/watch?v=sarah_guo_conviction_startups (State of Startups and AI 2025 — Sarah Guo, Conviction), https://www.youtube.com/watch?v=danielle_perszyk_amazon_agi (Useful General Intelligence — Danielle Perszyk, Amazon AGI), https://www.youtube.com/watch?v=mark_backman_daily_voice (Full Workshop: Realtime Voice AI — Mark Backman, Daily), https://www.youtube.com/watch?v=peter_roboflow_vision (Vision AI in 2025 — Peter Robicheaux, Roboflow), https://www.youtube.com/watch?v=dmitry_kuchin_reliable_ai (Practical Tactics to Build Reliable AI Apps — Dmitry Kuchin, Multinear), https://www.youtube.com/watch?v=ian_butler_vibe_coding (How to Improve Your Vibe Coding — Ian Butler), https://www.youtube.com/watch?v=chris_kelly_augment_vibes (Vibes Won't Cut It — Chris Kelly, Augment Code), https://www.youtube.com/watch?v=harald_kirshner_github_copilot (Real World Development with GitHub Copilot and VS Code — Harald Kirshner)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Nine August 2-3 talks: AWS agents at cloud scale (product), Sarah Guo/Conviction state of startups 2025 (market overview), Amazon AGI "useful general intelligence" framing, Realtime voice AI workshop (Daily/Pipecat), Vision AI applications (Roboflow product), practical AI reliability tactics, vibe coding improvement tips, Augment Code "vibes won't cut it" on the limits of vibe coding for production, GitHub Copilot real-world usage. No new wiki entities.
+
+## [2026-06-04] ingest | On Engineering AI Systems That Endure The Bitter Lesson — Omar Khattab, DSPy & Databricks (AI Engineer World's Fair 2025)
+Source: https://www.youtube.com/watch?v=qdmxApz3EJI
+Pages added: (none)
+Pages updated: GEPA
+1 entity updated. Omar Khattab argues: The Bitter Lesson (scale > domain knowledge for intelligence) doesn't mean engineers should avoid domain knowledge — it means avoid premature optimization at lower abstraction levels than necessary. Prompts are bad abstractions: they entangle task spec + model-specific tricks + inference strategy + formatting. Better separation of concerns: natural language spec + evals + code (control flow/tools) + swappable model/inference. DSPy implements this via "signatures" as the specification primitive. Added Khattab's opinion to GEPA page.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — August 6 talks (excl. Khattab)
+Source: https://www.youtube.com/watch?v=jeff_huber_chroma_data (How to Look at Your Data — Jeff Huber, Chroma + Jason Liu), https://www.youtube.com/watch?v=L8OoYeDI_ls (Evals Are Not Unit Tests — Ido Pesok, Vercel v0), https://www.youtube.com/watch?v=john_dickerson_evals_year (2025 is the Year of Evals — John Dickerson), https://www.youtube.com/watch?v=itamar_qodo_vibe (Vibe Coding with Confidence — Itamar Friedman, Qodo)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Four August 6 talks: Chroma data visualization/exploration, Vercel v0's "Evals Are Not Unit Tests" (application-layer evals catch what passes in demos but fails in production; LLM reliability is nondeterministic; the fruit letter counter story), evals panel discussion, Qodo vibe coding with test generation. Eval content reinforces existing Eval-Design and Eval-Flywheel; no new entities.
+
+## [2026-06-04] ingest | AI World's Fair Summer 2025 — August 9-23 talks
+Source: https://www.youtube.com/watch?v=ankur_goyal_braintrust_future_evals (The Future of Evals — Ankur Goyal, Braintrust), https://www.youtube.com/watch?v=IHkyFhU6JEY (Designing AI-Intensive Applications — swyx), https://www.youtube.com/watch?v=avWhreBUYF0 (#define AI Engineer — Greg Brockman, OpenAI ft. Jensen Huang), https://www.youtube.com/watch?v=hf0_next_unicorns (Next Unicorns: HF0 Residency), https://www.youtube.com/watch?v=craig_wattrus_flatfile_form_factors (Form Factors for AI Coworkers — Craig Wattrus, Flatfile), https://www.youtube.com/watch?v=leonard_tang_haize_fuzzing (Fuzzing in the GenAI Era — Leonard Tang, Haize Labs), https://www.youtube.com/watch?v=ola_multi_agent_knowledge_graphs (Multi-Agent AI and Network Knowledge Graphs — Ola Mabadeje), https://www.youtube.com/watch?v=chin_keong_lam_wisdom_rag (Wisdom-Driven Knowledge Augmented Generation — Chin Keong Lam, Patho AI), https://www.youtube.com/watch?v=ankur_goyal_five_evals (Five Hard-Earned Lessons About Evals — Ankur Goyal, Braintrust), https://www.youtube.com/watch?v=evals_for_aesthetics_krea (Perceptual Evaluations: Evals for Aesthetics — Diego Rodriguez, Krea.ai), https://www.youtube.com/watch?v=blackrock_knowledge_apps (How BlackRock Builds Custom Knowledge Apps — Vaibhav Page & Isaac)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Eleven August talks: Braintrust future of evals (product roadmap), swyx SPAD framework for AI-intensive apps (Sync→Plan→Analyze/Parallel→Deliver), Greg Brockman fireside chat (career history), HF0 residency startups, Flatfile's AI coworker form factors, Haize Labs GenAI fuzzing (adversarial prompt discovery), multi-agent knowledge graphs, Wisdom-driven RAG (domain-enhanced generation), Braintrust's five eval lessons, Krea.ai aesthetic/perceptual evals (evaluating image quality beyond accuracy), BlackRock knowledge app case study. The Haize Labs fuzzing and Krea aesthetic evals are interesting but don't yet appear in 2+ pages to warrant creation.
+
+## [2026-06-04] ingest | Z.ai GLM 4.6 — Yuxua Zai (AI Engineer 2025)
+Source: https://www.youtube.com/watch?v=glm_46_open_source
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Open-source model release talk from Z.ai (100M open-source downloads). Product announcement; no new AI engineering entities.
+
+## [2026-06-04] ingest | AI Changes Nothing — Dax Raad, OpenCode (AIE Code Summit 2025)
+Source: https://www.youtube.com/watch?v=ai_changes_nothing_dax_raad
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Contrarian take: AI changes how we implement but not what we build toward or why. OpenCode product mention. Philosophical/motivational; no new entities.
+
+## [2026-06-04] ingest | AIE Code Summit 2025 — November 24 talks (batch)
+Source: https://www.youtube.com/watch?v=zfvEMNmVlNY (The Unbearable Lightness of Agent Optimization — Alberto Romero, Jointly), https://www.youtube.com/watch?v=qqXdLf3wy1E (Agents are Robots Too: What Self-Driving Taught Me — Jesse Hu, Abundant), https://www.youtube.com/watch?v=yusuf_compilers_llms (Compilers in the Age of LLMs — Yusuf Olokoba, Muna), https://www.youtube.com/watch?v=corey_gallon_vibe_hangover (The Cure for the Vibe Coding Hangover — Corey J. Gallon, Rexmore), https://www.youtube.com/watch?v=brian_john_codex_subagents (Hacking Subagents Into Codex CLI — Brian John, Betterup), https://www.youtube.com/watch?v=alex_backlogmd (Backlog.md: Terminal Kanban for AI Agents — Alex), https://www.youtube.com/watch?v=flf_IKnFYnE (From Stateless Nightmares to Durable Agents — Samuel Colvin, Pydantic), https://www.youtube.com/watch?v=ofer_enterprise_deep_research (Enterprise Deep Research: Next Killer App — Ofer Mendelevitch, Vectara), https://www.youtube.com/watch?v=nick_pull_requests_data (What 20M Pull Requests Reveal About AI Transformation — Nick), https://www.youtube.com/watch?v=boris_catio_architecture_copilots (AI Copilots for Tech Architecture — Boris B, CATIO), https://www.youtube.com/watch?v=mahmoud_infra_fixes_itself (Infra that Fixes Itself — Mahmoud Abdelwahab), https://www.youtube.com/watch?v=val_bercovici_context_platform (Context Platform Engineering to Reduce Token Anxiety — Val Bercovici), https://www.youtube.com/watch?v=stephen_chin_neo4j_context_graphs (Context Engineering: Connecting the Dots with Graphs — Stephen Chin, Neo4j), https://www.youtube.com/watch?v=zero_bugs_temporal (Vision: Zero Bugs — Johann Schleier-Smith, Temporal), https://www.youtube.com/watch?v=ahmad_awais_meta_neuro_rl (Developing Taste in Coding Agents: Applied Meta Neuro-Symbolic RL — Ahmad Awais)
+Pages added: (none)
+Pages updated: Durable-Agent-Execution
+15 talks. AIE Code Summit November 2025 batch. Samuel Colvin's Temporal+PydanticAI durable agents demo: workflow replay returns cached activity results instantly on resume; tool calls must be Temporal activities for true durability; OpenAI's Temporal integration omits tool-call activities ("a chocolate teapot"). Added two opinions + source to Durable-Agent-Execution page. Other talks: Meta-AC framework for agent context optimization (self-optimizing context engineering beyond single-dimension approaches; generator+reflector+curator roles), Jesse Hu on agents-as-robots (1% model, 99% offline stack — offline eval/training stack is the winning differentiator, same as robotics), LLM compilers, vibe coding hangover cures, Codex CLI subagent hacking, backlog.md tool, enterprise deep research, 20M PR study on AI impact, architecture copilots, self-healing infra, context platform engineering, Neo4j graph context, zero-bugs vision, and meta neuro-symbolic RL for coding agent taste.
+
+## [2026-06-04] ingest | No Vibes Allowed: Solving Hard Problems in Complex Codebases — Dex Horthy, HumanLayer (AIE Code Summit 2025)
+Source: https://www.youtube.com/watch?v=rmvDxxNubIg
+Pages added: Intentional-Compaction
+Pages updated: (none)
+1 entity created. Dex Horthy's intentional compaction pattern for brownfield AI coding: proactively compress agent context window to a markdown handoff document (exact files, line numbers, decisions, failed approaches) before starting a new session. New session starts from the compaction rather than re-running discovery. Key insight: LLMs are stateless; the only lever is token quality, so structured handoffs compound gains across sessions. New page created.
+
+## [2026-06-04] ingest | AIE Code Summit 2025 — December 2 talks
+Source: https://www.youtube.com/watch?v=rmvDxxNubIg (No Vibes Allowed — Dex Horthy — logged above), https://www.youtube.com/watch?v=kevin_hou_defying_gravity (Defying Gravity — Kevin Hou, Google DeepMind), https://www.youtube.com/watch?v=lee_robinson_cursor_composer (Building Cursor Composer — Lee Robinson, Cursor)
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Two additional December 2 talks: Kevin Hou's "Defying Gravity" (AI model capability growth framing), Lee Robinson's Cursor Composer architecture (how multi-file editing coordination works in Cursor). No new entities beyond existing coding agent pages.
+
+## [2026-06-04] ingest | Evolving Claude APIs for Agents — Katelyn Lesse, Anthropic (AIE Code Summit 2025)
+Source: https://www.youtube.com/watch?v=aqW68Is_Kj4
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. Anthropic Claude API platform roadmap: (1) harnessing capabilities — thinking budget API, tool use reliability; (2) managing context — MCP, memory tool (client-side file system for long-term recall), context editing (clearing stale tool results); combined memory tool + context editing = 39% performance bump on internal evals; (3) giving Claude a computer — code execution tool (sandboxed, no container management), agent skills (folders of scripts/instructions Claude pulls in when relevant). Interesting details about Anthropic's API direction; content supplements existing Claude-Code and Skills pages.
+
+## [2026-06-04] ingest | Future-Proof Coding Agents — Bill Chen & Brian Fioca, OpenAI (AIE Code Summit 2025)
+Source: https://www.youtube.com/watch?v=future_proof_coding_agents_openai
+Pages added: (none)
+Pages updated: (none)
+0 entities extracted. OpenAI's approach to future-proofing coding agents (flexibility across model updates, tool abstraction patterns). Product/platform talk; no new entities.
+
+## [2026-06-04] lint | post-batch scan (July 24 – December 2025 batch)
+Orphans: Voice-Agent-Design (known, no non-forced host); Mechanistic-Interpretability (fixed: added inbound link from Coherence-Trap).
+Hub candidates: none. Terms like "sparse autoencoder," "Temporal," "SGLang" each appear in ≤1 page.
+Opinion threads: six consensus patterns confirmed (context degradation across scopes; naive RAG underperformance; verifiability as binding constraint; planning-HIL/implementation-AFK; data quality over model scale; measurement poisoning). All are consensus, not contested debates. Same clusters as prior scans; no new Debates pages needed.
+Contradictions: Spec-Driven-Code-Generation page contains opposing views (Pocock vs Grove) — already logged on the page itself as competing opinions. Not a new inter-page contradiction requiring a Debates page.
+Actions taken: Mechanistic-Interpretability linked from Coherence-Trap. No other structural changes required.

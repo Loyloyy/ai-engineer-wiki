@@ -17,7 +17,7 @@ These properties produce output that feels like comprehension. This is the trap:
 
 LLMs represent concepts via superposition — a single neuron can encode multiple related ideas, and overlapping neuron sets represent concept neighborhoods. When a prompt is issued, it acts as a force vector in high-dimensional latent space, activating the concept clusters most relevant to the input. The model does not retrieve information; it reconstructs the essence of ideas on demand.
 
-This is why hallucinations feel correct: they are coherent pattern completions, not errors in retrieval. The model fills gaps with plausible continuations — the same mechanism that generates useful outputs also generates confident fictions.
+This is why hallucinations feel correct: they are coherent pattern completions, not errors in retrieval. The model fills gaps with plausible continuations — the same mechanism that generates useful outputs also generates confident fictions. [Mechanistic-Interpretability](Mechanistic-Interpretability.md) provides tools to inspect which internal features activate and drive specific outputs — a different angle on the same mechanism.
 
 RAG functions as "factual anchors" — fragments of grounding context that provide enough "contextual gravity" to pull the force vector toward reality rather than toward plausible fiction. Dense, relevant context works; sparse or irrelevant context does not.
 

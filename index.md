@@ -24,8 +24,10 @@
 - [Durable-Agent-Execution](wiki/Durable-Agent-Execution.md) — Framework for production agent durability: append-only context log + VM-level execution snapshots; replaces replay model for long-running sessions
 - [Fine-Tuning](wiki/Fine-Tuning.md) — Hub: adapting model weights via SFT/DPO/RL; staged pipeline, data recipes, when it's worth it vs. prompting; ties together the small-model and reasoning-model pages
 - [Harness-Engineering](wiki/Harness-Engineering.md) — Discipline of structuring codebases, tooling, and processes so agents can execute the full engineering job with minimal human intervention per loop
+- [Intentional-Compaction](wiki/Intentional-Compaction.md) — Context management pattern for coding agents: proactively compress session into a handoff document so the next context starts with targeted knowledge instead of re-doing discovery
 - [High-Bandwidth-Artifacts](wiki/High-Bandwidth-Artifacts.md) — Structured persistent interfaces (docs, tables) for human-agent collaboration, contrasted with linear chat
 - [Latent-Diffusion](wiki/Latent-Diffusion.md) — Training diffusion models in compressed latent space rather than pixel space; reduces per-step compute by orders of magnitude
+- [Mechanistic-Interpretability](wiki/Mechanistic-Interpretability.md) — Reverse-engineering neural network internals to find and steer individual feature directions; enables attribution, feature steering, dynamic prompting, and model diffs
 - [Model-Rot](wiki/Model-Rot.md) — Progressive staleness of LLM domain knowledge as training data ages; acute for fast-moving frameworks and APIs
 - [RAG](wiki/RAG.md) — Hub: retrieval-augmented generation; mechanism and the recurring critique that naive RAG underperforms for agents; ties together the retrieval/context-grounding pages
 - [Smart-Truncation](wiki/Smart-Truncation.md) — Context management technique: preserve head + tail of conversation window, offload middle to retrievable memory store
